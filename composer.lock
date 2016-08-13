@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4ae4bbe830f0050cf9adc697e0ea4d8f",
-    "content-hash": "aedcb2f3d7c65d25aa744d4a563535fc",
+    "hash": "24107f91cc94ee66d1d010cca2f4b9d5",
+    "content-hash": "d21b312ae189a04f96cd5c19234ab9e6",
     "packages": [
         {
             "name": "arcanedev/log-viewer",
@@ -1005,6 +1005,47 @@
                 "tokenizer"
             ],
             "time": "2015-12-05 17:17:57"
+        },
+        {
+            "name": "landish/pagination",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Landish/Pagination.git",
+                "reference": "4a18a861923ff2a4d73350411f05dfbe2ab1a205"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Landish/Pagination/zipball/4a18a861923ff2a4d73350411f05dfbe2ab1a205",
+                "reference": "4a18a861923ff2a4d73350411f05dfbe2ab1a205",
+                "shasum": ""
+            },
+            "require-dev": {
+                "illuminate/pagination": "~5.0",
+                "phpunit/phpunit": "~4.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Landish\\Pagination\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lado Lomidze",
+                    "email": "lado.lomidze@gmail.com"
+                }
+            ],
+            "description": "Laravel 5 Custom Pagination Presenter",
+            "keywords": [
+                "laravel",
+                "pagination"
+            ],
+            "time": "2015-07-01 11:57:57"
         },
         {
             "name": "laravel/framework",
