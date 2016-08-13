@@ -38,8 +38,8 @@
                 <div class="menu">
                     @foreach(\App\Role::$validColors as $color)
                         <div class="item" data-value="{{ $color }}"><span
-                                    class="ui tag label single line {{ $color }}"
-                                    style="margin-left: 10px">{{ $color }}</span></div>
+                                class="ui tag label single line {{ $color }}"
+                                style="margin-left: 10px">{{ $color }}</span></div>
                     @endforeach
                 </div>
             </div>
