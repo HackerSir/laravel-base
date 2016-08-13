@@ -16,7 +16,7 @@
         {!! SemanticForm::open()->action(route('role.store')) !!}
     @endif
     <div class="ui stacked segment">
-        @if($isEditMode && $role->protect)
+        @if($isEditMode && $role->protection)
             {!! SemanticForm::text('name')->label('角色英文名稱')->placeholder('如：admin')->required()->disable() !!}
             {!! SemanticForm::hidden('name', $role->name) !!}
         @else
