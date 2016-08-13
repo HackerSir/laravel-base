@@ -79,7 +79,7 @@
                     alertify.notify('{{ Session::get('warning') }}', 'warning', 5);
                 @endif
                 // popup
-                $('[title]').each(function () {
+                $('[title]:not(#tracy-debug *[title])').each(function () {
                     $(this).popup({
                         variation: 'inverted',
                         position: 'right center'
