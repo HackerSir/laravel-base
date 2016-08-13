@@ -35,7 +35,7 @@ return [
         'attributes' => [
             'prefix' => 'log-viewer',
 
-            'middleware' => null,
+            'middleware' => ['web', 'permission:log-viewer.access'],
         ],
     ],
 
