@@ -21,7 +21,6 @@ class LaravelMenu
         Menu::make('left', function ($menu) {
             /* @var \Lavary\Menu\Builder $menu */
             $menu->add('首頁', ['route' => 'index']);
-            $menu->add('商家地圖 <i class="external icon"></i>', ['route' => 'map.index'])->link->attr('target', '_blank');
         });
         //右側
         Menu::make('right', function ($menu) {
@@ -49,10 +48,6 @@ class LaravelMenu
 
                     if (Entrust::can('role.manage')) {
                         $adminMenu->add('角色管理', ['route' => 'role.index']);
-                    }
-
-                    if (Entrust::can(['shop.manage', 'position.manage'])) {
-                        $adminMenu->add('商店管理', ['route' => 'shop.index'])->active('shop/*')->active('position/*');
                     }
 
                     if (Entrust::can('log-viewer.access')) {
