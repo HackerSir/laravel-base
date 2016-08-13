@@ -53,7 +53,9 @@
             @endforeach
         </tbody>
     </table>
-    @include('pagination.pagination', ['models' => $users])
+    <div class="ui center aligned attached segment" style="border: none">
+        {!! (new Landish\Pagination\SemanticUI($users))->render() !!}
+    </div>
 @endsection
 
 @section('js')

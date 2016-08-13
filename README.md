@@ -18,6 +18,7 @@ A website base on laravel and semantic ui for HackerSir.
   - recca0120/laravel-tracy: "^1.5.6"
   - lavary/laravel-menu: "dev-master"
   - thomaswelton/laravel-gravatar: "^1.1"
+  - landish/pagination: "^1.3"
 - System
   - User
   - Role
