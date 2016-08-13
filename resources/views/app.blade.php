@@ -11,6 +11,31 @@
         {{-- CSS --}}
         {!! Html::style('semantic/semantic.min.css') !!}
         {!! Html::style('//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/semantic.min.css') !!}
+        <style>
+            body {
+                padding-top: 70px;
+                height: auto;
+            }
+
+            .secondary.pointing.menu {
+                border: none !important;
+            }
+
+            .secondary.pointing.menu .toc.item {
+                display: none;
+            }
+
+            @media only screen and (max-width: 700px) {
+                .secondary.pointing.menu .item,
+                .secondary.pointing.menu .menu {
+                    display: none;
+                }
+
+                .secondary.pointing.menu .toc.item {
+                    display: block;
+                }
+            }
+        </style>
         @yield('css')
     </head>
     <body>
