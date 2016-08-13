@@ -1,4 +1,7 @@
 # Laravel Base (5.2)
+[![StyleCI(5.2)](https://styleci.io/repos/65561499/shield?branch=5.2)](https://styleci.io/repos/65561499)
+[![License](https://img.shields.io/github/license/HackerSir/laravel-base.svg)](https://raw.githubusercontent.com/HackerSir/laravel-base/master/LICENSE)
+
 A website base on laravel and semantic ui for HackerSir.
 
 ## Framework
