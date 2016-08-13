@@ -2,7 +2,7 @@
 
 @section('title', '修改密碼')
 
-@section('admin-content')
+@section('content')
     <h2 class="ui teal header center aligned">修改密碼</h2>
     {!! SemanticForm::open()->put()->action(route('auth.update-password'))->addClass('large') !!}
     <div class="ui stacked segment">

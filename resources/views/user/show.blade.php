@@ -2,7 +2,7 @@
 
 @section('title', "{$user->name} - 會員資料")
 
-@section('admin-css')
+@section('css')
     <style>
         /* TODO: 看要置左還是置中，然後看要不要抽出來做*/
         @media only screen and (max-width: 767px) {
@@ -23,7 +23,7 @@
     </style>
 @endsection
 
-@section('admin-content')
+@section('content')
     <h2 class="ui teal header center aligned">
         {{ $user->name }} - 會員資料
     </h2>
@@ -89,7 +89,7 @@
 
 @endsection
 
-@section('admin-js')
+@section('js')
     <script>
         $('i.popup').popup({
             variation: 'inverted'

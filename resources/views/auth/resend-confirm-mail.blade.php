@@ -2,7 +2,7 @@
 
 @section('title', '重新發送驗證信件')
 
-@section('admin-content')
+@section('content')
     <div class="ui top attached segment">
         <div class="ui top attached label">重新發送驗證信件</div>
         <div class="ui large aligned center aligned relaxed stackable grid">

@@ -5,7 +5,7 @@
 
 @section('title', $methodText . '角色')
 
-@section('admin-content')
+@section('content')
     <h2 class="ui teal header center aligned">
         {{ $methodText }}角色
     </h2>

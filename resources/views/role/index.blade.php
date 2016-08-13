@@ -2,7 +2,7 @@
 
 @section('title', '角色管理')
 
-@section('admin-content')
+@section('content')
     <h2 class="ui teal header center aligned">
         角色管理
     </h2>

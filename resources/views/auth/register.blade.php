@@ -2,7 +2,7 @@
 
 @section('title', '註冊')
 
-@section('admin-content')
+@section('content')
     <div class="ui top attached segment">
         <div class="ui top attached label">註冊</div>
         <div class="ui large aligned center aligned relaxed stackable grid">
