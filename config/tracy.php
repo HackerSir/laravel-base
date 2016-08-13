@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'enabled'      => true,
+    'enabled'      => env('APP_DEBUG', false),
     'showBar'      => true,
     'accepts'      => [
         'text/html',
@@ -16,7 +16,7 @@ return [
         'routing'        => true,
         'database'       => true,
         'view'           => true,
-        'event'          => false,
+        'event'          => true,
         'session'        => true,
         'request'        => true,
         'auth'           => true,
