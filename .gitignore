@@ -179,8 +179,8 @@ node_modules/
 .env
 
 ### IDE Helper ###
-#_ide_helper.php
-#.phpstorm.meta.php
+_ide_helper.php
+.phpstorm.meta.php
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
@@ -192,7 +192,7 @@ composer.phar
 
 # Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-#composer.lock
+composer.lock
 
 
 ### SublimeText ###
