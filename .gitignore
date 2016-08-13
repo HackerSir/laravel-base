@@ -137,7 +137,7 @@ fabric.properties
 
 # *.iml
 # modules.xml
-# .idea/misc.xml 
+# .idea/misc.xml
 # *.ipr
 
 
@@ -178,7 +178,6 @@ bootstrap/compiled.php
 app/storage/
 
 # Laravel 5 & Lumen specific
-bootstrap/cache/
 .env.*.php
 .env.php
 .env
