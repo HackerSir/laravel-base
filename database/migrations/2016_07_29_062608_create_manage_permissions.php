@@ -38,12 +38,6 @@ class CreateManagePermissions extends Migration
             'description'  => '進入 Log Viewer 面板，對網站記錄進行查詢與管理',
         ]);
 
-        $permPermissionIndexAccess = Permission::create([
-            'name'         => 'permission.index.access',
-            'display_name' => '進入權限面板',
-            'description'  => '進入權限面板，查看各角色權限清單',
-        ]);
-
         $permRoleManage = Permission::create([
             'name'         => 'role.manage',
             'display_name' => '管理角色',
@@ -57,7 +51,6 @@ class CreateManagePermissions extends Migration
         $admin->attachPermission($permUserManage);
         $admin->attachPermission($permUserView);
         $admin->attachPermission($permLogViewerAccess);
-        $admin->attachPermission($permPermissionIndexAccess);
         $admin->attachPermission($permRoleManage);
     }
 
@@ -68,10 +61,10 @@ class CreateManagePermissions extends Migration
      */
     public function down()
     {
+        Permission::where('name', 'menu.view')->delete();
         Permission::where('name', 'user.manage')->delete();
         Permission::where('name', 'user.view')->delete();
         Permission::where('name', 'log-viewer.access')->delete();
-        Permission::where('name', 'permission.index.access')->delete();
         Permission::where('name', 'role.manage')->delete();
     }
 }
