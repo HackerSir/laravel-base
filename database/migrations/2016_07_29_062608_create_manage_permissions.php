@@ -50,20 +50,6 @@ class CreateManagePermissions extends Migration
             'description'  => '新增、修改、刪除角色',
         ]);
 
-        $permShopManage = Permission::create([
-            'name'         => 'shop.manage',
-            'display_name' => '管理商店',
-            'description'  => '新增、修改、刪除商店',
-        ]);
-
-        $permPositionManage = Permission::create([
-            'name'         => 'position.manage',
-            'display_name' => '管理商店位置',
-            'description'  => '新增、修改、刪除商店位置',
-        ]);
-
-
-
         // Find Admin and give permission to him
         /* @var Role $admin */
         $admin = Role::where('name', 'Admin')->first();
@@ -73,8 +59,6 @@ class CreateManagePermissions extends Migration
         $admin->attachPermission($permLogViewerAccess);
         $admin->attachPermission($permPermissionIndexAccess);
         $admin->attachPermission($permRoleManage);
-        $admin->attachPermission($permShopManage);
-        $admin->attachPermission($permPositionManage);
     }
 
     /**
@@ -89,7 +73,5 @@ class CreateManagePermissions extends Migration
         Permission::where('name', 'log-viewer.access')->delete();
         Permission::where('name', 'permission.index.access')->delete();
         Permission::where('name', 'role.manage')->delete();
-        Permission::where('name', 'shop.manage')->delete();
-        Permission::where('name', 'position.manage')->delete();
     }
 }
