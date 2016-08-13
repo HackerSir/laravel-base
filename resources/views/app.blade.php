@@ -10,6 +10,7 @@
 
         {{-- CSS --}}
         {!! Html::style('semantic/semantic.min.css') !!}
+        {!! Html::style('//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css') !!}
         {!! Html::style('//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/semantic.min.css') !!}
         <style>
             body {
