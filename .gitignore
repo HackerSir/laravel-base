@@ -173,14 +173,14 @@ $RECYCLE.BIN/
 vendor/
 node_modules/
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
-
 # Laravel 5 & Lumen specific
 .env.*.php
 .env.php
 .env
+
+### IDE Helper ###
+_ide_helper.php
+.phpstorm.meta.php
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
