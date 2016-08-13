@@ -22,8 +22,10 @@
                 <div class="ui checkbox">
                     @if($user->id == Auth::user()->id && $role->name == 'Admin')
                         {!! Form::checkbox('role[]', $role->id, $user->hasRole($role->name), ['disabled']) !!}
-                        <label>{{ $role->display_name }} <i class="warning sign icon red popup"
-                                                            data-content="禁止解除自己的管理員職務"></i></label>
+                        <label>
+                            {{ $role->display_name }}
+                            <i class="warning sign icon red" title="禁止解除自己的管理員職務"></i>
+                        </label>
                     @else
                         {!! Form::checkbox('role[]', $role->id, $user->hasRole($role->name)) !!}
                         <label>{{ $role->display_name }} </label>
@@ -50,12 +52,4 @@
     @endif
     {!! SemanticForm::close() !!}
 
-@endsection
-
-@section('js')
-    <script>
-        $('i.popup').popup({
-            variation: 'inverted'
-        });
-    </script>
 @endsection

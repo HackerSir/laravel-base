@@ -33,7 +33,7 @@
                 <td>
                     {{ $user->email }}
                     @if (!$user->isConfirmed)
-                        <i class="warning sign icon red popup" data-content="尚未完成信箱驗證"></i>
+                        <i class="warning sign icon red" title="尚未完成信箱驗證"></i>
                     @endif
                 </td>
                 <td>
@@ -56,12 +56,4 @@
     <div class="ui center aligned attached segment" style="border: none">
         {!! (new Landish\Pagination\SemanticUI($users))->render() !!}
     </div>
-@endsection
-
-@section('js')
-    <script>
-        $('i.popup').popup({
-            variation: 'inverted'
-        });
-    </script>
 @endsection
