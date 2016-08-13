@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    /* @var \App\User $user */
     protected $user;
 
     /**
@@ -49,8 +50,9 @@ class ProfileController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255',
         ]);
-        $this->user->name = $request->get('name');
-        $this->user->save();
+        $this->user->update([
+            'name' => $request->get('name'),
+        ]);
 
         return redirect()->route('profile')->with('global', '資料修改完成。');
     }

@@ -23,6 +23,7 @@ class PasswordController extends Controller
     use ResetsPasswords;
 
     protected $redirectPath = '/';
+    /* @var \App\User $user */
     protected $user;
 
     /**
@@ -75,8 +76,9 @@ class PasswordController extends Controller
             'new_password' => 'required|confirmed|min:6',
         ]);
         //更新密碼
-        $this->user->password = bcrypt($request->get('new_password'));
-        $this->user->save();
+        $this->user->update([
+            'password' => bcrypt($request->get('new_password')),
+        ]);
 
         return redirect()->route('profile')->with('global', '密碼修改完成。');
     }

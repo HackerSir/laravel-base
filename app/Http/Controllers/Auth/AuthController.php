@@ -109,9 +109,10 @@ class AuthController extends Controller
         $user = auth()->user();
         $this->generateConfirmCodeAndSendConfirmMail($user);
         // 紀錄註冊時間與IP
-        $user->register_at = Carbon::now();
-        $user->register_ip = $request->ip();
-        $user->save();
+        $user->update([
+            'register_at' => Carbon::now(),
+            'register_ip' => $request->ip(),
+        ]);
         // 賦予第一位註冊的人管理員權限
         if (User::count() == 1) {
             $admin = Role::where('name', '=', 'Admin')->first();
@@ -137,9 +138,10 @@ class AuthController extends Controller
             return redirect()->route('index')->with('warning', '驗證連結無效。');
         }
         //更新資料
-        $user->confirm_code = null;
-        $user->confirm_at = Carbon::now()->toDateTimeString();
-        $user->save();
+        $user->update([
+            'confirm_code' => null,
+            'confirm_at'   => Carbon::now(),
+        ]);
 
         return redirect()->route('index')->with('global', '信箱驗證完成。');
     }
@@ -192,7 +194,8 @@ class AuthController extends Controller
         //發送驗證郵件
         $this->mailService->sendEmailConfirmation($user, $link);
         //記錄驗證碼
-        $user->confirm_code = $confirmCode;
-        $user->save();
+        $user->update([
+            'confirm_code' => $confirmCode,
+        ]);
     }
 }

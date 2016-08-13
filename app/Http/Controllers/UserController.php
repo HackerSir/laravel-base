@@ -77,7 +77,9 @@ class UserController extends Controller
             'name' => 'required|max:255',
         ]);
 
-        $user->name = $request->get('name');
+        $user->update([
+            'name' => $request->get('name'),
+        ]);
         //管理員禁止去除自己的管理員職務
         $keepAdmin = false;
         if ($user->id == auth()->user()->id) {
@@ -94,8 +96,6 @@ class UserController extends Controller
             $admin = Role::where('name', '=', 'Admin')->first();
             $user->attachRole($admin);
         }
-        //儲存資料
-        $user->save();
 
         return redirect()->route('user.show', $user)
             ->with('global', '資料修改完成。');
