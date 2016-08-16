@@ -53,7 +53,7 @@
         @endforeach
         </tbody>
     </table>
-    <div class="ui center aligned attached segment" style="border: none">
+    <div class="ui center aligned attached segment" style="border: none; background: none">
         {!! (new Landish\Pagination\SemanticUI($users))->render() !!}
     </div>
 @endsection
