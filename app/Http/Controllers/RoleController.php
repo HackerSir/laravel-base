@@ -45,7 +45,7 @@ class RoleController extends Controller
             'name'         => 'required|unique:roles,name',
             'display_name' => 'required',
             'permissions'  => 'array',
-            'color'        => 'required|in:' . implode(',', Role::$validColors),
+            'color'        => 'required|exists:colors,name',
         ]);
 
         $role = Role::create([
@@ -86,7 +86,7 @@ class RoleController extends Controller
             'name'         => 'required|unique:roles,name,' . $role->id . ',id',
             'display_name' => 'required',
             'permissions'  => 'array',
-            'color'        => 'required|in:' . implode(',', Role::$validColors),
+            'color'        => 'required|exists:colors,name',
         ]);
 
         if ($role->protection) {
