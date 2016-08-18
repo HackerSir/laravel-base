@@ -18,9 +18,12 @@ class InitEntrustTables extends Migration
             $table->string('name')->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
-            $table->string('color');
+            $table->string('color')->default('grey');
             $table->boolean('protection')->default(true);
             $table->timestamps();
+
+            $table->foreign('color')->references('name')->on('colors')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
 
         // Create table for associating roles to users (Many-to-Many)
