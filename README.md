@@ -27,5 +27,20 @@ A website base on laravel and semantic ui for HackerSir.
   - Role
   - Permission
 
+## Installation Guide
+1. Run the following commands.
+  ```bash
+composer install  
+npm install  
+gulp
+```
+
+2. Configure environment variables in `.env`.
+
+3. Run migrations to setup tables.
+  ```bash
+php artisan migrate
+```
+
 ## License
 This project is open-source under the [MIT license](http://opensource.org/licenses/MIT).
