@@ -52,7 +52,7 @@
 
 {{-- Javascript --}}
 {!! Html::script('//code.jquery.com/jquery-3.1.0.min.js') !!}
-{!! Html::script('semantic/semantic.js') !!}
+{!! Html::script('semantic/semantic.min.js') !!}
 {!! Html::script('//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js') !!}
 <script>
     $(document).ready(function () {
