@@ -1,0 +1,28 @@
+language: php
+
+addons:
+  mariadb: '10.1'
+
+php:
+  - 5.6
+  - 7
+
+before_script:
+  - composer self-update
+  - composer install --prefer-dist --optimize-autoloader --quiet
+  - cp .env.travis .env
+  - mysql -e 'CREATE DATABASE homestead_test;'
+  - php artisan migrate
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+
+script:
+  - vendor/bin/phpunit
+
+notifications:
+  email:
+    recipients:
+      - hackersir-developer@googlegroups.com
+    on_success: change
+    on_failure: always
