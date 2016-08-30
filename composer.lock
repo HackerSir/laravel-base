@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "159897f60e8c1530a53b528a0614cd83",
+    "hash": "86e3621d837901b96bd3cb7936e2f902",
     "content-hash": "d21b312ae189a04f96cd5c19234ab9e6",
     "packages": [
         {
@@ -72,16 +72,16 @@
         },
         {
             "name": "arcanedev/support",
-            "version": "3.12.0",
+            "version": "3.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ARCANEDEV/Support.git",
-                "reference": "e02933dd6af4d61ee77e3e13ae8d04ff0fb0fdfd"
+                "reference": "197ad603385865a3cce9a7e09a7999856b6044b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ARCANEDEV/Support/zipball/e02933dd6af4d61ee77e3e13ae8d04ff0fb0fdfd",
-                "reference": "e02933dd6af4d61ee77e3e13ae8d04ff0fb0fdfd",
+                "url": "https://api.github.com/repos/ARCANEDEV/Support/zipball/197ad603385865a3cce9a7e09a7999856b6044b4",
+                "reference": "197ad603385865a3cce9a7e09a7999856b6044b4",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,7 @@
                 "laravel",
                 "support"
             ],
-            "time": "2016-08-09 19:11:22"
+            "time": "2016-08-23 17:49:42"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1049,16 +1049,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.2.43",
+            "version": "v5.2.45",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5490b8f00564bb60839002f86828e27edd1e5610"
+                "reference": "2a79f920d5584ec6df7cf996d922a742d11095d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5490b8f00564bb60839002f86828e27edd1e5610",
-                "reference": "5490b8f00564bb60839002f86828e27edd1e5610",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2a79f920d5584ec6df7cf996d922a742d11095d1",
+                "reference": "2a79f920d5584ec6df7cf996d922a742d11095d1",
                 "shasum": ""
             },
             "require": {
@@ -1139,7 +1139,7 @@
                 "pusher/pusher-php-server": "Required to use the Pusher broadcast driver (~2.0).",
                 "symfony/css-selector": "Required to use some of the crawler integration testing tools (2.8.*|3.0.*).",
                 "symfony/dom-crawler": "Required to use most of the crawler integration testing tools (2.8.*|3.0.*).",
-                "symfony/psr-http-message-bridge": "Required to psr7 bridging features (0.2.*)."
+                "symfony/psr-http-message-bridge": "Required to use psr7 bridging features (0.2.*)."
             },
             "type": "library",
             "extra": {
@@ -1175,7 +1175,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-08-10 12:23:59"
+            "time": "2016-08-26 11:44:52"
         },
         {
             "name": "laravelcollective/html",
@@ -1837,16 +1837,16 @@
         },
         {
             "name": "recca0120/laravel-tracy",
-            "version": "v1.6.8",
+            "version": "v1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-tracy.git",
-                "reference": "807d6606545fc858b0d59d8abf989ff1dbc5e7e1"
+                "reference": "83771fcae5701d00909f3f5fe4321970caf377cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/807d6606545fc858b0d59d8abf989ff1dbc5e7e1",
-                "reference": "807d6606545fc858b0d59d8abf989ff1dbc5e7e1",
+                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/83771fcae5701d00909f3f5fe4321970caf377cf",
+                "reference": "83771fcae5701d00909f3f5fe4321970caf377cf",
                 "shasum": ""
             },
             "require": {
@@ -1900,20 +1900,20 @@
                 "tracy",
                 "webprofiler"
             ],
-            "time": "2016-08-18 19:08:37"
+            "time": "2016-08-30 16:46:10"
         },
         {
             "name": "recca0120/terminal",
-            "version": "v1.5.10",
+            "version": "v1.5.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-terminal.git",
-                "reference": "8284664a9dbdd1c6f8d7cda7780cb0df58237e44"
+                "reference": "0c99312a739f30813d641b2157eef5e689b7917d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/8284664a9dbdd1c6f8d7cda7780cb0df58237e44",
-                "reference": "8284664a9dbdd1c6f8d7cda7780cb0df58237e44",
+                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/0c99312a739f30813d641b2157eef5e689b7917d",
+                "reference": "0c99312a739f30813d641b2157eef5e689b7917d",
                 "shasum": ""
             },
             "require": {
@@ -1922,7 +1922,6 @@
                 "illuminate/encryption": "~5.1",
                 "illuminate/filesystem": "~5.1",
                 "illuminate/routing": "~5.1",
-                "paragonie/random_compat": "~1.1",
                 "php": ">=5.5.9",
                 "symfony/finder": "2.7.*|2.8.*|3.0.*|3.1.*"
             },
@@ -1964,7 +1963,7 @@
                 "web",
                 "web artisan"
             ],
-            "time": "2016-08-21 17:51:31"
+            "time": "2016-08-26 09:16:02"
         },
         {
             "name": "swiftmailer/swiftmailer",
