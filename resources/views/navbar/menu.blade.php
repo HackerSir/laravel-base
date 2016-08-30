@@ -11,26 +11,6 @@
         </div>
     </div>
 </div>
-<div class="ui sidebar inverted vertical labeled icon menu" style="z-index: 2;">
-    {{-- FIXME: 改由LaravelMenu生成 --}}
-    <a class="item" href="{!! route('index') !!}">
-        <i class="home icon"></i>
-        首頁
-    </a>
-    @if(Auth::check())
-        @if(!Auth::user()->isConfirmed)
-            <a class="item" href="{!! route('auth.resend-confirm-mail') !!}">
-                <i class="mail icon red"></i> 信箱未驗證
-            </a>
-        @endif
-        <a class="item" href="{!! action('Auth\AuthController@logout') !!}">
-            <i class="spy icon"></i>
-            登出
-        </a>
-    @else
-        <a class="item" href="{!! action('Auth\AuthController@showLoginForm') !!}">
-            <i class="spy icon"></i>
-            登入/註冊
-        </a>
-    @endif
+<div class="ui sidebar inverted vertical labeled icon menu" style="z-index: 999;">
+    @include('navbar.sidebar-item', ['items' => Menu::get('sidebar')->roots()])
 </div>

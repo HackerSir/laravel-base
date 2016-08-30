@@ -14,7 +14,6 @@
     {!! Html::style('//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/semantic.min.css') !!}
     <style>
         body {
-            padding-top: 70px;
             height: auto;
         }
 
@@ -43,12 +42,15 @@
 {{-- Navbar --}}
 @include('navbar.menu')
 
-{{-- Content --}}
-<div class="ui container">
-    @yield('content')
+<div class="pusher">
+    {{-- Content --}}
+    <div class="ui container" style="margin-top: 70px;">
+        @yield('content')
+    </div>
+
+    {{-- Footer --}}
+    @yield('footer')
 </div>
-{{-- Footer --}}
-@yield('footer')
 
 {{-- Javascript --}}
 {!! Html::script('//code.jquery.com/jquery-3.1.0.min.js') !!}
@@ -56,10 +58,18 @@
 {!! Html::script('//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js') !!}
 <script>
     $(document).ready(function () {
-//            $('.toc.item').click(function () {
-//                $('i.sidebar.icon').transition('fade out');
-//            });
-//            $('.ui.sidebar').sidebar('attach events', '.toc.item').sidebar('setting', 'transition', 'overlay');
+        $('.toc.item').click(function () {
+            $('i.sidebar.icon').transition('fade out');
+            $('.button').addClass('disabled');
+        });
+        $('.ui.sidebar').sidebar('attach events', '.toc.item')
+            .sidebar('setting', 'transition', 'overlay')
+            .sidebar('setting', 'onHide', function () {
+                $('i.sidebar.icon').transition('fade in');
+                setTimeout(function () {
+                    $('.button').removeClass('disabled');
+                }, 750);
+            });
         $('.ui.dropdown').each(function () {
             $(this).dropdown({
                 fullTextSearch: true
