@@ -51,7 +51,8 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::get('register', 'AuthController@showRegistrationForm')->name('auth.register');
     Route::post('register', 'AuthController@register')->name('auth.register');
     // Password Reset Routes...
-    Route::get('password/reset/{token?}', 'PasswordController@showResetForm')->name('auth.password.reset');
+    Route::get('password/reset/{token?}', 'PasswordController@showResetForm')->name('auth.password.reset')
+        ->where('token', '[\\w\\d]+');
     Route::post('password/email', 'PasswordController@sendResetLinkEmail')->name('auth.password.email');
     Route::post('password/reset', 'PasswordController@reset')->name('auth.password.reset');
     //修改密碼
