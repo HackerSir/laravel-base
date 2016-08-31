@@ -23,7 +23,7 @@ return [
      |  Supported locales :
      |    'auto', 'ar', 'de', 'en', 'es', 'fa', 'fr', 'hy', 'it', 'nl', 'pl', 'pt-BR', 'ro', 'ru', 'sv', 'th', 'tr', 'zh-TW', 'zh'
      */
-    'locale'       => 'auto',
+    'locale'       => env('APP_LOCALE', 'en'),
 
     /* ------------------------------------------------------------------------------------------------
      |  Route settings
