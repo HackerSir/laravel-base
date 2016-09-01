@@ -949,6 +949,63 @@
             "time": "2015-04-20 18:58:01"
         },
         {
+            "name": "jenssegers/date",
+            "version": "v3.2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/date.git",
+                "reference": "53cefb19ca0b8c314adce4c7ec79333333c9edc4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/date/zipball/53cefb19ca0b8c314adce4c7ec79333333c9edc4",
+                "reference": "53cefb19ca0b8c314adce4c7ec79333333c9edc4",
+                "shasum": ""
+            },
+            "require": {
+                "nesbot/carbon": "^1.0",
+                "php": ">=5.4",
+                "symfony/translation": "^2.7|^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.0|^5.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Date\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "A date library to help you work with dates in different languages",
+            "homepage": "https://github.com/jenssegers/date",
+            "keywords": [
+                "carbon",
+                "date",
+                "datetime",
+                "i18n",
+                "laravel",
+                "time",
+                "translation"
+            ],
+            "time": "2016-08-31 07:50:37"
+        },
+        {
             "name": "jeremeamia/SuperClosure",
             "version": "2.2.0",
             "source": {
@@ -1233,20 +1290,21 @@
         },
         {
             "name": "laravolt/semantic-form",
-            "version": "1.5.1",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravolt/semantic-form.git",
-                "reference": "f58cf65dc624984a400b9d0719ce9e34e4dc4843"
+                "reference": "e9829e1b528fa2933f6213c5ec323bc7402ffebf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravolt/semantic-form/zipball/f58cf65dc624984a400b9d0719ce9e34e4dc4843",
-                "reference": "f58cf65dc624984a400b9d0719ce9e34e4dc4843",
+                "url": "https://api.github.com/repos/laravolt/semantic-form/zipball/e9829e1b528fa2933f6213c5ec323bc7402ffebf",
+                "reference": "e9829e1b528fa2933f6213c5ec323bc7402ffebf",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "~5.2",
+                "jenssegers/date": "^3.2",
                 "nesbot/carbon": "~1.20",
                 "php": ">=5.5.0"
             },
@@ -1280,7 +1338,7 @@
                 "laravolt",
                 "semantic-ui"
             ],
-            "time": "2016-08-15 10:01:06"
+            "time": "2016-08-31 23:33:54"
         },
         {
             "name": "lavary/laravel-menu",
@@ -3027,16 +3085,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a"
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/9ca5644c536654e9509b9d257f53c58630eb2a6a",
-                "reference": "9ca5644c536654e9509b9d257f53c58630eb2a6a",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
+                "reference": "3cc116adbe4b11be5ec557bf1d24dc5e3a21d18c",
                 "shasum": ""
             },
             "require": {
@@ -3048,7 +3106,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -3073,7 +3131,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2016-06-14 14:14:52"
+            "time": "2016-09-01 10:05:43"
         },
         {
             "name": "zizaco/entrust",
