@@ -52,7 +52,6 @@
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php -r \"copy('.env.example', '.env');\"",
             "php artisan clear-compiled",
             "php artisan ide-helper:generate",
             "php artisan ide-helper:meta",
