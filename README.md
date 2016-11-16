@@ -12,6 +12,8 @@ A website base on Laravel and Bootstrap for HackerSir.
 - Packages
   - laravelcollective/html: "^5.3"
   - predis/predis: "^1.1"
+  - barryvdh/laravel-ide-helper: "^2.2"
+  - doctrine/dbal: "^2.5"
 - System
   - User
 
@@ -34,10 +36,8 @@ php artisan migrate
 - Packages
   - zizaco/entrust: "5.2.x-dev"
   - arcanedev/log-viewer: "~3.0"
-  - barryvdh/laravel-ide-helper: "^2.2"
   - graham-campbell/throttle: "^5.2"
   - laravolt/semantic-form: "^1.3"
-  - doctrine/dbal: "v2.5.4"
   - recca0120/laravel-tracy: "^1.5.6"
   - lavary/laravel-menu: "dev-master"
   - thomaswelton/laravel-gravatar: "^1.1"
