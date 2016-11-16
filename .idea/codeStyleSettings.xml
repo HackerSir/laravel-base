@@ -6,9 +6,14 @@
         <MarkdownNavigatorCodeStyleSettings>
           <option name="RIGHT_MARGIN" value="72" />
         </MarkdownNavigatorCodeStyleSettings>
+        <PHPCodeStyleSettings>
+          <option name="ALIGN_KEY_VALUE_PAIRS" value="true" />
+          <option name="COMMA_AFTER_LAST_ARRAY_ELEMENT" value="true" />
+          <option name="BLANK_LINE_BEFORE_RETURN_STATEMENT" value="true" />
+          <option name="FORCE_SHORT_DECLARATION_ARRAY_STYLE" value="true" />
+        </PHPCodeStyleSettings>
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />
-    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default (1)" />
   </component>
 </project>
