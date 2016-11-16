@@ -15,21 +15,24 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/bootstrap.min.css"/>
     <style>
-
+        body > .container {
+            padding-top: 60px;
+            min-height: calc(100vh - 55px);
+        }
     </style>
     @yield('css')
 </head>
 <body>
-{{-- TODO: Navbar --}}
-{{--@include('navbar.menu')--}}
-
+{{-- Navbar --}}
+@include('components.navbar')
 
 {{-- Content --}}
 <div class="container">
     @yield('content')
 </div>
 
-{{-- TODO: Footer --}}
+{{-- Footer --}}
+@include('components.footer')
 
 {{-- Javascript --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
