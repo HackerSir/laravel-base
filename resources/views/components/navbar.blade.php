@@ -1,7 +1,7 @@
 {{-- TODO: 由LaravelMenu或自動生成 --}}
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">{{ config('site.name') }}</a>
+        <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name') }}</a>
         {{-- 左側選單 --}}
         <ul class="nav navbar-nav">
             <li class="nav-item active"><a class="nav-link" href="javascript:void(0)">Home</a></li>

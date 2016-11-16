@@ -15,7 +15,7 @@
 @endsection
 @section('content')
     <div class="jumbotron">
-        <h1>{{ config('site.name') }}</h1>
+        <h1>{{ config('app.name') }}</h1>
         <h2>逢甲大學黑客社</h2>
         <a href="javascript:void(0)" class="btn btn-primary btn-lg" style="margin-top: 5vh;" title="Let's GO!!">GO!</a>
     </div>
