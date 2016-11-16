@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "99983cf6ffc421ca965a883bafae1fbe",
-    "content-hash": "edee8e01f6d0c75a0f186304e5647dfb",
+    "hash": "7c1489634f7390dfb129746ee104e33a",
+    "content-hash": "bd5680b4204d934ad46698a656f5e850",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1606,6 +1606,125 @@
             "time": "2016-10-02 15:51:17"
         },
         {
+            "name": "recca0120/laravel-tracy",
+            "version": "v1.7.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/recca0120/laravel-tracy.git",
+                "reference": "78317b2498db9ced70c56c12aaa9fa2f3dee09bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/78317b2498db9ced70c56c12aaa9fa2f3dee09bf",
+                "reference": "78317b2498db9ced70c56c12aaa9fa2f3dee09bf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "~5.1",
+                "illuminate/database": "~5.1",
+                "illuminate/routing": "~5.1",
+                "illuminate/session": "~5.1",
+                "illuminate/support": "~5.1",
+                "php": ">=5.5.9",
+                "recca0120/terminal": "~1.6.1",
+                "tracy/tracy": "^2.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4",
+                "nesbot/carbon": "~1.20",
+                "phpunit/phpunit": "~4.8|~5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Recca0120\\LaravelTracy\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "recca0120",
+                    "email": "recca0120@gmail.com"
+                }
+            ],
+            "description": "A Laravel Package to integrate Nette Tracy Debugger",
+            "keywords": [
+                "debug",
+                "debugbar",
+                "error",
+                "error handler",
+                "laravel",
+                "nette",
+                "profiler",
+                "tracy",
+                "webprofiler"
+            ],
+            "time": "2016-10-23 09:22:54"
+        },
+        {
+            "name": "recca0120/terminal",
+            "version": "v1.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/recca0120/laravel-terminal.git",
+                "reference": "5d4052cab9309a242675ca2276a49390a5794b44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/5d4052cab9309a242675ca2276a49390a5794b44",
+                "reference": "5d4052cab9309a242675ca2276a49390a5794b44",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.1",
+                "illuminate/database": "~5.1",
+                "illuminate/filesystem": "~5.1",
+                "illuminate/routing": "~5.1",
+                "php": ">=5.5.9",
+                "symfony/finder": "2.7.*|2.8.*|3.0.*|3.1.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.4",
+                "nesbot/carbon": "~1.20",
+                "phpunit/phpunit": "~4.8|~5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Recca0120\\Terminal\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "recca0120",
+                    "email": "recca0120@gmail.com"
+                }
+            ],
+            "description": "run laravel artisan command in web application",
+            "keywords": [
+                "artisan",
+                "console",
+                "laravel",
+                "terminal",
+                "web",
+                "web artisan"
+            ],
+            "time": "2016-09-24 13:28:08"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.3",
             "source": {
@@ -2493,6 +2612,68 @@
                 "dump"
             ],
             "time": "2016-10-18 15:46:07"
+        },
+        {
+            "name": "tracy/tracy",
+            "version": "v2.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nette/tracy.git",
+                "reference": "9c352f10f41c374c5bb19191e385076430e39a20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/9c352f10f41c374c5bb19191e385076430e39a20",
+                "reference": "9c352f10f41c374c5bb19191e385076430e39a20",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-session": "*",
+                "php": ">=5.4.4"
+            },
+            "require-dev": {
+                "nette/di": "~2.3",
+                "nette/tester": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src"
+                ],
+                "files": [
+                    "src/shortcuts.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause",
+                "GPL-2.0",
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "David Grudl",
+                    "homepage": "https://davidgrudl.com"
+                },
+                {
+                    "name": "Nette Community",
+                    "homepage": "https://nette.org/contributors"
+                }
+            ],
+            "description": "Tracy: useful PHP debugger",
+            "homepage": "https://tracy.nette.org",
+            "keywords": [
+                "debug",
+                "debugger",
+                "nette"
+            ],
+            "time": "2016-09-30 14:17:54"
         },
         {
             "name": "vlucas/phpdotenv",

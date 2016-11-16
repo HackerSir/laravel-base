@@ -169,6 +169,7 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Recca0120\LaravelTracy\ServiceProvider::class,
 
         /*
          * Application Service Providers...
