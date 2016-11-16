@@ -2,16 +2,18 @@
 [![StyleCI(5.3)](https://styleci.io/repos/65561499/shield?branch=5.3)](https://styleci.io/repos/65561499)
 [![License](https://img.shields.io/github/license/HackerSir/laravel-base.svg)](https://raw.githubusercontent.com/HackerSir/laravel-base/master/LICENSE)
 
-A website base on laravel and Bootstrap for HackerSir.
+A website base on Laravel and Bootstrap for HackerSir.
 
 ## Framework
 - Laravel 5.3
-- Bootstrap
+- Bootstrap 4
 
 ## Including
 - Packages
   - laravelcollective/html: "^5.3"
   - predis/predis: "^1.1"
+- System
+  - User
 
 ## Installation Guide
 1. Run the following commands.
@@ -41,7 +43,6 @@ php artisan migrate
   - thomaswelton/laravel-gravatar: "^1.1"
   - landish/pagination: "^1.3"
 - System
-  - User
   - Role
   - Permission
 
