@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title', '個人資料')
 
@@ -71,7 +71,7 @@
     <div style="text-align: center">
         <a href="{{ route('profile.edit') }}" class="ui icon brown inverted button">
             <i class="icon edit"></i> 編輯資料</a>
-        <a href="{{ route('auth.change-password') }}" class="ui icon brown inverted button">
+        <a href="{{ route('password.change') }}" class="ui icon brown inverted button">
             <i class="icon lock"></i> 修改密碼
         </a>
     </div>
