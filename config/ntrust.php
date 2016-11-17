@@ -23,7 +23,7 @@ return [
     | Set multiple profiles for your multiple type user profile and diffrent
     | role and permission for each users
     |
-   	| Profile name should be singular name of user/admin table name
+    | Profile name should be singular name of user/admin table name
     |
     | Example: "user", "admin"
     |
