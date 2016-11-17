@@ -19,6 +19,8 @@ A website base on Laravel and Bootstrap for HackerSir.
   - klaravel/ntrust: "^1.1"
 - System
   - User
+  - Role
+  - Permission
 
 ## Installation Guide
 1. Run the following commands.
@@ -36,15 +38,21 @@ php artisan migrate
 ```
 
 ## TODO
+- Tasks
+  - [ ] AuthListener：Log time and ip when login
+  - RegisterController
+    - [ ] Email conformation
+    - [ ] Log register time and ip
+  - Unify page style
+    - [ ] Normal pages
+    - [ ] Form pages
+  - [ ] Replace `url()` with `route()`
 - Packages
   - arcanedev/log-viewer: "~3.0"
   - graham-campbell/throttle: "^5.2"
   - laravolt/semantic-form: "^1.3"
   - lavary/laravel-menu: "dev-master"
   - landish/pagination: "^1.3"
-- System
-  - Role
-  - Permission
 
 ## License
 This project is open-source under the [MIT license](http://opensource.org/licenses/MIT).
