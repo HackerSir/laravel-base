@@ -171,6 +171,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Recca0120\LaravelTracy\ServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
+        Klaravel\Ntrust\NtrustServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -230,6 +231,7 @@ return [
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
         'Gravatar'     => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
+        'Entrust'      => Klaravel\Ntrust\NtrustFacade::class,
     ],
 
 ];

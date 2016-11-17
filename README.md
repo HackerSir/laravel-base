@@ -16,6 +16,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - doctrine/dbal: "^2.5"
   - recca0120/laravel-tracy: "^1.5.6"
   - thomaswelton/laravel-gravatar: "^1.1"
+  - klaravel/ntrust: "^1.1"
 - System
   - User
 
@@ -36,7 +37,6 @@ php artisan migrate
 
 ## TODO
 - Packages
-  - zizaco/entrust: "5.2.x-dev"
   - arcanedev/log-viewer: "~3.0"
   - graham-campbell/throttle: "^5.2"
   - laravolt/semantic-form: "^1.3"
