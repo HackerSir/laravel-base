@@ -3,33 +3,48 @@
 @section('title', '編輯個人資料')
 
 @section('content')
-    <h2 class="ui teal header center aligned">編輯個人資料</h2>
-    {!! SemanticForm::open()->put()->action(route('profile.update'))->addClass('large') !!}
-    {!! SemanticForm::bind($user) !!}
-    <div class="ui stacked segment">
-        {!! SemanticForm::text('email')->label('Email')->placeholder('Email')->disable() !!}
-        <div class="ui tiny negative message">
-            <ul class="list">
-                <li>信箱作為帳號使用，故無法修改</li>
-            </ul>
+    <div class="card">
+        <div class="card-header">
+            編輯個人資料
         </div>
-        {!! SemanticForm::text('name')->label('Name')->placeholder('Name / Nickname')->required() !!}
+        <div class="card-block">
+            <form role="form" method="POST" action="{{ route('profile.update') }}">
+                {{ csrf_field() }}
+                {{ method_field('put') }}
 
-        {{-- TODO: text-align: center要獨立成一個text-center --}}
-        <div style="text-align: center">
-            <a href="{{ route('profile') }}" class="ui icon blue inverted button"><i class="icon arrow left"></i> 返回個人資料</a>
-            {!! SemanticForm::submit('<i class="checkmark icon"></i> 更新個人資料')->addClass('ui icon submit red inverted button') !!}
+                <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">
+                    <label for="email" class="col-md-4 form-control-label">E-Mail Address</label>
+
+                    <div class="col-md-6">
+                        <input id="email" type="email" class="form-control" value="{{ $user->email }}" readonly>
+                        <span class="form-text">信箱作為帳號使用，故無法修改</span>
+                    </div>
+                </div>
+
+                <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                    <label for="name" class="col-md-4 form-control-label">Name</label>
+
+                    <div class="col-md-6">
+                        <input id="name" type="text"
+                               class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                               name="name"
+                               value="{{ $user->name }}" required autofocus>
+
+                        @if ($errors->has('name'))
+                            <span class="form-control-feedback">
+                                <strong>{{ $errors->first('name') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col-md-8 offset-md-4">
+                        <a href="{{ route('profile') }}" class="btn btn-secondary">返回個人資料</a>
+                        <button type="submit" class="btn btn-primary"> 更新個人資料</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
-
-    @if($errors->count())
-        <div class="ui error message" style="display: block">
-            <ul class="list">
-                @foreach($errors->all('<li>:message</li>') as $error)
-                    {!! $error !!}
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    {!! SemanticForm::close() !!}
 @endsection

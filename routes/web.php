@@ -41,9 +41,9 @@ Route::group(['namespace' => 'Auth'], function () {
     Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('password/reset', 'ResetPasswordController@reset')->name('password.reset');
-    //TODO: 修改密碼
+    //修改密碼
     Route::get('password/change', 'PasswordController@getChangePassword')->name('password.change');
-    Route::put('password/change', 'PasswordController@changePassword')->name('password.change');
+    Route::put('password/change', 'PasswordController@putChangePassword')->name('password.change');
     //TODO: 驗證信箱
     Route::get('resend', 'AuthController@resendConfirmMailPage')->name('confirm-mail.resend');
     Route::post('resend', 'AuthController@resendConfirmMail')->name('confirm-mail.resend');

@@ -11,8 +11,8 @@
         {{-- 右側選單 --}}
         <ul class="nav navbar-nav float-xs-right">
             @if (auth()->guest())
-                <li class="nav-item"><a class="nav-link" href="{{ url('/login') }}">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('/register') }}">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
             @else
                 {{-- TODO: 會員選單 --}}
                 <li class="nav-item dropdown">
@@ -21,14 +21,14 @@
                         {{ auth()->user()->name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="UserDropdown">
-                        <a class="dropdown-item" href="javascript:void(0)">Profile</a>
+                        <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
 
                         <a class="dropdown-item" href="javascript:void(0)"
                            onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
                             Logout
                         </a>
-                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             {{ csrf_field() }}
                         </form>
                     </div>
