@@ -27,4 +27,25 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 //會員系統
-Auth::routes();
+//將 Auth::routes() 複製出來自己命名
+Route::group(['namespace' => 'Auth'], function () {
+    // Authentication Routes...
+    Route::get('login', 'LoginController@showLoginForm')->name('login');
+    Route::post('login', 'LoginController@login')->name('login');
+    Route::post('logout', 'LoginController@logout')->name('logout');
+    // Registration Routes...
+    Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
+    Route::post('register', 'RegisterController@register')->name('register');
+    // Password Reset Routes...
+    Route::get('password/reset', 'ForgotPasswordController@showLinkRequestForm')->name('password.reset');
+    Route::post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('password.email');
+    Route::get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('password.reset');
+    Route::post('password/reset', 'ResetPasswordController@reset')->name('password.reset');
+    //TODO: 修改密碼
+    Route::get('password/change', 'PasswordController@getChangePassword')->name('password.change');
+    Route::put('password/change', 'PasswordController@changePassword')->name('password.change');
+    //TODO: 驗證信箱
+    Route::get('resend', 'AuthController@resendConfirmMailPage')->name('confirm-mail.resend');
+    Route::post('resend', 'AuthController@resendConfirmMail')->name('confirm-mail.resend');
+    Route::get('confirm/{confirmCode}', 'AuthController@emailConfirm')->name('confirm');
+});
