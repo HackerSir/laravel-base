@@ -13,7 +13,7 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form role="form" method="POST" action="{{ url('/password/email') }}">
+            <form role="form" method="POST" action="{{ route('password.email') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">

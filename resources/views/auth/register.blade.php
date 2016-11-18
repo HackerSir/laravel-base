@@ -8,7 +8,7 @@
             Register
         </div>
         <div class="card-block">
-            <form role="form" method="POST" action="{{ url('/register') }}">
+            <form role="form" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">

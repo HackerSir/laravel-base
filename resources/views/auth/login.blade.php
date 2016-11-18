@@ -8,7 +8,7 @@
             Login
         </div>
         <div class="card-block">
-            <form role="form" method="POST" action="{{ url('/login') }}">
+            <form role="form" method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">
@@ -60,7 +60,7 @@
                             Login
                         </button>
 
-                        <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                        <a class="btn btn-link" href="{{ route('password.reset') }}">
                             Forgot Your Password?
                         </a>
                     </div>

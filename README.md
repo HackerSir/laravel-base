@@ -46,7 +46,6 @@ php artisan migrate
   - Unify page style
     - [ ] Normal pages
     - [ ] Form pages
-  - [ ] Replace `url()` with `route()`
 - Packages
   - arcanedev/log-viewer: "~3.0"
   - graham-campbell/throttle: "^5.2"
