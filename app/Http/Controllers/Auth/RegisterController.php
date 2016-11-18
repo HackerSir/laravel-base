@@ -195,6 +195,5 @@ class RegisterController extends Controller
         ]);
         //發送驗證郵件
         $user->notify(new ConfirmMail($user));
-
     }
 }

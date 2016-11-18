@@ -5,7 +5,6 @@ namespace App\Notifications;
 use App\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
 class ConfirmMail extends Notification
