@@ -14,7 +14,12 @@
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
             @else
-                {{-- TODO: 會員選單 --}}
+                @if(!auth()->user()->isConfirmed)
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="{{ route('confirm-mail.resend') }}">尚未完成信箱驗證</a>
+                    </li>
+                @endif
+                {{-- 會員選單 --}}
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="UserDropdown"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

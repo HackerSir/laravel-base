@@ -40,6 +40,7 @@ use Klaravel\Ntrust\Traits\NtrustUserTrait;
  * @method static \Illuminate\Database\Query\Builder|\App\User whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read mixed $is_confirmed
  */
 class User extends Authenticatable
 {
@@ -57,7 +58,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'confirm_code',
+        'confirm_at',
+        'register_at',
+        'register_ip',
+        'last_login_at',
+        'last_login_ip',
     ];
 
     /**
@@ -68,4 +77,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * 帳號是否完成驗證
+     *
+     * @return bool
+     */
+    public function getIsConfirmedAttribute()
+    {
+        return !empty($this->confirm_at);
+    }
 }

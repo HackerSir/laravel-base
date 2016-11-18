@@ -44,8 +44,8 @@ Route::group(['namespace' => 'Auth'], function () {
     //修改密碼
     Route::get('password/change', 'PasswordController@getChangePassword')->name('password.change');
     Route::put('password/change', 'PasswordController@putChangePassword')->name('password.change');
-    //TODO: 驗證信箱
-    Route::get('resend', 'AuthController@resendConfirmMailPage')->name('confirm-mail.resend');
-    Route::post('resend', 'AuthController@resendConfirmMail')->name('confirm-mail.resend');
-    Route::get('confirm/{confirmCode}', 'AuthController@emailConfirm')->name('confirm');
+    //驗證信箱
+    Route::get('resend', 'RegisterController@resendConfirmMailPage')->name('confirm-mail.resend');
+    Route::post('resend', 'RegisterController@resendConfirmMail')->name('confirm-mail.resend');
+    Route::get('confirm/{confirmCode}', 'RegisterController@emailConfirm')->name('confirm');
 });

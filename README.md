@@ -41,9 +41,6 @@ php artisan migrate
 ## TODO
 - Tasks
   - [ ] AuthListener：Log time and ip when login
-  - RegisterController
-    - [ ] Email conformation
-    - [ ] Log register time and ip
   - Unify page style
     - [ ] Normal pages
     - [ ] Form pages
