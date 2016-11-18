@@ -8,7 +8,7 @@ use Klaravel\Ntrust\Traits\NtrustRoleTrait;
 /**
  * App\Role
  *
- * @property integer $id
+ * @property int $id
  * @property string $name
  * @property string $display_name
  * @property string $description
