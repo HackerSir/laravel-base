@@ -12,7 +12,7 @@
                 {{ csrf_field() }}
                 {{ method_field('put') }}
 
-                <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">
+                <div class="form-group row">
                     <label for="email" class="col-md-4 form-control-label">E-Mail Address</label>
 
                     <div class="col-md-6">
