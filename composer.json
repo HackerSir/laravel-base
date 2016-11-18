@@ -13,7 +13,8 @@
         "doctrine/dbal": "^2.5",
         "recca0120/laravel-tracy": "^1.7",
         "thomaswelton/laravel-gravatar": "^1.1",
-        "klaravel/ntrust": "^1.1"
+        "klaravel/ntrust": "^1.1",
+        "graham-campbell/throttle": "^5.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

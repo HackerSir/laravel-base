@@ -172,6 +172,7 @@ return [
         Recca0120\LaravelTracy\ServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
         Klaravel\Ntrust\NtrustServiceProvider::class,
+        GrahamCampbell\Throttle\ThrottleServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -232,6 +233,7 @@ return [
         'Html'         => Collective\Html\HtmlFacade::class,
         'Gravatar'     => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
         'Entrust'      => Klaravel\Ntrust\NtrustFacade::class,
+        'Throttle'     => GrahamCampbell\Throttle\Facades\Throttle::class,
     ],
 
 ];

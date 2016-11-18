@@ -17,6 +17,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - recca0120/laravel-tracy: "^1.5.6"
   - thomaswelton/laravel-gravatar: "^1.1"
   - klaravel/ntrust: "^1.1"
+  - graham-campbell/throttle: "^5.2"
 - System
   - User
   - Role
@@ -48,7 +49,6 @@ php artisan migrate
     - [ ] Form pages
 - Packages
   - arcanedev/log-viewer: "~3.0"
-  - graham-campbell/throttle: "^5.2"
   - laravolt/semantic-form: "^1.3"
   - lavary/laravel-menu: "dev-master"
   - landish/pagination: "^1.3"
