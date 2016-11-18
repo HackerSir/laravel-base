@@ -9,7 +9,7 @@ use Klaravel\Ntrust\Traits\NtrustUserTrait;
 /**
  * App\User
  *
- * @property integer $id
+ * @property int $id
  * @property string $name
  * @property string $email
  * @property string $password

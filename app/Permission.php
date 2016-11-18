@@ -8,7 +8,7 @@ use Klaravel\Ntrust\Traits\NtrustPermissionTrait;
 /**
  * App\Permission
  *
- * @property integer $id
+ * @property int $id
  * @property string $name
  * @property string $display_name
  * @property string $description
