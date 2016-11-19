@@ -16,7 +16,7 @@ class ConfirmMail extends Notification
     /**
      * Create a new notification instance.
      *
-     * @return void
+     * @param User $user
      */
     public function __construct(User $user)
     {
