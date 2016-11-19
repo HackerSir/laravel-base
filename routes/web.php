@@ -14,8 +14,8 @@
 //首頁
 Route::get('/', 'HomeController@index')->name('index');
 
-//會員限定
-Route::group(['middleware' => 'auth'], function () {
+//會員（須完成信箱驗證）
+Route::group(['middleware' => ['auth', 'email']], function () {
     //會員資料
     Route::group(['prefix' => 'profile'], function () {
         //查看會員資料
