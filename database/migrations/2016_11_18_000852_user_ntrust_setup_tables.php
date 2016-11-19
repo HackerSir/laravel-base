@@ -18,6 +18,7 @@ class UserNtrustSetupTables extends Migration
             $table->string('name')->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
+            $table->boolean('protection')->default(true);
             $table->timestamps();
         });
 
@@ -40,6 +41,7 @@ class UserNtrustSetupTables extends Migration
             $table->string('name')->unique();
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
+            $table->boolean('protection')->default(true);
             $table->timestamps();
         });
 
