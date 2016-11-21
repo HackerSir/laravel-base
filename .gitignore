@@ -285,3 +285,4 @@ flycheck_*.el
 ### Semantic UI ###
 # build
 public/semantic
+.idea/vagrant.xml
