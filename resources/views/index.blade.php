@@ -6,6 +6,7 @@
     <style>
         .jumbotron {
             text-align: center;
+            word-break: break-all;
             background: rgba(100, 100, 100, .6);
             margin-top: 20vh;
             padding-top: 40px;
