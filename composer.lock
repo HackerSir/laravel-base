@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5df2ede16ec0e13646d08beac12dadc5",
-    "content-hash": "c6cc58e97c21a4ca694ed566a6081b37",
+    "hash": "cc297f9fd15f35256692e841f05c8846",
+    "content-hash": "512aca6f40df3fe84c154243b1b1bd1a",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1113,6 +1113,48 @@
             "description": "HTML and Form Builders for the Laravel Framework",
             "homepage": "http://laravelcollective.com",
             "time": "2016-08-27 23:52:43"
+        },
+        {
+            "name": "lavary/laravel-menu",
+            "version": "v1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lavary/laravel-menu.git",
+                "reference": "1617add78aa8ec8e4657aba3d88d2b86fc534b9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lavary/laravel-menu/zipball/1617add78aa8ec8e4657aba3d88d2b86fc534b9f",
+                "reference": "1617add78aa8ec8e4657aba3d88d2b86fc534b9f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.0",
+                "illuminate/view": ">=5.0",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Lavary\\Menu\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lavary",
+                    "email": "mrl.8081@gmail.com"
+                }
+            ],
+            "description": "A quick way to create menus in Laravel 5",
+            "homepage": "https://github.com/lavary/laravel-menu",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2016-09-12 13:17:45"
         },
         {
             "name": "league/flysystem",

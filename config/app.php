@@ -173,6 +173,7 @@ return [
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
         Klaravel\Ntrust\NtrustServiceProvider::class,
         GrahamCampbell\Throttle\ThrottleServiceProvider::class,
+        Lavary\Menu\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -234,6 +235,7 @@ return [
         'Gravatar'     => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
         'Entrust'      => Klaravel\Ntrust\NtrustFacade::class,
         'Throttle'     => GrahamCampbell\Throttle\Facades\Throttle::class,
+        'Menu'         => Lavary\Menu\Facade::class,
     ],
 
 ];

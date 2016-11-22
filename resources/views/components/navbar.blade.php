@@ -4,12 +4,11 @@
         <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name') }}</a>
         {{-- 左側選單 --}}
         <ul class="nav navbar-nav">
-            <li class="nav-item active"><a class="nav-link" href="javascript:void(0)">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="javascript:void(0)">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="javascript:void(0)">Contact</a></li>
+            @include(config('laravel-menu.views.bootstrap-items'), array('items' => Menu::get('left')->roots()))
         </ul>
         {{-- 右側選單 --}}
         <ul class="nav navbar-nav float-xs-right">
+            @include(config('laravel-menu.views.bootstrap-items'), array('items' => Menu::get('right')->roots()))
             @if (auth()->guest())
                 <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                 <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
