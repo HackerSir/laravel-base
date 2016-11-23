@@ -12,6 +12,7 @@ use Klaravel\Ntrust\Traits\NtrustPermissionTrait;
  * @property string $name
  * @property string $display_name
  * @property string $description
+ * @property boolean $protection
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Role[] $roles
@@ -19,6 +20,7 @@ use Klaravel\Ntrust\Traits\NtrustPermissionTrait;
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereDisplayName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Permission whereProtection($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereUpdatedAt($value)
  * @mixin \Eloquent
@@ -38,4 +40,20 @@ class Permission extends Model
      * @var array
      */
     protected $fillable = ['name', 'display_name', 'description', 'protection'];
+
+    /**
+     * @param $roleName
+     *
+     * @return bool
+     */
+    public function hasRole($roleName)
+    {
+        foreach ($this->roles as $role) {
+            if ($role->name == $roleName) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

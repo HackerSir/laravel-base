@@ -24,6 +24,15 @@ Route::group(['middleware' => ['auth', 'email']], function () {
             'store',
         ],
     ]);
+    //角色管理
+    //權限：role.manage
+    Route::group(['middleware' => 'permission:role.manage'], function () {
+        Route::resource('role', 'RoleController', [
+            'except' => [
+                'show',
+            ],
+        ]);
+    });
     //會員資料
     Route::group(['prefix' => 'profile'], function () {
         //查看會員資料

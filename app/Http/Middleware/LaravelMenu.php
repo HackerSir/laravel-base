@@ -43,8 +43,7 @@ class LaravelMenu
                     }
 
                     if (Entrust::can('role.manage')) {
-                        //                        $adminMenu->add('角色管理', ['route' => 'role.index']);
-                        $adminMenu->add('角色管理', 'javascript:void(0)');
+                        $adminMenu->add('角色管理', ['route' => 'role.index']);
                     }
 
                     if (Entrust::can('log-viewer.access')) {
