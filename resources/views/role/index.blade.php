@@ -26,7 +26,7 @@
                     </td>
                     <td style="text-align: center">
                         @if($role->protection)
-                            <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                            <i class="fa fa-check fa-2x text-success" aria-hidden="true"></i>
                         @endif
                     </td>
                     <td>
@@ -72,7 +72,7 @@
                     @foreach($roles as $role)
                         <td class="text-center" style="text-align: center">
                             @if($permission->hasRole($role->name))
-                                <i class="fa fa-check fa-2x" aria-hidden="true"></i>
+                                <i class="fa fa-check fa-2x text-success" aria-hidden="true"></i>
                             @endif
                         </td>
                     @endforeach
