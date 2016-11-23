@@ -8,7 +8,6 @@
         {!! $item->title !!}
     @endif
     @if($item->hasChildren())
-        {{-- FIXME: 尚未支援響應式 --}}
         <div class="dropdown-menu">
             @include('components.navbar-subitems', ['items' => $item->children()])
         </div>
