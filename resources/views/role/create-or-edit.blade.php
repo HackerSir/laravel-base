@@ -79,7 +79,7 @@
                     <label class="col-md-4 form-control-label">權限</label>
                     <div class="col-md-6">
                         @foreach($permissions as $permission)
-                            @if($permission->protection)
+                            @if(isset($role) && $role->protection)
                                 <label class="custom-control custom-checkbox">
                                     <input type="checkbox" name="permissions[]" value="{{ $permission->id }}"
                                            class="custom-control-input"
