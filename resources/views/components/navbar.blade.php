@@ -8,7 +8,7 @@
             @include(config('laravel-menu.views.bootstrap-items'), array('items' => Menu::get('left')->roots()))
         </ul>
         {{-- 右側選單 --}}
-        <ul class="nav navbar-nav float-xs-right">
+        <ul class="nav navbar-nav float-sm-right">
             @include(config('laravel-menu.views.bootstrap-items'), array('items' => Menu::get('right')->roots()))
         </ul>
     </div>
