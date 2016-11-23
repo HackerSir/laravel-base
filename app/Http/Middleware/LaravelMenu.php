@@ -30,28 +30,30 @@ class LaravelMenu
             //會員
             if (auth()->check()) {
                 if (!auth()->user()->isConfirmed) {
-                    $confirmLink = $menu->add('尚未完成信箱驗證', ['route' => 'confirm-mail.resend']);
-                    $confirmLink->link->attr(['class' => 'text-danger']);
+                    $menu->add('尚未完成信箱驗證', ['route' => 'confirm-mail.resend'])
+                        ->link->attr(['class' => 'text-danger']);
                 }
                 //管理員
                 if (Entrust::can('menu.view') and auth()->user()->isConfirmed) {
                     /** @var \Lavary\Menu\Builder $adminMenu */
                     $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
 
-//                    if (Entrust::can(['user.manage', 'user.view'])) {
+                    if (Entrust::can(['user.manage', 'user.view'])) {
 //                        $adminMenu->add('會員清單', ['route' => 'user.index'])->active('user/*');
-//                    }
-//
-//                    if (Entrust::can('role.manage')) {
+                        $adminMenu->add('會員清單', 'javascript:void(0)')->active('user/*');
+                    }
+
+                    if (Entrust::can('role.manage')) {
 //                        $adminMenu->add('角色管理', ['route' => 'role.index']);
-//                    }
-//
-//                    if (Entrust::can('log-viewer.access')) {
-//                        $adminMenu->add(
-//                            '記錄檢視器 <i class="external icon"></i>',
-//                            ['route' => 'log-viewer::dashboard']
-//                        )->link->attr('target', '_blank');
-//                    }
+                        $adminMenu->add('角色管理', 'javascript:void(0)');
+                    }
+
+                    if (Entrust::can('log-viewer.access')) {
+                        $adminMenu->add(
+                            '記錄檢視器',
+                            ['route' => 'log-viewer::dashboard']
+                        )->link->attr('target', '_blank');
+                    }
                 }
                 /** @var \Lavary\Menu\Builder $userMenu */
                 $userMenu = $menu->add(auth()->user()->name, 'javascript:void(0)');

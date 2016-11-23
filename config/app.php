@@ -174,6 +174,7 @@ return [
         Klaravel\Ntrust\NtrustServiceProvider::class,
         GrahamCampbell\Throttle\ThrottleServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
 
         /*
          * Application Service Providers...
