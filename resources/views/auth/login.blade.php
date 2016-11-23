@@ -60,6 +60,9 @@
                             Login
                         </button>
 
+                        <a class="btn btn-link" href="{{ route('register') }}">
+                            Register
+                        </a>
                         <a class="btn btn-link" href="{{ route('password.reset') }}">
                             Forgot Your Password?
                         </a>
