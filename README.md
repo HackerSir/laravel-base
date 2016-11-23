@@ -42,7 +42,6 @@ php artisan migrate
 
 ## TODO
 - Tasks
-  - [ ] AuthListener: Log time and ip when login
   - [ ] UserController: User management
   - [ ] RoleController: Role management
   - Unify page style
