@@ -18,6 +18,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - thomaswelton/laravel-gravatar: "^1.1"
   - klaravel/ntrust: "^1.1"
   - graham-campbell/throttle: "^5.2"
+  - lavary/laravel-menu: "^1.6"
 - System
   - User
   - Role
@@ -40,14 +41,15 @@ php artisan migrate
 
 ## TODO
 - Tasks
-  - [ ] AuthListener：Log time and ip when login
+  - [ ] AuthListener: Log time and ip when login
+  - [ ] UserController: User management
+  - [ ] RoleController: Role management
   - Unify page style
     - [ ] Normal pages
     - [ ] Form pages
 - Packages
   - arcanedev/log-viewer: "~3.0"
   - laravolt/semantic-form: "^1.3"
-  - lavary/laravel-menu: "dev-master"
   - landish/pagination: "^1.3"
 
 ## License

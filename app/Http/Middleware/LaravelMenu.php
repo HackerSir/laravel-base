@@ -25,14 +25,13 @@ class LaravelMenu
             $menu->add('Contact', 'javascript:void(0)');
         });
         //右側
-        //FIXME: 多層選單
         Menu::make('right', function ($menu) {
             /* @var \Lavary\Menu\Builder $menu */
             //會員
             if (auth()->check()) {
                 if (!auth()->user()->isConfirmed) {
-                    //TODO: 加上顏色
-                    $menu->add('尚未完成信箱驗證', ['route' => 'confirm-mail.resend']);
+                    $confirmLink = $menu->add('尚未完成信箱驗證', ['route' => 'confirm-mail.resend']);
+                    $confirmLink->link->attr(['class' => 'text-danger']);
                 }
                 //管理員
                 if (Entrust::can('menu.view') and auth()->user()->isConfirmed) {
