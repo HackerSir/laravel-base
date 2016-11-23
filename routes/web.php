@@ -32,6 +32,7 @@ Route::group(['namespace' => 'Auth'], function () {
     // Authentication Routes...
     Route::get('login', 'LoginController@showLoginForm')->name('login');
     Route::post('login', 'LoginController@login')->name('login');
+    Route::get('logout', 'LoginController@logout')->name('logout');
     Route::post('logout', 'LoginController@logout')->name('logout');
     // Registration Routes...
     Route::get('register', 'RegisterController@showRegistrationForm')->name('register');
