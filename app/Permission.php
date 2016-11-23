@@ -12,7 +12,7 @@ use Klaravel\Ntrust\Traits\NtrustPermissionTrait;
  * @property string $name
  * @property string $display_name
  * @property string $description
- * @property boolean $protection
+ * @property bool $protection
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Role[] $roles
