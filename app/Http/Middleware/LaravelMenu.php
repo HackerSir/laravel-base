@@ -39,12 +39,12 @@ class LaravelMenu
                     $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
 
                     if (Entrust::can(['user.manage', 'user.view'])) {
-//                        $adminMenu->add('會員清單', ['route' => 'user.index'])->active('user/*');
+                        //                        $adminMenu->add('會員清單', ['route' => 'user.index'])->active('user/*');
                         $adminMenu->add('會員清單', 'javascript:void(0)')->active('user/*');
                     }
 
                     if (Entrust::can('role.manage')) {
-//                        $adminMenu->add('角色管理', ['route' => 'role.index']);
+                        //                        $adminMenu->add('角色管理', ['route' => 'role.index']);
                         $adminMenu->add('角色管理', 'javascript:void(0)');
                     }
 
