@@ -48,6 +48,7 @@
         integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK"
         crossorigin="anonymous"></script>
 <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+<script src="https://use.fontawesome.com/544fc47aab.js"></script>
 <script>
     $(function () {
         //CSRF Token
