@@ -22,6 +22,10 @@
             padding-top: 60px;
             min-height: calc(100vh - 55px);
         }
+
+        .table td, .table th {
+            vertical-align: middle;
+        }
     </style>
     @yield('css')
 </head>

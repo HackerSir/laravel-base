@@ -47,6 +47,10 @@ php artisan migrate
   - Unify page style
     - [ ] Normal pages
     - [ ] Form pages
+    - [ ] List pages
+    - [ ] Button color
+    - [ ] Button appended icon
+  - [ ] Simply form generation
 - Packages
   - laravolt/semantic-form: "^1.3"
   - landish/pagination: "^1.3"
