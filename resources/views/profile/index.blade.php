@@ -35,7 +35,7 @@
                     <td class="text-md-right">角色：</td>
                     <td>
                         @foreach($user->roles as $role)
-                            {!! $role->tag !!}
+                            {!! $role->display_name !!}<br/>
                         @endforeach
                     </td>
                 </tr>
