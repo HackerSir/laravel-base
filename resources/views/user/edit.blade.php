@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                <div class="form-group row{{ $errors->has('role') ? ' has-danger' : '' }}">
                     <label class="col-md-4 form-control-label">角色</label>
                     <div class="col-md-6">
                         @foreach($roles as $role)
@@ -66,6 +66,11 @@
                             @endif
                             <br/>
                         @endforeach
+                        @if ($errors->has('role'))
+                            <span class="form-control-feedback">
+                                <strong>{{ $errors->first('role') }}</strong>
+                            </span>
+                        @endif
                     </div>
                 </div>
 
