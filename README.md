@@ -42,8 +42,6 @@ php artisan migrate
 
 ## TODO
 - Tasks
-  - [ ] UserController: User management
-  - [ ] RoleController: Role management
   - Unify page style
     - [ ] Normal pages
     - [ ] Form pages
