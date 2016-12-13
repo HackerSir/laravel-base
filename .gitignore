@@ -170,7 +170,7 @@ $RECYCLE.BIN/
 
 
 ### Laravel ###
-vendor/
+/vendor
 node_modules/
 
 # Laravel 5 & Lumen specific
@@ -286,3 +286,6 @@ flycheck_*.el
 # build
 public/semantic
 .idea/vagrant.xml
+
+### gulp build ###
+public/css/app.css.map

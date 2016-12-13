@@ -12,6 +12,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     {{-- CSS --}}
+    {{-- npm的bootstrap還未推出v4 --}}
+    {{--<link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
           integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
           crossorigin="anonymous">
@@ -54,17 +56,20 @@
 <script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
 <script src="https://use.fontawesome.com/544fc47aab.js"></script>
 <script>
+    //CSRF Token
+    window.Laravel = <?php echo json_encode([
+        'csrfToken' => csrf_token(),
+    ]); ?>
+</script>
+<script src="{{ asset('js/app.js') }}"></script>
+<script>
     $(function () {
-        //CSRF Token
-        window.Laravel = <?php echo json_encode([
-            'csrfToken' => csrf_token(),
-        ]); ?>
-            //AlertifyJS
-            alertify.defaults = {
-                notifier: {
-                    position: 'top-right'
-                }
-            };
+        //AlertifyJS
+        alertify.defaults = {
+            notifier: {
+                position: 'top-right'
+            }
+        };
         @if(session('global'))
             alertify.notify('{{ session('global') }}', 'success', 5);
         @endif
