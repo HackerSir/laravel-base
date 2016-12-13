@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Klaravel\Ntrust\Traits\NtrustUserTrait;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * App\User

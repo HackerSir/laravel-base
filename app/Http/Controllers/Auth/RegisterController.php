@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Notifications\ConfirmMail;
 use App\Role;
 use App\User;
-use Carbon\Carbon;
-use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Http\Request;
 use Throttle;
 use Validator;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Notifications\ConfirmMail;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
 {
