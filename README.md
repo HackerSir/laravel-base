@@ -7,6 +7,7 @@ A website base on Laravel and Bootstrap for HackerSir.
 ## Framework
 - Laravel 5.3
 - Bootstrap 4
+- Vue.js 1.0
 
 ## Including
 - Packages
