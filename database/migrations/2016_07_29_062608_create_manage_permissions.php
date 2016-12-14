@@ -1,7 +1,7 @@
 <?php
 
-use App\Permission;
 use App\Role;
+use App\Permission;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateManagePermissions extends Migration

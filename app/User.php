@@ -2,8 +2,8 @@
 
 namespace App;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 /**
  * 使用者

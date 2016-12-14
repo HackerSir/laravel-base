@@ -3,12 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Role;
-use App\Services\MailService;
-use Carbon\Carbon;
 use App\User;
-use Illuminate\Http\Request;
 use Throttle;
 use Validator;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Services\MailService;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
