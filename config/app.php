@@ -170,6 +170,7 @@ return [
         Recca0120\LaravelTracy\ServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
     ],
 
     /*

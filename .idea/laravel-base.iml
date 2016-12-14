@@ -18,5 +18,6 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="dataTables.semanticui" level="application" />
   </component>
 </module>
