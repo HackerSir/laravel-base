@@ -175,6 +175,7 @@ return [
         GrahamCampbell\Throttle\ThrottleServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
         /*
          * Application Service Providers...

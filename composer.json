@@ -16,7 +16,8 @@
         "klaravel/ntrust": "^1.1",
         "graham-campbell/throttle": "^5.2",
         "lavary/laravel-menu": "^1.6",
-        "arcanedev/log-viewer": "^4.1"
+        "arcanedev/log-viewer": "^4.1",
+        "yajra/laravel-datatables-oracle": "^6.22"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
