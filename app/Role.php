@@ -28,6 +28,10 @@ class Role extends EntrustRole
         'protection',
     ];
 
+    protected $appends = [
+        'tag',
+    ];
+
     public function getTagAttribute()
     {
         return "<span class=\"ui tag label single line {$this->color}\">{$this->display_name}</span>";

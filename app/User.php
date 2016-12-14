@@ -48,6 +48,10 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $appends = [
+        'is_confirmed',
+    ];
+
     /** @var array $dates 自動轉換為Carbon的屬性 */
     protected $dates = ['confirm_at', 'register_at', 'last_login_at'];
 

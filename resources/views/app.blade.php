@@ -14,8 +14,8 @@
     {!! Html::style('//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/semantic.min.css') !!}
     {{-- DataTables --}}
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/dataTables.semanticui.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/buttons/1.2.3/css/buttons.dataTables.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/buttons/1.2.3/css/buttons.semanticui.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.semanticui.min.css">
     <style>
         body {
             height: auto;
@@ -64,7 +64,9 @@
 <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
 <script src="//cdn.datatables.net/1.10.13/js/dataTables.semanticui.min.js"></script>
 <script src="//cdn.datatables.net/buttons/1.2.3/js/dataTables.buttons.min.js"></script>
+<script src="//cdn.datatables.net/buttons/1.2.3/js/buttons.semanticui.min.js"></script>
 <script src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+<script src="//cdn.datatables.net/responsive/2.1.1/js/responsive.semanticui.min.js"></script>
 <script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>
 <script>
     $(document).ready(function () {

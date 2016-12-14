@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\UsersDataTable;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
@@ -31,13 +32,12 @@ class UserController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @param UsersDataTable $dataTable
+     * @return \Illuminate\Http\JsonResponse|\Illuminate\View\View
      */
-    public function index()
+    public function index(UsersDataTable $dataTable)
     {
-        $users = User::with('roles')->orderBy('id')->paginate();
-
-        return view('user.index', compact('users'));
+        return $dataTable->render('user.index');
     }
 
     /**
