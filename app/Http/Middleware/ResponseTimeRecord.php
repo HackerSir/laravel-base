@@ -2,10 +2,10 @@
 
 namespace App\Http\Middleware;
 
-use Closure;
-use App\Console\Commands\LogApacheStatus;
-use Exception;
 use Log;
+use Closure;
+use Exception;
+use App\Console\Commands\LogApacheStatus;
 
 //http://stackoverflow.com/questions/31619350/correct-way-to-get-server-response-time-in-laravel
 class ResponseTimeRecord

@@ -2,9 +2,9 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Log\Writer;
 use Monolog\Logger;
+use Illuminate\Log\Writer;
+use Illuminate\Console\Command;
 
 class LogApacheStatus extends Command
 {
