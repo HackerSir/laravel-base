@@ -78,6 +78,10 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    protected $appends = [
+        'is_confirmed',
+    ];
+
     /**
      * 帳號是否完成驗證
      *
