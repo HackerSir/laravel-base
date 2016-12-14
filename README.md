@@ -22,6 +22,7 @@ A website base on laravel and semantic ui for HackerSir.
   - lavary/laravel-menu: "dev-master"
   - thomaswelton/laravel-gravatar: "^1.1"
   - landish/pagination: "^1.3"
+  - yajra/laravel-datatables-oracle: "^6.22"
 - System
   - User
   - Role
