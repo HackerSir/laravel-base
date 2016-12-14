@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\UsersDataTable;
 use App\Role;
 use App\User;
 use Illuminate\Http\Request;
+use App\DataTables\UsersDataTable;
 
 class UserController extends Controller
 {
