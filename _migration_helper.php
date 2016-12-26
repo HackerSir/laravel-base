@@ -16,6 +16,7 @@ namespace Illuminate\Support;
  * @method Fluent onDelete($value)
  * @method Fluent references($value)
  * @method Fluent on($value)
+ * @method Fluent comment($value)
  */
 class Fluent
 {
