@@ -12,6 +12,9 @@
           <option name="BLANK_LINE_BEFORE_RETURN_STATEMENT" value="true" />
           <option name="FORCE_SHORT_DECLARATION_ARRAY_STYLE" value="true" />
         </PHPCodeStyleSettings>
+        <codeStyleSettings language="PHP">
+          <option name="SPACE_AFTER_TYPE_CAST" value="true" />
+        </codeStyleSettings>
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />
