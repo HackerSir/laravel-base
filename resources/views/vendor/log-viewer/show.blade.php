@@ -106,7 +106,7 @@
                                     <tr>
                                         <td colspan="5" class="stack">
                                             <div class="stack-content collapse" id="log-stack-{{ $key }}">
-                                                {!! preg_replace("/\n/", '<br>', $entry->stack) !!}
+                                                {!! $entry->stack() !!}
                                             </div>
                                         </td>
                                     </tr>
@@ -128,7 +128,9 @@
             </div>
         </div>
     </div>
+@endsection
 
+@section('modals')
     {{-- DELETE MODAL --}}
     <div id="delete-log-modal" class="modal fade">
         <div class="modal-dialog">
@@ -163,7 +165,7 @@
                 deleteLogForm  = $('form#delete-log-form'),
                 submitBtn      = deleteLogForm.find('button[type=submit]');
 
-            deleteLogForm.submit(function(event) {
+            deleteLogForm.on('submit', function(event) {
                 event.preventDefault();
                 submitBtn.button('loading');
 

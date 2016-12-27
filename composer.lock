@@ -9,26 +9,26 @@
     "packages": [
         {
             "name": "arcanedev/log-viewer",
-            "version": "4.1.0",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ARCANEDEV/LogViewer.git",
-                "reference": "d72efb0ff2dec5d7b3b04542b69bc5bb1defccd7"
+                "reference": "4c8845f33b3bb751b0be0fcf0c293a5df13bd1d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ARCANEDEV/LogViewer/zipball/d72efb0ff2dec5d7b3b04542b69bc5bb1defccd7",
-                "reference": "d72efb0ff2dec5d7b3b04542b69bc5bb1defccd7",
+                "url": "https://api.github.com/repos/ARCANEDEV/LogViewer/zipball/4c8845f33b3bb751b0be0fcf0c293a5df13bd1d5",
+                "reference": "4c8845f33b3bb751b0be0fcf0c293a5df13bd1d5",
                 "shasum": ""
             },
             "require": {
-                "arcanedev/support": "~3.0",
+                "arcanedev/support": "~3.20",
                 "php": ">=5.6",
                 "psr/log": "~1.0"
             },
             "require-dev": {
-                "phpunit/phpcov": "~2.0|~3.0",
-                "phpunit/phpunit": "~4.0|~5.0"
+                "phpunit/phpcov": "~3.0",
+                "phpunit/phpunit": "~5.0"
             },
             "type": "library",
             "extra": {
@@ -68,20 +68,20 @@
                 "log-viewer",
                 "logviewer"
             ],
-            "time": "2016-11-08 10:46:48"
+            "time": "2016-12-19 18:50:02"
         },
         {
             "name": "arcanedev/support",
-            "version": "3.19.1",
+            "version": "3.20.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ARCANEDEV/Support.git",
-                "reference": "4680f50e4146e7871d99a3223107322b170efbb2"
+                "reference": "beada0dc4e00dbdeea11a5ce24be0d9056202ea5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ARCANEDEV/Support/zipball/4680f50e4146e7871d99a3223107322b170efbb2",
-                "reference": "4680f50e4146e7871d99a3223107322b170efbb2",
+                "url": "https://api.github.com/repos/ARCANEDEV/Support/zipball/beada0dc4e00dbdeea11a5ce24be0d9056202ea5",
+                "reference": "beada0dc4e00dbdeea11a5ce24be0d9056202ea5",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,7 @@
                 "laravel",
                 "support"
             ],
-            "time": "2016-12-16 20:13:01"
+            "time": "2016-12-19 18:56:46"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -3739,16 +3739,16 @@
         },
         {
             "name": "mockery/mockery",
-            "version": "0.9.6",
+            "version": "0.9.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "65d4ca18e15cb02eeb1e5336f884e46b9b905be0"
+                "reference": "4de7969f4664da3cef1ccd83866c9f59378c3371"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/65d4ca18e15cb02eeb1e5336f884e46b9b905be0",
-                "reference": "65d4ca18e15cb02eeb1e5336f884e46b9b905be0",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/4de7969f4664da3cef1ccd83866c9f59378c3371",
+                "reference": "4de7969f4664da3cef1ccd83866c9f59378c3371",
                 "shasum": ""
             },
             "require": {
@@ -3800,7 +3800,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2016-09-30 12:09:40"
+            "time": "2016-12-19 14:50:55"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4055,16 +4055,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "4.0.3",
+            "version": "4.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "903fd6318d0a90b4770a009ff73e4a4e9c437929"
+                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/903fd6318d0a90b4770a009ff73e4a4e9c437929",
-                "reference": "903fd6318d0a90b4770a009ff73e4a4e9c437929",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c14196e64a78570034afd0b7a9f3757ba71c2a0a",
+                "reference": "c14196e64a78570034afd0b7a9f3757ba71c2a0a",
                 "shasum": ""
             },
             "require": {
@@ -4114,7 +4114,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-11-28 16:00:31"
+            "time": "2016-12-20 15:22:42"
         },
         {
             "name": "phpunit/php-file-iterator",
