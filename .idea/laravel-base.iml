@@ -39,29 +39,5 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
-      <library name="PHP" type="php">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/dompdf/dompdf" />
-          <root url="file://$MODULE_DIR$/vendor/league/fractal" />
-          <root url="file://$MODULE_DIR$/vendor/maatwebsite/excel" />
-          <root url="file://$MODULE_DIR$/vendor/phenx/php-font-lib" />
-          <root url="file://$MODULE_DIR$/vendor/phenx/php-svg-lib" />
-          <root url="file://$MODULE_DIR$/vendor/phpoffice/phpexcel" />
-          <root url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
-          <root url="file://$MODULE_DIR$/vendor/yajra/laravel-datatables-oracle" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/dompdf/dompdf" />
-          <root url="file://$MODULE_DIR$/vendor/league/fractal" />
-          <root url="file://$MODULE_DIR$/vendor/maatwebsite/excel" />
-          <root url="file://$MODULE_DIR$/vendor/phenx/php-font-lib" />
-          <root url="file://$MODULE_DIR$/vendor/phenx/php-svg-lib" />
-          <root url="file://$MODULE_DIR$/vendor/phpoffice/phpexcel" />
-          <root url="file://$MODULE_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
-          <root url="file://$MODULE_DIR$/vendor/yajra/laravel-datatables-oracle" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>
