@@ -31,8 +31,7 @@ A website base on Laravel and Bootstrap for HackerSir.
 1. Run the following commands.
 ```bash
 composer install  
-npm install  
-gulp
+npm install
 ```
 
 2. Configure environment variables in `.env`.
@@ -40,6 +39,13 @@ gulp
 3. Run migrations to setup tables.
 ```bash
 php artisan migrate
+```
+
+## Notice
+- If you modify some files which need to be compiled, make sure you have run the following command before commit.  
+(For testing in local, you can also compile files by using `gulp` instead.)
+```bash
+gulp --production
 ```
 
 ## TODO
