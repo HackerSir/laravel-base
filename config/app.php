@@ -235,6 +235,7 @@ return [
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
         'Gravatar'     => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
+        'Ntrust'       => Klaravel\Ntrust\NtrustFacade::class,
         'Entrust'      => Klaravel\Ntrust\NtrustFacade::class,
         'Throttle'     => GrahamCampbell\Throttle\Facades\Throttle::class,
         'Menu'         => Lavary\Menu\Facade::class,
