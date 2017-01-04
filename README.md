@@ -34,9 +34,16 @@ composer install
 npm install
 ```
 
-2. Configure environment variables in `.env`.
+2. Copy `.env.example` to `.env`.
 
-3. Run migrations to setup tables.
+3. Configure environment variables in `.env`.
+
+4. Generate app key.
+```bash
+php artisan key:generate
+```
+
+5. Run migrations to setup tables.
 ```bash
 php artisan migrate
 ```
