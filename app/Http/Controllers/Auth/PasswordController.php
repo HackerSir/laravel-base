@@ -40,7 +40,7 @@ class PasswordController extends Controller
         /* @var User $user */
         $user = auth()->user();
         //檢查原密碼
-        if (!Hash::check($request->get('password'), $user->getAuthPassword())) {
+        if (!Hash::check($request->input('password'), $user->getAuthPassword())) {
             return redirect()->route('password.change')->withErrors(['password' => '輸入有誤，請重新輸入。']);
         }
         //檢查新密碼
@@ -49,7 +49,7 @@ class PasswordController extends Controller
         ]);
         //更新密碼
         $user->update([
-            'password' => bcrypt($request->get('new_password')),
+            'password' => bcrypt($request->input('new_password')),
         ]);
 
         return redirect()->route('profile')->with('global', '密碼修改完成。');

@@ -45,7 +45,7 @@ class ProfileController extends Controller
         /* @var User $user */
         $user = auth()->user();
         $user->update([
-            'name' => $request->get('name'),
+            'name' => $request->input('name'),
         ]);
 
         return redirect()->route('profile')->with('global', '資料修改完成。');

@@ -78,7 +78,7 @@ class UserController extends Controller
         ]);
 
         $user->update([
-            'name' => $request->get('name'),
+            'name' => $request->input('name'),
         ]);
         //管理員禁止去除自己的管理員職務
         $keepAdmin = false;
@@ -89,7 +89,7 @@ class UserController extends Controller
         $user->detachRoles($user->roles);
         //重新添加該有的權限
         if ($request->has('role')) {
-            $user->attachRoles($request->get('role'));
+            $user->attachRoles($request->input('role'));
         }
         //加回管理員
         if ($keepAdmin) {

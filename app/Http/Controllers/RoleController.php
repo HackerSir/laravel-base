@@ -48,13 +48,13 @@ class RoleController extends Controller
         ]);
 
         $role = Role::create([
-            'name'         => $request->get('name'),
-            'display_name' => $request->get('display_name'),
-            'description'  => $request->get('description'),
+            'name'         => $request->input('name'),
+            'display_name' => $request->input('display_name'),
+            'description'  => $request->input('description'),
             'protection'   => false,
         ]);
         //TODO: 避免具備保護屬性的權限被賦予或撤銷
-        $role->perms()->sync($request->get('permissions') ?: []);
+        $role->perms()->sync($request->input('permissions') ?: []);
 
         return redirect()->route('role.index')->with('global', '角色已建立');
     }
@@ -90,16 +90,16 @@ class RoleController extends Controller
         //TODO: 避免具備保護屬性的權限被賦予或撤銷
         if ($role->protection) {
             $role->update([
-                'display_name' => $request->get('display_name'),
-                'description'  => $request->get('description'),
+                'display_name' => $request->input('display_name'),
+                'description'  => $request->input('description'),
             ]);
         } else {
             $role->update([
-                'name'         => $request->get('name'),
-                'display_name' => $request->get('display_name'),
-                'description'  => $request->get('description'),
+                'name'         => $request->input('name'),
+                'display_name' => $request->input('display_name'),
+                'description'  => $request->input('description'),
             ]);
-            $role->perms()->sync($request->get('permissions') ?: []);
+            $role->perms()->sync($request->input('permissions') ?: []);
         }
 
         return redirect()->route('role.index')->with('global', '角色已更新');
