@@ -6,7 +6,7 @@ namespace Illuminate\Support;
  * @method Fluent first()
  * @method Fluent after($column)
  * @method Fluent change()
- * @method Fluent nullable()
+ * @method Fluent nullable($bool = true)
  * @method Fluent unsigned()
  * @method Fluent unique()
  * @method Fluent index()
