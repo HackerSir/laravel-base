@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
-use App\User;
 use Closure;
+use App\User;
 
 class EmailConfirm
 {
