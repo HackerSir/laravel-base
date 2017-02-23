@@ -118,7 +118,11 @@
     // DataTables 預設設定
     (function ($, DataTable) {
         $.extend(true, DataTable.defaults, {
+            pageLength: 10,
+            autoWidth: false,
             responsive: true,
+            dom: "<'row'<'col-md-6'l><'col-md-6'f>><'row'<'col-md-12'rt>><'row'<'col-md-6'i><'col-md-6'p>>",
+            stateSave: true,
             language: {
                 "decimal": "",
                 "emptyTable": "沒有資料",
