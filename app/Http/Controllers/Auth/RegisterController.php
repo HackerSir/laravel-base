@@ -38,8 +38,6 @@ class RegisterController extends Controller
 
     /**
      * Create a new controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -123,11 +121,10 @@ class RegisterController extends Controller
     /**
      * 驗證信箱
      *
-     * @param  \Illuminate\Http\Request $request
      * @param string $confirmCode
      * @return \Illuminate\Http\Response
      */
-    public function emailConfirm(Request $request, $confirmCode)
+    public function emailConfirm($confirmCode)
     {
         //檢查驗證碼
         $user = User::where('confirm_code', $confirmCode)->whereNull('confirm_at')->first();
@@ -187,8 +184,6 @@ class RegisterController extends Controller
     {
         //產生驗證碼
         $confirmCode = str_random(60);
-        //產生驗證連結
-        $link = route('confirm', $confirmCode);
         //記錄驗證碼
         $user->update([
             'confirm_code' => $confirmCode,

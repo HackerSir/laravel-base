@@ -18,7 +18,7 @@ class RoleController extends Controller
         $roles = Role::all();
         $permissions = Permission::with('roles')->get();
 
-        return view('role.index', compact(['roles', 'permissions']));
+        return view('role.index', compact('roles', 'permissions'));
     }
 
     /**
