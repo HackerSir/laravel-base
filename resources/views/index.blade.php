@@ -9,6 +9,7 @@
             word-break: break-all;
             background: rgba(100, 100, 100, .6);
             margin-top: 20vh;
+            margin-bottom: 0;
             padding-top: 40px;
             border-radius: 20px;
         }
