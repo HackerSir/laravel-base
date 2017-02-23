@@ -15,7 +15,7 @@
         <div class="card-header">
             個人資料
         </div>
-        <div class="text-xs-center">
+        <div class="text-center">
             {{-- Gravatar大頭貼 --}}
             <a href="https://zh-tw.gravatar.com/" target="_blank" title="透過Gravatar更換照片">
                 <img src="{{ Gravatar::src($user->email, 200) }}" class="img-thumbnail" id="gravatar"/>
@@ -57,7 +57,7 @@
                 </tr>
             </table>
         </div>
-        <div class="card-block text-xs-center">
+        <div class="card-block text-center">
             <a href="{{ route('profile.edit') }}" class="btn btn-primary">編輯資料</a>
             <a href="{{ route('password.change') }}" class="btn btn-primary">修改密碼</a>
         </div>
