@@ -16,12 +16,12 @@ use Klaravel\Ntrust\Traits\NtrustPermissionTrait;
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Role[] $roles
+ * @method static \Illuminate\Database\Query\Builder|\App\Permission whereCreatedAt($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Permission whereDescription($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Permission whereDisplayName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereName($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Permission whereDisplayName($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Permission whereDescription($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereProtection($value)
- * @method static \Illuminate\Database\Query\Builder|\App\Permission whereCreatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Permission whereUpdatedAt($value)
  * @mixin \Eloquent
  */
