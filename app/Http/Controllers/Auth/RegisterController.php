@@ -147,8 +147,9 @@ class RegisterController extends Controller
      */
     public function resendConfirmMailPage()
     {
+        /** @var User $user */
         $user = auth()->user();
-        if ($user->isConfirmed) {
+        if ($user->is_confirmed) {
             return redirect()->route('index');
         }
 
