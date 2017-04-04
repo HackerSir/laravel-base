@@ -24,8 +24,8 @@
     {{--<link rel="stylesheet" href="{{ asset('css/app.css') }}">--}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/alertify.min.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.8.0/css/themes/bootstrap.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.9.0/css/alertify.min.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.9.0/css/themes/bootstrap.min.css"/>
     {{-- DataTables --}}
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/buttons/1.2.3/css/buttons.dataTables.min.css">
@@ -64,7 +64,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
-<script src="//cdn.jsdelivr.net/alertifyjs/1.8.0/alertify.min.js"></script>
+<script src="//cdn.jsdelivr.net/alertifyjs/1.9.0/alertify.min.js"></script>
 <script src="https://use.fontawesome.com/544fc47aab.js"></script>
 {{-- DataTables --}}
 <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
@@ -82,8 +82,44 @@
     $(function () {
         //AlertifyJS
         alertify.defaults = {
+            autoReset:true,
+            basic:false,
+            closable:true,
+            closableByDimmer:true,
+            frameless:false,
+            maintainFocus:true, // <== global default not per instance, applies to all dialogs
+            maximizable:true,
+            modal:true,
+            movable:true,
+            moveBounded:false,
+            overflow:true,
+            padding: true,
+            pinnable:true,
+            pinned:true,
+            preventBodyShift:false, // <== global default not per instance, applies to all dialogs
+            resizable:true,
+            startMaximized:false,
+            transition:'pulse',
             notifier: {
                 position: 'top-right'
+            },
+            // language resources
+            glossary:{
+                // dialogs default title
+                title:'AlertifyJS',
+                // ok button text
+                ok: 'OK',
+                // cancel button text
+                cancel: 'Cancel'
+            },
+            // theme settings
+            theme:{
+                // class name attached to prompt dialog input textbox.
+                input:'ajs-input',
+                // class name attached to ok button
+                ok:'ajs-ok',
+                // class name attached to cancel button
+                cancel:'ajs-cancel'
             }
         };
         @if(session('global'))
