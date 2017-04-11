@@ -2,11 +2,11 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Controllers\Auth\RegisterController;
 use App\Role;
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Console\Command;
+use App\Http\Controllers\Auth\RegisterController;
 
 class UserCreate extends Command
 {
@@ -48,7 +48,7 @@ class UserCreate extends Command
             $isOk = true;
             if (filter_var($email, FILTER_VALIDATE_EMAIL) == false) {
                 $isOk = false;
-                $this->error("Invalid email address, please retry...");
+                $this->error('Invalid email address, please retry...');
             } elseif (User::whereEmail($email)->count() > 0) {
                 $isOk = false;
                 $this->error("The email \"{$email}\" has been used, please try another one...");
