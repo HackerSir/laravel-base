@@ -169,6 +169,7 @@ class RegisterController extends Controller
         if (!$throttler->attempt()) {
             return redirect()->route('confirm-mail.resend')->with('warning', '信件請求過於頻繁，請等待5分鐘。');
         }
+        /** @var User $user */
         $user = auth()->user();
         // 發送驗證信件
         $this->generateConfirmCodeAndSendConfirmMail($user);
