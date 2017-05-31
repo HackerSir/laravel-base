@@ -167,6 +167,14 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
+        Klaravel\Ntrust\NtrustServiceProvider::class,
+        GrahamCampbell\Throttle\ThrottleServiceProvider::class,
+        Lavary\Menu\ServiceProvider::class,
+        Arcanedev\LogViewer\LogViewerServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -225,7 +233,12 @@ return [
         'URL'          => Illuminate\Support\Facades\URL::class,
         'Validator'    => Illuminate\Support\Facades\Validator::class,
         'View'         => Illuminate\Support\Facades\View::class,
-
+        'Form'         => Collective\Html\FormFacade::class,
+        'Html'         => Collective\Html\HtmlFacade::class,
+        'Gravatar'     => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
+        'Ntrust'       => Klaravel\Ntrust\NtrustFacade::class,
+        'Throttle'     => GrahamCampbell\Throttle\Facades\Throttle::class,
+        'Menu'         => Lavary\Menu\Facade::class,
     ],
 
 ];

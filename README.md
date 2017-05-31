@@ -1,9 +1,59 @@
-# laravel-base
-A base website using laravel and semantic ui for HackerSir.
+# Laravel Base (5.4)
+[![StyleCI(5.4)](https://styleci.io/repos/65561499/shield?branch=5.4)](https://styleci.io/repos/65561499)
+[![License](https://img.shields.io/github/license/HackerSir/laravel-base.svg)](https://raw.githubusercontent.com/HackerSir/laravel-base/master/LICENSE)
 
-## Important!! 
-Keep master clean!!  
+A website base on Laravel and Bootstrap for HackerSir.
 
 ## Framework
-- Laravel
-- Semantic UI
+- Laravel 5.4
+- Bootstrap 4
+- Vue.js 2
+
+## Including
+- Packages
+  - laravelcollective/html: "^5.4"
+  - predis/predis: "^1.1"
+  - barryvdh/laravel-ide-helper: "^2.2"
+  - doctrine/dbal: "^2.5"
+  - //recca0120/laravel-tracy: "^1.5.6"
+  - thomaswelton/laravel-gravatar: "^1.1"
+  - klaravel/ntrust: "^1.1"
+  - graham-campbell/throttle: "^5.2"
+  - lavary/laravel-menu: "^1.6"
+  - arcanedev/log-viewer: "^4.1"
+  - yajra/laravel-datatables-oracle: "^6.22"
+- System
+  - User
+  - Role
+  - Permission
+
+## Installation Guide
+1. Run the following commands.
+```bash
+composer install  
+npm install
+```
+
+2. Copy `.env.example` to `.env`.
+
+3. Configure environment variables in `.env`.
+
+4. Generate app key.
+```bash
+php artisan key:generate
+```
+
+5. Run migrations to setup tables.
+```bash
+php artisan migrate
+```
+
+## Notice
+- If you modify some files which need to be compiled, make sure you have run the following command before commit.  
+(For testing in local, you can also compile files by using `gulp` instead.)
+```bash
+gulp --production
+```
+
+## License
+This project is open-source under the [MIT license](http://opensource.org/licenses/MIT).
