@@ -13295,12 +13295,12 @@ namespace Arcanedev\LogViewer\Facades {
 
 namespace {
 
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Arr;
-use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Debug\Dumper;
-use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\HigherOrderTapProxy;
+use Illuminate\Support\Str;
 
 if (!function_exists('append_config')) {
     /**
