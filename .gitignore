@@ -316,3 +316,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/vim,node,macos,linux,emacs,laravel,windows,composer,notepadpp,jetbrains,sublimetext,visualstudiocode
+
+### IDE Helper ###
+_ide_helper.php
+.phpstorm.meta.php
