@@ -13,15 +13,15 @@ A website base on Laravel and Bootstrap for HackerSir.
 - Packages
   - laravelcollective/html: "^5.4"
   - predis/predis: "^1.1"
-  - barryvdh/laravel-ide-helper: "^2.2"
+  - barryvdh/laravel-ide-helper: "^2.3"
   - doctrine/dbal: "^2.5"
   - //recca0120/laravel-tracy: "^1.5.6"
   - thomaswelton/laravel-gravatar: "^1.1"
   - klaravel/ntrust: "^1.1"
-  - graham-campbell/throttle: "^5.2"
+  - graham-campbell/throttle: "^5.3"
   - lavary/laravel-menu: "^1.6"
-  - arcanedev/log-viewer: "^4.1"
-  - yajra/laravel-datatables-oracle: "^6.22"
+  - arcanedev/log-viewer: "^4.3"
+  - yajra/laravel-datatables-oracle: "^7.6"
 - System
   - User
   - Role
