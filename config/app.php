@@ -175,6 +175,7 @@ return [
         Lavary\Menu\ServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
 
         /*
          * Application Service Providers...
