@@ -1,5 +1,7 @@
 # Laravel Base (5.4)
 [![StyleCI(5.4)](https://styleci.io/repos/65561499/shield?branch=5.4)](https://styleci.io/repos/65561499)
+[![codecov](https://codecov.io/gh/HackerSir/laravel-base/branch/5.4/graph/badge.svg)](https://codecov.io/gh/HackerSir/laravel-base)
+[![Build Status](https://travis-ci.org/HackerSir/laravel-base.svg?branch=5.4)](https://travis-ci.org/HackerSir/laravel-base)
 [![License](https://img.shields.io/github/license/HackerSir/laravel-base.svg)](https://raw.githubusercontent.com/HackerSir/laravel-base/master/LICENSE)
 
 A website base on Laravel and Bootstrap for HackerSir.
