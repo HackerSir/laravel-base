@@ -19,9 +19,9 @@ php:
 before_script:
   - phpenv config-rm xdebug.ini
   - cp .env.travis .env
-  - php artisan key:generate
   - composer self-update
   - composer install --prefer-dist --optimize-autoloader --quiet
+  - php artisan key:generate
   - mysql -e 'CREATE DATABASE travis_test;'
   - php artisan migrate
 
