@@ -1,6 +1,4 @@
 language: php
-dist: trusty
-sudo: true
 
 services:
   - redis-server
