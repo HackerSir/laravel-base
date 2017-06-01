@@ -3,7 +3,7 @@ dist: trusty
 sudo: false
 
 addons:
-  mariadb: '10.2'
+  mariadb: '10.1'
 
 services:
   - redis-server
