@@ -12,7 +12,7 @@
                 {{ csrf_field() }}
 
                 <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">
-                    <label for="email" class="col-md-4 form-control-label">E-Mail Address</label>
+                    <label for="email" class="col-md-4 form-control-label">信箱</label>
 
                     <div class="col-md-6">
                         <input id="email" type="email" class="form-control" value="{{ $user->email }}" readonly>
