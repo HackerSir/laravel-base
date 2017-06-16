@@ -174,6 +174,8 @@ return [
         Lavary\Menu\ServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
+        Yajra\Datatables\HtmlServiceProvider::class,
+        Yajra\Datatables\ButtonsServiceProvider::class,
         Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
 

@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.9.0/css/themes/bootstrap.min.css"/>
     {{-- DataTables --}}
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="//cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">
+    {{--<link rel="stylesheet" href="//cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">--}}
     <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
     <style>
         body > .container {
@@ -55,12 +55,8 @@
 @include('components.footer')
 
 {{-- Javascript --}}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"
-        integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
@@ -68,7 +64,7 @@
 <script src="https://use.fontawesome.com/544fc47aab.js"></script>
 {{-- DataTables --}}
 <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-<script src="//cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>
+{{--<script src="//cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>--}}
 <script src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
 {{--<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>--}}
 <script>
@@ -77,7 +73,7 @@
         'csrfToken' => csrf_token(),
     ]); ?>
 </script>
-<script src="{{ asset('js/app.js') }}"></script>
+{{--<script src="{{ asset('js/app.js') }}"></script>--}}
 <script>
     $(function () {
         //AlertifyJS
