@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
@@ -66,7 +67,6 @@ class LaratrustSetupTables extends Migration
 
             $table->primary(['permission_id', 'user_id', 'user_type']);
         });
-
     }
 
     /**
