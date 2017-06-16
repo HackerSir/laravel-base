@@ -14,18 +14,14 @@ class UserController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('permission:user.manage|user.view', [
-            'only' => [
-                'index',
-                'show',
-            ],
+        $this->middleware('permission:user.manage|user.view')->only([
+            'index',
+            'show',
         ]);
-        $this->middleware('permission:user.manage', [
-            'only' => [
-                'edit',
-                'update',
-                'destroy',
-            ],
+        $this->middleware('permission:user.manage')->only([
+            'edit',
+            'update',
+            'destroy',
         ]);
     }
 
