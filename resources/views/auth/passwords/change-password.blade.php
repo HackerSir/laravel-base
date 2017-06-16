@@ -13,7 +13,7 @@
                 {{ method_field('put') }}
 
                 <div class="form-group row{{ $errors->has('password') ? ' has-danger' : '' }}">
-                    <label for="password" class="col-md-4 form-control-label">Password</label>
+                    <label for="password" class="col-md-4 form-control-label">密碼</label>
 
                     <div class="col-md-6">
                         <input id="password" type="password"
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="form-group row{{ $errors->has('new_password') ? ' has-danger' : '' }}">
-                    <label for="new_password" class="col-md-4 form-control-label">New password</label>
+                    <label for="new_password" class="col-md-4 form-control-label">新密碼</label>
 
                     <div class="col-md-6">
                         <input id="new_password" type="password"
@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="form-group row{{ $errors->has('new_password_confirmation') ? ' has-danger' : '' }}">
-                    <label for="new_password_confirmation" class="col-md-4 form-control-label">New password Confirmation</label>
+                    <label for="new_password_confirmation" class="col-md-4 form-control-label">確認新密碼</label>
 
                     <div class="col-md-6">
                         <input id="new_password_confirmation" type="password"
