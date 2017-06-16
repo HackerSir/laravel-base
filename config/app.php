@@ -170,12 +170,12 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
-        Klaravel\Ntrust\NtrustServiceProvider::class,
         GrahamCampbell\Throttle\ThrottleServiceProvider::class,
         Lavary\Menu\ServiceProvider::class,
         Arcanedev\LogViewer\LogViewerServiceProvider::class,
         Yajra\Datatables\DatatablesServiceProvider::class,
         Recca0120\LaravelTracy\LaravelTracyServiceProvider::class,
+        Laratrust\LaratrustServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -237,9 +237,9 @@ return [
         'Form'         => Collective\Html\FormFacade::class,
         'Html'         => Collective\Html\HtmlFacade::class,
         'Gravatar'     => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
-        'Ntrust'       => Klaravel\Ntrust\NtrustFacade::class,
         'Throttle'     => GrahamCampbell\Throttle\Facades\Throttle::class,
         'Menu'         => Lavary\Menu\Facade::class,
+        'Laratrust'   => Laratrust\LaratrustFacade::class,
     ],
 
 ];
