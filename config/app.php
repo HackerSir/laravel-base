@@ -239,7 +239,7 @@ return [
         'Gravatar'     => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
         'Throttle'     => GrahamCampbell\Throttle\Facades\Throttle::class,
         'Menu'         => Lavary\Menu\Facade::class,
-        'Laratrust'   => Laratrust\LaratrustFacade::class,
+        'Laratrust'    => Laratrust\LaratrustFacade::class,
     ],
 
 ];
