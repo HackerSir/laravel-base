@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Reset Password')
+@section('title', '重設密碼')
 
 @section('content')
     <div class="card">
         <div class="card-header">
-            Reset Password
+            重設密碼
         </div>
         <div class="card-block">
             @if (session('status'))
@@ -17,7 +17,7 @@
                 {{ csrf_field() }}
 
                 <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">
-                    <label for="email" class="col-md-4 form-control-label">E-Mail Address</label>
+                    <label for="email" class="col-md-4 form-control-label">信箱</label>
 
                     <div class="col-md-6">
                         <input id="email" type="email"
@@ -36,7 +36,7 @@
                 <div class="form-group row">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">
-                            Send Password Reset Link
+                            發送密碼重設連結
                         </button>
                     </div>
                 </div>

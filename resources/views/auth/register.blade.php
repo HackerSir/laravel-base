@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
-@section('title', 'Register')
+@section('title', '註冊')
 
 @section('content')
     <div class="card">
         <div class="card-header">
-            Register
+            註冊
         </div>
         <div class="card-block">
             <form role="form" method="POST" action="{{ route('register') }}">
                 {{ csrf_field() }}
 
                 <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
-                    <label for="name" class="col-md-4 form-control-label">Name</label>
+                    <label for="name" class="col-md-4 form-control-label">名稱</label>
 
                     <div class="col-md-6">
                         <input id="name" type="text"
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">
-                    <label for="email" class="col-md-4 form-control-label">E-Mail Address</label>
+                    <label for="email" class="col-md-4 form-control-label">信箱</label>
 
                     <div class="col-md-6">
                         <input id="email" type="email"
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group row{{ $errors->has('password') ? ' has-danger' : '' }}">
-                    <label for="password" class="col-md-4 form-control-label">Password</label>
+                    <label for="password" class="col-md-4 form-control-label">密碼</label>
 
                     <div class="col-md-6">
                         <input id="password" type="password"
@@ -62,7 +62,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="password-confirm" class="col-md-4 form-control-label">Confirm Password</label>
+                    <label for="password-confirm" class="col-md-4 form-control-label">確認密碼</label>
 
                     <div class="col-md-6">
                         <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
@@ -73,10 +73,10 @@
                 <div class="form-group row">
                     <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">
-                            Register
+                            註冊
                         </button>
                         <a class="btn btn-link" href="{{ route('login') }}">
-                            Login
+                            登入
                         </a>
                     </div>
                 </div>
