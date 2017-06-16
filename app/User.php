@@ -15,6 +15,7 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @property string $remember_token
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
+ * @property-read bool $is_confirmed
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Permission[] $permissions
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Role[] $roles
@@ -38,7 +39,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'password',
+        'name',
+        'email',
+        'password',
+        'confirm_code',
+        'confirm_at',
+        'register_at',
+        'register_ip',
+        'last_login_at',
+        'last_login_ip',
     ];
 
     /**
@@ -49,4 +58,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $appends = [
+        'is_confirmed',
+    ];
+
+    /**
+     * 帳號是否完成驗證
+     *
+     * @return bool
+     */
+    public function getIsConfirmedAttribute()
+    {
+        return !empty($this->confirm_at);
+    }
 }
