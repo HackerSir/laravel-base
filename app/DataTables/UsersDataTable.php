@@ -3,8 +3,8 @@
 namespace App\DataTables;
 
 use App\User;
-use Yajra\Datatables\Services\DataTable;
 use Illuminate\Database\Eloquent\Builder;
+use Yajra\Datatables\Services\DataTable;
 
 class UsersDataTable extends DataTable
 {
