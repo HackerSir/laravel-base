@@ -11,6 +11,7 @@ use Laratrust\LaratrustRole;
  * @property string $name
  * @property string $display_name
  * @property string $description
+ * @property bool $protection
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Permission[] $permissions
@@ -19,6 +20,7 @@ use Laratrust\LaratrustRole;
  * @method static \Illuminate\Database\Query\Builder|\App\Role whereDisplayName($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Role whereId($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Role whereName($value)
+ * @method static \Illuminate\Database\Query\Builder|\App\Role whereProtection($value)
  * @method static \Illuminate\Database\Query\Builder|\App\Role whereUpdatedAt($value)
  * @mixin \Eloquent
  */
@@ -28,5 +30,6 @@ class Role extends LaratrustRole
         'name',
         'display_name',
         'description',
+        'protection',
     ];
 }
