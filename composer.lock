@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "c454242c953d0c941481fb0f5d38aa20",
+    "content-hash": "6d5f36b288ff8a49829dfe4295a26e86",
     "packages": [
         {
             "name": "arcanedev/log-viewer",
@@ -3820,6 +3820,57 @@
                 "laravel"
             ],
             "time": "2017-06-07T05:28:09+00:00"
+        },
+        {
+            "name": "yish/generators",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mombuyish/Laravel-Oh-Generators.git",
+                "reference": "be497115da05eff89df8612aca4a551c8b522daf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mombuyish/Laravel-Oh-Generators/zipball/be497115da05eff89df8612aca4a551c8b522daf",
+                "reference": "be497115da05eff89df8612aca4a551c8b522daf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.9",
+                "orchestra/database": "^3.4",
+                "orchestra/testbench": "^3.4",
+                "phpunit/phpunit": "~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yish\\Generators\\": "src/"
+                },
+                "files": [
+                    "src/Foundation/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Yish",
+                    "email": "mombuartworks@gmail.com"
+                }
+            ],
+            "description": "This package extends the core file generators that are included with Laravel 5",
+            "homepage": "https://github.com/Mombuyish/Laravel-Oh-Generators",
+            "keywords": [
+                "generator",
+                "laravel",
+                "patterns"
+            ],
+            "time": "2017-06-03T02:49:39+00:00"
         }
     ],
     "packages-dev": [
