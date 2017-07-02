@@ -131,28 +131,30 @@
         },
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.3.2",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "e82de98cef0d6597b1b686be0b5813a3a4bb53c5"
+                "reference": "87a02ff574f722c685e011f76692ab869ab64f6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/e82de98cef0d6597b1b686be0b5813a3a4bb53c5",
-                "reference": "e82de98cef0d6597b1b686be0b5813a3a4bb53c5",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/87a02ff574f722c685e011f76692ab869ab64f6c",
+                "reference": "87a02ff574f722c685e011f76692ab869ab64f6c",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/reflection-docblock": "^2.0.4",
-                "illuminate/console": "^5.0,<5.5",
-                "illuminate/filesystem": "^5.0,<5.5",
-                "illuminate/support": "^5.0,<5.5",
+                "illuminate/console": "^5.0,<5.6",
+                "illuminate/filesystem": "^5.0,<5.6",
+                "illuminate/support": "^5.0,<5.6",
                 "php": ">=5.4.0",
                 "symfony/class-loader": "^2.3|^3.0"
             },
             "require-dev": {
                 "doctrine/dbal": "~2.3",
+                "illuminate/config": "^5.0,<5.6",
+                "illuminate/view": "^5.0,<5.6",
                 "phpunit/phpunit": "4.*",
                 "scrutinizer/ocular": "~1.1",
                 "squizlabs/php_codesniffer": "~2.3"
@@ -164,6 +166,11 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "2.3-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider"
+                    ]
                 }
             },
             "autoload": {
@@ -193,7 +200,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2017-02-22T12:27:33+00:00"
+            "time": "2017-06-16T14:08:59+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",
@@ -1042,16 +1049,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.4.27",
+            "version": "v5.4.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404"
+                "reference": "442511fc62121085d184355e4f964c88942bbecb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/66f5e1b37cbd66e730ea18850ded6dc0ad570404",
-                "reference": "66f5e1b37cbd66e730ea18850ded6dc0ad570404",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/442511fc62121085d184355e4f964c88942bbecb",
+                "reference": "442511fc62121085d184355e4f964c88942bbecb",
                 "shasum": ""
             },
             "require": {
@@ -1167,7 +1174,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-06-15T19:08:25+00:00"
+            "time": "2017-06-30T13:43:07+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1413,16 +1420,16 @@
         },
         {
             "name": "maatwebsite/excel",
-            "version": "2.1.17",
+            "version": "2.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Maatwebsite/Laravel-Excel.git",
-                "reference": "14d5abf8e20563c80dd074fd7c8cf1c05bf51f1d"
+                "reference": "f4535ac21968f6086438e098cdf289b350aa993c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/14d5abf8e20563c80dd074fd7c8cf1c05bf51f1d",
-                "reference": "14d5abf8e20563c80dd074fd7c8cf1c05bf51f1d",
+                "url": "https://api.github.com/repos/Maatwebsite/Laravel-Excel/zipball/f4535ac21968f6086438e098cdf289b350aa993c",
+                "reference": "f4535ac21968f6086438e098cdf289b350aa993c",
                 "shasum": ""
             },
             "require": {
@@ -1449,6 +1456,16 @@
                 "illuminate/view": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Maatwebsite\\Excel\\ExcelServiceProvider"
+                    ],
+                    "aliases": {
+                        "Excel": "Maatwebsite\\Excel\\Facades\\Excel"
+                    }
+                }
+            },
             "autoload": {
                 "classmap": [
                     "src/Maatwebsite/Excel"
@@ -1477,20 +1494,20 @@
                 "import",
                 "laravel"
             ],
-            "time": "2017-04-04T18:28:12+00:00"
+            "time": "2017-07-02T07:00:56+00:00"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.22.1",
+            "version": "1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
                 "shasum": ""
             },
             "require": {
@@ -1511,7 +1528,7 @@
                 "phpunit/phpunit-mock-objects": "2.3.0",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
-                "swiftmailer/swiftmailer": "~5.3"
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -1555,7 +1572,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-03-13T07:08:03+00:00"
+            "time": "2017-06-19T01:22:40+00:00"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -1656,16 +1673,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.5",
+            "version": "v3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d"
+                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
-                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/0808939f81c1347a3c8a82a5925385a08074b0f1",
+                "reference": "0808939f81c1347a3c8a82a5925385a08074b0f1",
                 "shasum": ""
             },
             "require": {
@@ -1703,7 +1720,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-03-05T18:23:57+00:00"
+            "time": "2017-06-28T20:53:48+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -1909,16 +1926,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.6",
+            "version": "v0.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "7028d6d525fb183d50b249b7c07598e3d386b27d"
+                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/7028d6d525fb183d50b249b7c07598e3d386b27d",
-                "reference": "7028d6d525fb183d50b249b7c07598e3d386b27d",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
                 "shasum": ""
             },
             "require": {
@@ -1978,7 +1995,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-04T10:34:20+00:00"
+            "time": "2017-06-24T06:16:19+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -2064,16 +2081,16 @@
         },
         {
             "name": "recca0120/laravel-tracy",
-            "version": "v1.8.5",
+            "version": "v1.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-tracy.git",
-                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb"
+                "reference": "4fc0eb8dc7774fe4d616e6402937fa6596dc4cd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/141ee41f6cc36f4cdc95163b66e6edf015a151bb",
-                "reference": "141ee41f6cc36f4cdc95163b66e6edf015a151bb",
+                "url": "https://api.github.com/repos/recca0120/laravel-tracy/zipball/4fc0eb8dc7774fe4d616e6402937fa6596dc4cd0",
+                "reference": "4fc0eb8dc7774fe4d616e6402937fa6596dc4cd0",
                 "shasum": ""
             },
             "require": {
@@ -2090,12 +2107,12 @@
             "require-dev": {
                 "mockery/mockery": "~0.9.4",
                 "nesbot/carbon": "~1.20",
-                "phpunit/phpunit": "~4.8|~5.4"
+                "phpunit/phpunit": "~4.8|~5.4|~6.1"
             },
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/helpers.php"
+                    "src/polyfill.php"
                 ],
                 "psr-4": {
                     "Recca0120\\LaravelTracy\\": "src/"
@@ -2123,20 +2140,20 @@
                 "tracy",
                 "webprofiler"
             ],
-            "time": "2017-03-08T07:27:54+00:00"
+            "time": "2017-06-19T18:05:09+00:00"
         },
         {
             "name": "recca0120/terminal",
-            "version": "v1.6.11",
+            "version": "v1.6.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/recca0120/laravel-terminal.git",
-                "reference": "cbb017f8e950642ac8b46e9521d42582e2222ffa"
+                "reference": "968e4f0b8a2c53b56fdba2d54a8b4340393d64f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/cbb017f8e950642ac8b46e9521d42582e2222ffa",
-                "reference": "cbb017f8e950642ac8b46e9521d42582e2222ffa",
+                "url": "https://api.github.com/repos/recca0120/laravel-terminal/zipball/968e4f0b8a2c53b56fdba2d54a8b4340393d64f3",
+                "reference": "968e4f0b8a2c53b56fdba2d54a8b4340393d64f3",
                 "shasum": ""
             },
             "require": {
@@ -2183,7 +2200,7 @@
                 "web",
                 "web artisan"
             ],
-            "time": "2017-05-31T14:14:28+00:00"
+            "time": "2017-06-19T18:06:50+00:00"
         },
         {
             "name": "santigarcor/laratrust",
@@ -3649,23 +3666,23 @@
         },
         {
             "name": "yajra/laravel-datatables-buttons",
-            "version": "v1.3.1",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables-buttons.git",
-                "reference": "b9ba58436bedf3c89eb19652d638f3aa362c798f"
+                "reference": "92b73916c1a1db64768477b61ac861773ed30508"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/b9ba58436bedf3c89eb19652d638f3aa362c798f",
-                "reference": "b9ba58436bedf3c89eb19652d638f3aa362c798f",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-buttons/zipball/92b73916c1a1db64768477b61ac861773ed30508",
+                "reference": "92b73916c1a1db64768477b61ac861773ed30508",
                 "shasum": ""
             },
             "require": {
                 "illuminate/console": "5.4.*",
                 "maatwebsite/excel": "^2.0",
                 "php": ">=5.6.4",
-                "yajra/laravel-datatables-html": "1.*",
+                "yajra/laravel-datatables-html": "^1.4",
                 "yajra/laravel-datatables-oracle": "7.*"
             },
             "require-dev": {
@@ -3704,20 +3721,20 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-05-28T05:45:35+00:00"
+            "time": "2017-06-26T04:53:11+00:00"
         },
         {
             "name": "yajra/laravel-datatables-html",
-            "version": "v1.2.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables-html.git",
-                "reference": "8b7448f703ec37edc9f4af67acfc4146c5f7b019"
+                "reference": "9cb8368b7c084df3a45d89eb2acee62acd58b70a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables-html/zipball/8b7448f703ec37edc9f4af67acfc4146c5f7b019",
-                "reference": "8b7448f703ec37edc9f4af67acfc4146c5f7b019",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables-html/zipball/9cb8368b7c084df3a45d89eb2acee62acd58b70a",
+                "reference": "9cb8368b7c084df3a45d89eb2acee62acd58b70a",
                 "shasum": ""
             },
             "require": {
@@ -3758,20 +3775,20 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-03-28T06:27:30+00:00"
+            "time": "2017-06-26T05:18:16+00:00"
         },
         {
             "name": "yajra/laravel-datatables-oracle",
-            "version": "v7.7.0",
+            "version": "v7.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yajra/laravel-datatables.git",
-                "reference": "edf2d782cc0b340876ecf6851a8f0de1c0e15a76"
+                "reference": "f044610b64e70b63c1cc3831e687e071bed11afb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/edf2d782cc0b340876ecf6851a8f0de1c0e15a76",
-                "reference": "edf2d782cc0b340876ecf6851a8f0de1c0e15a76",
+                "url": "https://api.github.com/repos/yajra/laravel-datatables/zipball/f044610b64e70b63c1cc3831e687e071bed11afb",
+                "reference": "f044610b64e70b63c1cc3831e687e071bed11afb",
                 "shasum": ""
             },
             "require": {
@@ -3819,7 +3836,7 @@
                 "jquery",
                 "laravel"
             ],
-            "time": "2017-06-07T05:28:09+00:00"
+            "time": "2017-06-30T09:59:25+00:00"
         },
         {
             "name": "yish/generators",
@@ -4588,16 +4605,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.20",
+            "version": "5.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b"
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
-                "reference": "3cb94a5f8c07a03c8b7527ed7468a2926203f58b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
                 "shasum": ""
             },
             "require": {
@@ -4666,7 +4683,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-05-22T07:42:55+00:00"
+            "time": "2017-06-21T08:11:54+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
