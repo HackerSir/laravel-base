@@ -23,7 +23,10 @@ A website base on Laravel and Bootstrap for HackerSir.
   - graham-campbell/throttle: "^5.3"
   - lavary/laravel-menu: "^1.6"
   - arcanedev/log-viewer: "^4.3"
+  - yajra/laravel-datatables-buttons: "^1.3"
+  - yajra/laravel-datatables-html: "^1.2"
   - yajra/laravel-datatables-oracle: "^7.6"
+  - yish/generators: "^1.1"
 - System
   - User
   - Role
