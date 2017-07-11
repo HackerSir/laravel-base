@@ -48,6 +48,9 @@ class AuthListener
     {
         /* @var \App\User $user */
         $user = $event->user;
+        if (!$user) {
+            return;
+        }
         $ip = Request::getClientIp();
         //更新最後登入時間與IP
         $user->update([
