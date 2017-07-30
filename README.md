@@ -6,4 +6,4 @@ Keep master clean!!
 
 ## Framework
 - Laravel
-- Semantic UI
+- Bootstrap/Semantic UI
