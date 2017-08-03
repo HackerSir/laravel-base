@@ -31,6 +31,14 @@
     {{--<link rel="stylesheet" href="//cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">--}}
     <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
     <style>
+        {{-- https://github.com/twbs/bootstrap/issues/21590 --}}
+        @media (max-width: 576px) {
+            nav > .container {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
         body > .container {
             padding-top: 60px;
             min-height: calc(100vh - 62px);
