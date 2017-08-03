@@ -39,6 +39,11 @@
         .table td, .table th {
             vertical-align: middle;
         }
+
+        {{-- 讓 AlertifyJS 的 notify 往下一點，才不會擋到 navbar --}}
+        .alertify-notifier.ajs-top {
+            top: 60px;
+        }
     </style>
     @yield('css')
 </head>
