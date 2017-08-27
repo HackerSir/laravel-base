@@ -7,7 +7,7 @@
         <div class="col-md-8 offset-md-2">
             <h1>登入</h1>
             <div class="card">
-                <div class="card-block">
+                <div class="card-body">
                     <form role="form" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
 

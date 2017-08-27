@@ -23,7 +23,7 @@
                     <img src="{{ Gravatar::src($user->email, 200) }}" class="img-thumbnail" id="gravatar"
                          title="Gravatar大頭貼"/>
                 </div>
-                <div class="card-block">
+                <div class="card-body">
                     <table class="table table-hover">
                         <tr>
                             <td class="text-md-right">名稱：</td>

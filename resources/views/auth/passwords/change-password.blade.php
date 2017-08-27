@@ -7,7 +7,7 @@
         <div class="col-md-8 offset-md-2">
             <h1>修改密碼</h1>
             <div class="card">
-                <div class="card-block">
+                <div class="card-body">
                     <form role="form" method="POST" action="{{ route('password.change') }}">
                         {{ csrf_field() }}
                         {{ method_field('put') }}
