@@ -8,8 +8,8 @@
 @section('title', $methodText . '角色')
 
 @section('content')
-    <div class="mt-3 pb-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3 pb-3">
+        <div class="col-md-8">
             <h1>{{ $methodText }}角色</h1>
             <div class="card">
                 <div class="card-body">
@@ -118,7 +118,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-10 offset-md-2">
+                            <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary"> 確認</button>
                                 <a href="{{ route('role.index') }}" class="btn btn-secondary">返回列表</a>
                             </div>

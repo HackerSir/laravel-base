@@ -11,8 +11,8 @@
 @endsection
 
 @section('content')
-    <div class="row mt-3 pb-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3 pb-3">
+        <div class="col-md-8">
             <h1>個人資料</h1>
             <div class="card">
                 <div class="card-body text-center">

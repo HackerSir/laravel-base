@@ -3,8 +3,8 @@
 @section('title', "{$user->name} - 編輯會員資料")
 
 @section('content')
-    <div class="row mt-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
             <h1>{{ $user->name }} - 編輯會員資料</h1>
             <div class="card">
                 <div class="card-body">
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-10 offset-md-2">
+                            <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary"> 更新會員資料</button>
                                 <a href="{{ route('user.show', $user) }}" class="btn btn-secondary">返回會員資料</a>
                             </div>
