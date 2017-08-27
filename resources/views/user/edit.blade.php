@@ -31,7 +31,7 @@
                                        value="{{ $user->name }}" required autofocus>
 
                                 @if ($errors->has('name'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                 <strong>{{ $errors->first('name') }}</strong>
                             </span>
                                 @endif
@@ -68,7 +68,7 @@
                                     <br/>
                                 @endforeach
                                 @if ($errors->has('role'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                             <strong>{{ $errors->first('role') }}</strong>
                                         </span>
                                 @endif

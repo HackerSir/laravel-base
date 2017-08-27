@@ -23,7 +23,7 @@
                                        value="{{ $email or old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
@@ -39,7 +39,7 @@
                                        name="password" required>
 
                                 @if ($errors->has('password'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
@@ -55,7 +55,7 @@
                                        required>
 
                                 @if ($errors->has('password_confirmation'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('password_confirmation') }}</strong>
                                     </span>
                                 @endif

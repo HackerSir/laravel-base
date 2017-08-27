@@ -26,7 +26,7 @@
                                        required>
 
                                 @if ($errors->has('email'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                 <strong>{{ $errors->first('email') }}</strong>
                             </span>
                                 @endif

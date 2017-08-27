@@ -21,7 +21,7 @@
                                        name="password" required autofocus>
 
                                 @if ($errors->has('password'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                 <strong>{{ $errors->first('password') }}</strong>
                             </span>
                                 @endif
@@ -37,7 +37,7 @@
                                        name="new_password" required autofocus>
 
                                 @if ($errors->has('new_password'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                 <strong>{{ $errors->first('new_password') }}</strong>
                             </span>
                                 @endif
@@ -53,7 +53,7 @@
                                        name="new_password_confirmation" required autofocus>
 
                                 @if ($errors->has('new_password_confirmation'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                 <strong>{{ $errors->first('new_password_confirmation') }}</strong>
                             </span>
                                 @endif

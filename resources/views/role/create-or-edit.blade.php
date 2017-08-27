@@ -37,7 +37,7 @@
                                            placeholder="如：admin" required>
                                 @endif
                                 @if ($errors->has('name'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
@@ -53,7 +53,7 @@
                                        name="display_name"
                                        placeholder="如：管理員">
                                 @if ($errors->has('display_name'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('display_name') }}</strong>
                                     </span>
                                 @endif
@@ -69,7 +69,7 @@
                                        name="description"
                                        placeholder="說明此角色之用途">
                                 @if ($errors->has('description'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('description') }}</strong>
                                     </span>
                                 @endif
