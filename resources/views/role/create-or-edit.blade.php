@@ -19,7 +19,7 @@
                             {{ method_field('patch') }}
                         @endif
                         {{ csrf_field() }}
-                        <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label">英文名稱</label>
                             <div class="col-md-10">
                                 @if($isEditMode && $role->protection)
@@ -44,7 +44,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('display_name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="display_name" class="col-md-2 col-form-label">顯示名稱</label>
                             <div class="col-md-10">
                                 <input id="display_name" type="text"
@@ -60,7 +60,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('description') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="description" class="col-md-2 col-form-label">簡介</label>
                             <div class="col-md-10">
                                 <input id="description" type="text"
@@ -77,7 +77,7 @@
                         </div>
 
 
-                        <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label class="col-md-2 col-form-label">權限</label>
                             <div class="col-md-10" style="padding-top: calc(.5rem - 1px * 2);">
                                 @foreach($permissions as $permission)

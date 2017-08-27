@@ -12,7 +12,7 @@
                         {{ csrf_field() }}
                         {{ method_field('put') }}
 
-                        <div class="form-group row{{ $errors->has('password') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="password" class="col-md-2 col-form-label">密碼</label>
 
                             <div class="col-md-10">
@@ -28,7 +28,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('new_password') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="new_password" class="col-md-2 col-form-label">新密碼</label>
 
                             <div class="col-md-10">
@@ -44,7 +44,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('new_password_confirmation') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="new_password_confirmation" class="col-md-2 col-form-label">確認新密碼</label>
 
                             <div class="col-md-10">

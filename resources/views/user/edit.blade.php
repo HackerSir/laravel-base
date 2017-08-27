@@ -21,7 +21,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label">名稱</label>
 
                             <div class="col-md-10">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('role') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label class="col-md-2 col-form-label">角色</label>
                             <div class="col-md-10" style="padding-top: calc(.5rem - 1px * 2);">
                                 @foreach($roles as $role)
