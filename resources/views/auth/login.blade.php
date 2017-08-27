@@ -3,8 +3,8 @@
 @section('title', '登入')
 
 @section('content')
-    <div class="row mt-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
             <h1>登入</h1>
             <div class="card">
                 <div class="card-body">
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-10 offset-md-2">
+                            <div class="col-md-10 ml-auto">
                                 <label class="custom-control custom-checkbox">
                                     <input type="checkbox" name="remember" class="custom-control-input">
                                     <span class="custom-control-indicator"></span>
@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-10 offset-md-2">
+                            <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary">
                                     登入
                                 </button>
