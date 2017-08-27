@@ -19,7 +19,7 @@
                                 <span class="form-text">信箱作為帳號使用，故無法修改</span>
                             </div>
                         </div>
-                        <div class="alert alert-warning col-md-10 offset-md-2" role="alert">
+                        <div class="alert alert-warning col-md-10 ml-auto" role="alert">
                             請注意：
                             <ul>
                                 <li>若信箱錯誤，請重新註冊帳號</li>
