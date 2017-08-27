@@ -18,7 +18,7 @@
             </a>
             <h1>{{ $user->name }} - 會員資料</h1>
             <div class="card">
-                <div class="card-block text-center">
+                <div class="card-body text-center">
                     {{-- Gravatar大頭貼 --}}
                     <img src="{{ Gravatar::src($user->email, 200) }}" class="img-thumbnail" id="gravatar"
                          title="Gravatar大頭貼"/>
@@ -65,7 +65,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="card-block text-center">
+                <div class="card-body text-center">
                     <a href="{{ route('user.edit', $user) }}" class="btn btn-primary">編輯資料</a>
                     {!! Form::open(['route' => ['user.destroy', $user], 'style' => 'display: inline', 'method' => 'DELETE', 'onSubmit' => "return confirm('確定要刪除此會員嗎？');"]) !!}
                     <button type="submit" class="btn btn-danger">刪除會員</button>
