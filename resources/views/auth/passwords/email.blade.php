@@ -3,11 +3,11 @@
 @section('title', '重設密碼')
 
 @section('content')
-    <div class="row mt-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
             <h1>重設密碼</h1>
             <div class="card">
-                <div class="card-block">
+                <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -16,17 +16,17 @@
                     <form role="form" method="POST" action="{{ route('password.email') }}">
                         {{ csrf_field() }}
 
-                        <div class="form-group row{{ $errors->has('email') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="email" class="col-md-2 col-form-label">信箱</label>
 
                             <div class="col-md-10">
                                 <input id="email" type="email"
-                                       class="form-control{{ $errors->has('email') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        name="email" value="{{ old('email') }}"
                                        required>
 
                                 @if ($errors->has('email'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                 <strong>{{ $errors->first('email') }}</strong>
                             </span>
                                 @endif
@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-10 offset-md-2">
+                            <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary">
                                     發送重設密碼信件
                                 </button>

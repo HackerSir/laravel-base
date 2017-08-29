@@ -11,17 +11,17 @@
 @endsection
 
 @section('content')
-    <div class="row mt-3 pb-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3 pb-3">
+        <div class="col-md-8">
             <h1>個人資料</h1>
             <div class="card">
-                <div class="card-block text-center">
+                <div class="card-body text-center">
                     {{-- Gravatar大頭貼 --}}
                     <a href="https://zh-tw.gravatar.com/" target="_blank" title="透過Gravatar更換照片">
                         <img src="{{ Gravatar::src($user->email, 200) }}" class="img-thumbnail" id="gravatar"/>
                     </a>
                 </div>
-                <div class="card-block">
+                <div class="card-body">
                     <table class="table table-hover">
                         <tr>
                             <td class="text-md-right">名稱：</td>
@@ -57,7 +57,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="card-block text-center">
+                <div class="card-body text-center">
                     <a href="{{ route('profile.edit') }}" class="btn btn-primary">編輯資料</a>
                     <a href="{{ route('password.change') }}" class="btn btn-primary">修改密碼</a>
                 </div>

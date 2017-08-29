@@ -3,11 +3,11 @@
 @section('title', "{$user->name} - 編輯會員資料")
 
 @section('content')
-    <div class="row mt-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-8">
             <h1>{{ $user->name }} - 編輯會員資料</h1>
             <div class="card">
-                <div class="card-block">
+                <div class="card-body">
                     <form role="form" method="POST" action="{{ route('user.update', $user) }}">
                         {{ csrf_field() }}
                         {{ method_field('patch') }}
@@ -21,24 +21,24 @@
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label">名稱</label>
 
                             <div class="col-md-10">
                                 <input id="name" type="text"
-                                       class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                        name="name"
                                        value="{{ $user->name }}" required autofocus>
 
                                 @if ($errors->has('name'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                 <strong>{{ $errors->first('name') }}</strong>
                             </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('role') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label class="col-md-2 col-form-label">角色</label>
                             <div class="col-md-10" style="padding-top: calc(.5rem - 1px * 2);">
                                 @foreach($roles as $role)
@@ -68,7 +68,7 @@
                                     <br/>
                                 @endforeach
                                 @if ($errors->has('role'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                             <strong>{{ $errors->first('role') }}</strong>
                                         </span>
                                 @endif
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-10 offset-md-2">
+                            <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary"> 更新會員資料</button>
                                 <a href="{{ route('user.show', $user) }}" class="btn btn-secondary">返回會員資料</a>
                             </div>

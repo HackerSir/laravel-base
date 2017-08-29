@@ -8,68 +8,68 @@
 @section('title', $methodText . '角色')
 
 @section('content')
-    <div class="mt-3 pb-3">
-        <div class="col-md-8 offset-md-2">
+    <div class="row justify-content-center mt-3 pb-3">
+        <div class="col-md-8">
             <h1>{{ $methodText }}角色</h1>
             <div class="card">
-                <div class="card-block">
+                <div class="card-body">
                     <form role="form" method="POST"
                           action="{{ $isEditMode ? route('role.update', $role) : route('role.store') }}">
                         @if($isEditMode)
                             {{ method_field('patch') }}
                         @endif
                         {{ csrf_field() }}
-                        <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="name" class="col-md-2 col-form-label">英文名稱</label>
                             <div class="col-md-10">
                                 @if($isEditMode && $role->protection)
                                     <input id="name" type="text"
-                                           class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                                           class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                            name="name"
                                            value="{{ $role->name }}"
                                            placeholder="如：admin" disabled>
                                     {!! Form::hidden('name', $role->name) !!}
                                 @else
                                     <input id="name" type="text"
-                                           class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                                           class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                            name="name"
                                            value="{{ $role->name or '' }}"
                                            placeholder="如：admin" required>
                                 @endif
                                 @if ($errors->has('name'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('display_name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="display_name" class="col-md-2 col-form-label">顯示名稱</label>
                             <div class="col-md-10">
                                 <input id="display_name" type="text"
-                                       class="form-control{{ $errors->has('display_name') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('display_name') ? ' is-invalid' : '' }}"
                                        value="{{ $role->display_name or '' }}"
                                        name="display_name"
                                        placeholder="如：管理員">
                                 @if ($errors->has('display_name'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('display_name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="form-group row{{ $errors->has('description') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label for="description" class="col-md-2 col-form-label">簡介</label>
                             <div class="col-md-10">
                                 <input id="description" type="text"
-                                       class="form-control{{ $errors->has('description') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
                                        value="{{ $role->description or ''}}"
                                        name="description"
                                        placeholder="說明此角色之用途">
                                 @if ($errors->has('description'))
-                                    <span class="form-control-feedback">
+                                    <span class="invalid-feedback">
                                         <strong>{{ $errors->first('description') }}</strong>
                                     </span>
                                 @endif
@@ -77,7 +77,7 @@
                         </div>
 
 
-                        <div class="form-group row{{ $errors->has('name') ? ' has-danger' : '' }}">
+                        <div class="form-group row">
                             <label class="col-md-2 col-form-label">權限</label>
                             <div class="col-md-10" style="padding-top: calc(.5rem - 1px * 2);">
                                 @foreach($permissions as $permission)
@@ -118,7 +118,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-10 offset-md-2">
+                            <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary"> 確認</button>
                                 <a href="{{ route('role.index') }}" class="btn btn-secondary">返回列表</a>
                             </div>
