@@ -24,14 +24,14 @@
                             <div class="col-md-10">
                                 @if($isEditMode && $role->protection)
                                     <input id="name" type="text"
-                                           class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                                           class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                            name="name"
                                            value="{{ $role->name }}"
                                            placeholder="如：admin" disabled>
                                     {!! Form::hidden('name', $role->name) !!}
                                 @else
                                     <input id="name" type="text"
-                                           class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                                           class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                            name="name"
                                            value="{{ $role->name or '' }}"
                                            placeholder="如：admin" required>
@@ -48,7 +48,7 @@
                             <label for="display_name" class="col-md-2 col-form-label">顯示名稱</label>
                             <div class="col-md-10">
                                 <input id="display_name" type="text"
-                                       class="form-control{{ $errors->has('display_name') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('display_name') ? ' is-invalid' : '' }}"
                                        value="{{ $role->display_name or '' }}"
                                        name="display_name"
                                        placeholder="如：管理員">
@@ -64,7 +64,7 @@
                             <label for="description" class="col-md-2 col-form-label">簡介</label>
                             <div class="col-md-10">
                                 <input id="description" type="text"
-                                       class="form-control{{ $errors->has('description') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('description') ? ' is-invalid' : '' }}"
                                        value="{{ $role->description or ''}}"
                                        name="description"
                                        placeholder="說明此角色之用途">

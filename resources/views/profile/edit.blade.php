@@ -26,7 +26,7 @@
 
                             <div class="col-md-10">
                                 <input id="name" type="text"
-                                       class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                        name="name"
                                        value="{{ $user->name }}" required autofocus>
 

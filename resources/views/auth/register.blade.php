@@ -16,7 +16,7 @@
 
                             <div class="col-md-10">
                                 <input id="name" type="text"
-                                       class="form-control{{ $errors->has('name') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}"
                                        name="name"
                                        value="{{ old('name') }}" required
                                        autofocus>
@@ -34,7 +34,7 @@
 
                             <div class="col-md-10">
                                 <input id="email" type="email"
-                                       class="form-control{{ $errors->has('email') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        name="email" value="{{ old('email') }}"
                                        required>
 
@@ -51,7 +51,7 @@
 
                             <div class="col-md-10">
                                 <input id="password" type="password"
-                                       class="form-control{{ $errors->has('password') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                        name="password" required>
 
                                 @if ($errors->has('password'))

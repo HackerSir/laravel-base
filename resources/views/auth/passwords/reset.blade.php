@@ -18,7 +18,7 @@
 
                             <div class="col-md-10">
                                 <input id="email" type="email"
-                                       class="form-control{{ $errors->has('email') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        name="email"
                                        value="{{ $email or old('email') }}" required autofocus>
 
@@ -35,7 +35,7 @@
 
                             <div class="col-md-10">
                                 <input id="password" type="password"
-                                       class="form-control{{ $errors->has('email') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        name="password" required>
 
                                 @if ($errors->has('password'))
@@ -50,7 +50,7 @@
                             <label for="password-confirm" class="col-md-2 col-form-label">確認密碼</label>
                             <div class="col-md-10">
                                 <input id="password-confirm" type="password"
-                                       class="form-control{{ $errors->has('email') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        name="password_confirmation"
                                        required>
 

@@ -21,7 +21,7 @@
 
                             <div class="col-md-10">
                                 <input id="email" type="email"
-                                       class="form-control{{ $errors->has('email') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
                                        name="email" value="{{ old('email') }}"
                                        required>
 

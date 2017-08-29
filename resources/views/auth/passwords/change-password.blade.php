@@ -17,7 +17,7 @@
 
                             <div class="col-md-10">
                                 <input id="password" type="password"
-                                       class="form-control{{ $errors->has('password') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                        name="password" required autofocus>
 
                                 @if ($errors->has('password'))
@@ -33,7 +33,7 @@
 
                             <div class="col-md-10">
                                 <input id="new_password" type="password"
-                                       class="form-control{{ $errors->has('new_password') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('new_password') ? ' is-invalid' : '' }}"
                                        name="new_password" required autofocus>
 
                                 @if ($errors->has('new_password'))
@@ -49,7 +49,7 @@
 
                             <div class="col-md-10">
                                 <input id="new_password_confirmation" type="password"
-                                       class="form-control{{ $errors->has('new_password_confirmation') ? ' form-control-danger' : '' }}"
+                                       class="form-control{{ $errors->has('new_password_confirmation') ? ' is-invalid' : '' }}"
                                        name="new_password_confirmation" required autofocus>
 
                                 @if ($errors->has('new_password_confirmation'))
