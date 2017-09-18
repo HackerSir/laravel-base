@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\User;
-use Buzz\LaravelGoogleCaptcha\CaptchaFacade;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\BrowserKitTestCase;
 
@@ -25,12 +24,6 @@ class UserAuthTest extends BrowserKitTestCase
 
     public function testRegisterSuccess()
     {
-        CaptchaFacade::shouldReceive('verify')
-            ->andReturn(true);
-
-        CaptchaFacade::shouldReceive('display')
-            ->andReturn('<input type="hidden" name="g-recaptcha-response" value="1" />');
-
         $userEmail = 'example@example.com';
 
         $this->visit(route('register'))
