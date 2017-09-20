@@ -6,6 +6,9 @@
 
 A website base on Laravel and Bootstrap for HackerSir.
 
+## Required
+- PHP 7.1
+
 ## Framework
 - Laravel 5.5
 - Bootstrap 4 Beta
