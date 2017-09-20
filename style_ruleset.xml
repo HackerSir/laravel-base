@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- 規則名稱 -->
+<ruleset name="Custom Standard">
+    <!-- 描述 -->
+    <description>A custom coding standard</description>
+
+    <!-- 以PSR2為基礎 -->
+    <rule ref="PSR2"/>
+
+    <!-- 禁用TooLong規則 -->
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <severity>0</severity>
+    </rule>
+</ruleset>

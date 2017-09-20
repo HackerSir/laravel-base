@@ -1,0 +1,57 @@
+before_script:
+  # Environment
+  - apt-get update -yqq
+  - apt-get install -yqq libpq-dev
+  - docker-php-ext-install pdo pdo_pgsql
+  # Project
+  - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
+  - cp .env.example .env
+  - php artisan key:generate
+  - php artisan config:clear
+  - php artisan migrate:refresh --seed
+
+after_script:
+  # PHP Code Sniffier
+  - ./vendor/bin/phpcs --config-set ignore_errors_on_exit 1
+  - ./vendor/bin/phpcs --config-set ignore_warnings_on_exit 1
+  - ./vendor/bin/phpcs --standard=style_ruleset.xml app
+
+variables:
+  # Connection Settings
+  DB_DATABASE: db_name
+  DB_USERNAME: db_user
+  DB_PASSWORD: secret
+  # Other settings for testing
+  CACHE_DRIVER: array
+  SESSION_DRIVER: array
+  # MySQL Service
+  MYSQL_DATABASE: $DB_DATABASE
+  MYSQL_ROOT_PASSWORD: root_password
+  MYSQL_USER: $DB_USERNAME
+  MYSQL_PASSWORD: $DB_PASSWORD
+  # Postgres Service
+  POSTGRES_DB: $DB_DATABASE
+  POSTGRES_USER: $DB_USERNAME
+  POSTGRES_PASSWORD: $DB_PASSWORD
+
+phpunit:php7.1:mysql5.7:
+  image: edbizarro/gitlab-ci-pipeline-php:7.1
+  services:
+    - mysql:5.7
+  variables:
+    DB_CONNECTION: mysql
+    DB_HOST: mysql
+    DB_PORT: '3306'
+  script:
+    - ./vendor/phpunit/phpunit/phpunit -v --coverage-text --stderr
+
+phpunit:php7.1:postgres9.6:
+  image: edbizarro/gitlab-ci-pipeline-php:7.1
+  services:
+    - postgres:9.6
+  variables:
+    DB_CONNECTION: pgsql
+    DB_HOST: postgres
+    DB_PORT: '5432'
+  script:
+    - ./vendor/phpunit/phpunit/phpunit -v --coverage-text --stderr
