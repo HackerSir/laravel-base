@@ -16,20 +16,20 @@ A website base on Laravel and Bootstrap for HackerSir.
 
 ## Including
 - Packages
-  - [TODO] laravelcollective/html: "^5.4"
-  - [TODO] predis/predis: "^1.1"
-  - [TODO] barryvdh/laravel-ide-helper: "^2.3"
-  - [TODO] doctrine/dbal: "^2.5"
-  - [TODO] recca0120/laravel-tracy: "^1.8"
-  - [TODO] thomaswelton/laravel-gravatar: "^1.1"
-  - [TODO] santigarcor/laratrust: "^3.2"
-  - [TODO] graham-campbell/throttle: "^5.3"
-  - [TODO] lavary/laravel-menu: "^1.6"
-  - [TODO] arcanedev/log-viewer: "^4.3"
-  - [TODO] yajra/laravel-datatables-buttons: "^1.3"
-  - [TODO] yajra/laravel-datatables-html: "^1.2"
-  - [TODO] yajra/laravel-datatables-oracle: "^7.6"
-  - [TODO] yish/generators: "^1.1"
+  - laravelcollective/html: "^5.5"
+  - predis/predis: "^1.1"
+  - barryvdh/laravel-ide-helper: "^2.4"
+  - doctrine/dbal: "^2.6"
+  - recca0120/laravel-tracy: "^2.4"
+  - thomaswelton/laravel-gravatar: "^1.1"
+  - santigarcor/laratrust: "^4.0"
+  - graham-campbell/throttle: "^6.0"
+  - lavary/laravel-menu: "^1.6"
+  - arcanedev/log-viewer: "^4.4"
+  - yajra/laravel-datatables-buttons: "^3.0"
+  - yajra/laravel-datatables-html: "^3.1"
+  - yajra/laravel-datatables-oracle: "^8.0"
+  - yish/generators: "^2.0"
 - System
   - [TODO] User
   - [TODO] Role
