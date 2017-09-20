@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Carbon\Carbon;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use Schema;
 
 class AppServiceProvider extends ServiceProvider
 {
