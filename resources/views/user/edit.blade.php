@@ -5,6 +5,9 @@
 @section('content')
     <div class="row justify-content-center mt-3">
         <div class="col-md-8">
+            <a href="{{ route('user.show', $user) }}" class="btn btn-secondary">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> 會員資料
+            </a>
             <h1>{{ $user->name }} - 編輯會員資料</h1>
             <div class="card">
                 <div class="card-body">
@@ -32,8 +35,8 @@
 
                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback">
-                                <strong>{{ $errors->first('name') }}</strong>
-                            </span>
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
@@ -49,10 +52,10 @@
                                                    checked disabled @endif>
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">
-                                                    {{ $role->display_name }}（{{ $role->description }}）
-                                                    <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"
-                                                       title="禁止解除自己的管理員職務"></i>
-                                                </span>
+                                                {{ $role->display_name }}（{{ $role->description }}）
+                                                <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"
+                                                   title="禁止解除自己的管理員職務"></i>
+                                            </span>
                                         </label>
                                     @else
                                         <label class="custom-control custom-checkbox">
@@ -61,24 +64,25 @@
                                                    @if($user->hasRole($role->name)) checked @endif>
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">
-                                                    {{ $role->display_name }}（{{ $role->description }}）
-                                                </span>
+                                                {{ $role->display_name }}（{{ $role->description }}）
+                                            </span>
                                         </label>
                                     @endif
                                     <br/>
                                 @endforeach
                                 @if ($errors->has('role'))
                                     <span class="invalid-feedback">
-                                            <strong>{{ $errors->first('role') }}</strong>
-                                        </span>
+                                        <strong>{{ $errors->first('role') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-md-10 ml-auto">
-                                <button type="submit" class="btn btn-primary"> 更新會員資料</button>
-                                <a href="{{ route('user.show', $user) }}" class="btn btn-secondary">返回會員資料</a>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-check" aria-hidden="true"></i> 更新會員資料
+                                </button>
                             </div>
                         </div>
                     </form>

@@ -5,6 +5,9 @@
 @section('content')
     <div class="row justify-content-center mt-3">
         <div class="col-md-8">
+            <a href="{{ route('profile') }}" class="btn btn-secondary">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> 個人資料
+            </a>
             <h1>修改密碼</h1>
             <div class="card">
                 <div class="card-body">
@@ -22,8 +25,8 @@
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
@@ -38,8 +41,8 @@
 
                                 @if ($errors->has('new_password'))
                                     <span class="invalid-feedback">
-                                <strong>{{ $errors->first('new_password') }}</strong>
-                            </span>
+                                        <strong>{{ $errors->first('new_password') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
@@ -54,16 +57,17 @@
 
                                 @if ($errors->has('new_password_confirmation'))
                                     <span class="invalid-feedback">
-                                <strong>{{ $errors->first('new_password_confirmation') }}</strong>
-                            </span>
+                                        <strong>{{ $errors->first('new_password_confirmation') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <div class="col-md-10 ml-auto">
-                                <button type="submit" class="btn btn-primary">修改密碼</button>
-                                <a href="{{ route('profile') }}" class="btn btn-secondary">返回個人資料</a>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-check" aria-hidden="true"></i> 確認
+                                </button>
                             </div>
                         </div>
                     </form>

@@ -65,7 +65,7 @@
                         <div class="form-group row">
                             <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary">
-                                    重設密碼
+                                    <i class="fa fa-check" aria-hidden="true"></i> 重設密碼
                                 </button>
                             </div>
                         </div>

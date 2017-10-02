@@ -22,8 +22,8 @@
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback">
-                                <strong>{{ $errors->first('email') }}</strong>
-                            </span>
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
@@ -38,8 +38,8 @@
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback">
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
                                 @endif
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                         <div class="form-group row">
                             <div class="col-md-10 ml-auto">
                                 <button type="submit" class="btn btn-primary">
-                                    登入
+                                    <i class="fa fa-check" aria-hidden="true"></i> 登入
                                 </button>
 
                                 <a class="btn btn-link" href="{{ route('register') }}">
