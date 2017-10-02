@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
+use Monolog\Handler\SlackHandler;
 use Monolog\Logger;
 use Schema;
 
@@ -27,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         $slackChannel = env('SLACK_CHANNEL');
         if ($slackEnable && $slackToken && $slackChannel) {
             $monolog = \Log::getMonolog();
-            $slackHandler = new \Monolog\Handler\SlackHandler(
+            $slackHandler = new SlackHandler(
                 $slackToken,
                 $slackChannel,
                 'Monolog',

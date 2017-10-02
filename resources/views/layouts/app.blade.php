@@ -77,9 +77,9 @@
 {{--<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>--}}
 <script>
     //CSRF Token
-    window.Laravel = <?php echo json_encode([
+    window.Laravel = @json([
         'csrfToken' => csrf_token(),
-    ]); ?>
+    ]);
 </script>
 {{--<script src="{{ asset('js/app.js') }}"></script>--}}
 <script>
