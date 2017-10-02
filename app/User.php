@@ -13,18 +13,31 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @property string $name
  * @property string $email
  * @property string $password
+ * @property string|null $confirm_code
+ * @property string|null $confirm_at
+ * @property string|null $register_at
+ * @property string|null $register_ip
+ * @property string|null $last_login_at
+ * @property string|null $last_login_ip
  * @property string|null $remember_token
  * @property \Carbon\Carbon|null $created_at
  * @property \Carbon\Carbon|null $updated_at
+ * @property-read bool $is_confirmed
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Permission[] $permissions
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Role[] $roles
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereConfirmAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereConfirmCode($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastLoginAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastLoginIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePermissionIs($permission = '')
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRegisterAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRegisterIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRoleIs($role = '')
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
@@ -41,7 +54,15 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
+        'password',
+        'confirm_code',
+        'confirm_at',
+        'register_at',
+        'register_ip',
+        'last_login_at',
+        'last_login_ip',
     ];
 
     /**
@@ -52,4 +73,18 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    protected $appends = [
+        'is_confirmed',
+    ];
+
+    /**
+     * 帳號是否完成驗證
+     *
+     * @return bool
+     */
+    public function getIsConfirmedAttribute()
+    {
+        return !empty($this->confirm_at);
+    }
 }

@@ -31,9 +31,9 @@ A website base on Laravel and Bootstrap for HackerSir.
   - yajra/laravel-datatables-oracle: "^8.0"
   - yish/generators: "^2.0"
 - System
-  - [TODO] User
-  - [TODO] Role
-  - [TODO] Permission
+  - User
+  - Role
+  - Permission
 
 ## Installation Guide
 1. Run the following commands.
