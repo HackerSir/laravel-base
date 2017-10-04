@@ -23,7 +23,7 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 script:
-  - phpdbg -qrr vendor/bin/phpunit
+  - phpdbg -qrr vendor/bin/phpunit --coverage-clover=coverage.xml
 
 notifications:
   email:
