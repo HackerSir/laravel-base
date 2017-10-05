@@ -7,6 +7,7 @@ use App\Notifications\ConfirmMail;
 use App\Role;
 use App\User;
 use Carbon\Carbon;
+use GrahamCampbell\Throttle\Facades\Throttle;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Validator;
