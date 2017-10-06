@@ -86,6 +86,7 @@ If you want to run this project in [Laradock](http://laradock.io/), you can foll
     cd laradock
     docker-compose up -d nginx mysql redis
     ```
+5. Open your browser and visit localhost: `http://localhost`.
 - If you want to enter the workspace container, to execute commands like  (Artisan, Composer, PHPUnit, Gulp, …)
     ```bash
     docker-compose exec workspace bash
