@@ -1,8 +1,4 @@
 before_script:
-  # Environment
-  - apt-get update -yqq
-  - apt-get install -yqq libpq-dev
-  - docker-php-ext-install pdo pdo_pgsql
   # Project
   - composer install --prefer-dist --no-ansi --no-interaction --no-progress --no-scripts
   - cp .env.example .env
@@ -35,7 +31,7 @@ variables:
   POSTGRES_PASSWORD: $DB_PASSWORD
 
 phpunit:php7.1:mysql5.7:
-  image: edbizarro/gitlab-ci-pipeline-php:7.1
+  image: danny50610/gitlab-ci-pipeline-php:7.1
   services:
     - mysql:5.7
   variables:
@@ -46,7 +42,7 @@ phpunit:php7.1:mysql5.7:
     - ./vendor/phpunit/phpunit/phpunit -v --coverage-text --stderr
 
 phpunit:php7.1:postgres9.6:
-  image: edbizarro/gitlab-ci-pipeline-php:7.1
+  image: danny50610/gitlab-ci-pipeline-php:7.1
   services:
     - postgres:9.6
   variables:
