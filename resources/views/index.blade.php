@@ -1,7 +1,5 @@
 @extends('layouts.app')
 
-@section('title', '首頁')
-
 @section('css')
     <style>
         .jumbotron {
@@ -16,7 +14,7 @@
 @section('content')
     <div class="jumbotron mt-3">
         <h1>{{ config('app.name') }}</h1>
-        <h3>逢甲大學黑客社</h3>
+        <h3>{{ config('app.cht_name') }}</h3>
         <a href="javascript:void(0)" class="btn btn-primary btn-lg" title="Let's GO!!">GO!</a>
     </div>
 @endsection

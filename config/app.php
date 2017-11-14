@@ -13,7 +13,8 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name'     => env('APP_NAME', 'Laravel'),
+    'cht_name' => env('APP_CHT_NAME', '逢甲大學黑客社'),
 
     /*
     |--------------------------------------------------------------------------
