@@ -110,6 +110,9 @@
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/spatie/temporary-directory" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-backup" />
+      <path value="$PROJECT_DIR$/vendor/spatie/db-dumper" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

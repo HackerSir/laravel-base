@@ -23,6 +23,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - recca0120/laravel-tracy: "^2.4"
   - thomaswelton/laravel-gravatar: "^1.1"
   - santigarcor/laratrust: "^4.0"
+  - spatie/laravel-backup: "^5.1",
   - graham-campbell/throttle: "^6.0"
   - lavary/laravel-menu: "^1.6"
   - arcanedev/log-viewer: "^4.4"
