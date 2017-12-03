@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RoleRequest;
 use App\Permission;
 use App\Role;
-use Illuminate\Http\Request;
 
 class RoleController extends Controller
 {
@@ -36,24 +36,15 @@ class RoleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param RoleRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(RoleRequest $request)
     {
-        $this->validate($request, [
-            'name'         => 'required|unique:roles,name',
-            'display_name' => 'required',
-            'permissions'  => 'array',
-        ]);
-
         /** @var Role $role */
-        $role = Role::create([
-            'name'         => $request->input('name'),
-            'display_name' => $request->input('display_name'),
-            'description'  => $request->input('description'),
-            'protection'   => false,
-        ]);
+        $role = Role::create(array_merge($request->all(), [
+            'protection' => false,
+        ]));
         $role->permissions()->sync($request->input('permissions') ?: []);
 
         return redirect()->route('role.index')->with('success', '角色已建立');
@@ -75,29 +66,16 @@ class RoleController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param RoleRequest $request
      * @param Role $role
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Role $role)
+    public function update(RoleRequest $request, Role $role)
     {
-        $this->validate($request, [
-            'name'         => 'required|unique:roles,name,' . $role->id . ',id',
-            'display_name' => 'required',
-            'permissions'  => 'array',
-        ]);
-
         if ($role->protection) {
-            $role->update([
-                'display_name' => $request->input('display_name'),
-                'description'  => $request->input('description'),
-            ]);
+            $role->update($request->only(['display_name', 'description']));
         } else {
-            $role->update([
-                'name'         => $request->input('name'),
-                'display_name' => $request->input('display_name'),
-                'description'  => $request->input('description'),
-            ]);
+            $role->update($request->only(['name', 'display_name', 'description']));
             $role->permissions()->sync($request->input('permissions') ?: []);
         }
 
@@ -109,6 +87,7 @@ class RoleController extends Controller
      *
      * @param Role $role
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(Role $role)
     {

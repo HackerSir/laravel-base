@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\UserDataTable;
+use App\Http\Requests\UserRequest;
 use App\Role;
 use App\User;
-use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
@@ -63,30 +63,20 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param UserRequest $request
      * @param User $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(UserRequest $request, User $user)
     {
-        $this->validate($request, [
-            'name' => 'required|max:255',
-        ]);
-
-        $user->update([
-            'name' => $request->input('name'),
-        ]);
+        $user->update($request->only('name'));
         //管理員禁止去除自己的管理員職務
         $keepAdmin = false;
         if ($user->id == auth()->user()->id) {
             $keepAdmin = true;
         }
-        //移除原有權限
-        $user->detachRoles($user->roles);
-        //重新添加該有的權限
-        if ($request->has('role')) {
-            $user->attachRoles($request->input('role'));
-        }
+        //權限
+        $user->roles()->sync($request->input('role'));
         //加回管理員
         if ($keepAdmin) {
             $admin = Role::where('name', '=', 'Admin')->first();
@@ -102,6 +92,7 @@ class UserController extends Controller
      *
      * @param User $user
      * @return \Illuminate\Http\Response
+     * @throws \Exception
      */
     public function destroy(User $user)
     {

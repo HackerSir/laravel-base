@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ProfileUpdateRequest;
 use App\User;
-use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
@@ -34,19 +34,14 @@ class ProfileController extends Controller
     /**
      * 編輯個人資料
      *
-     * @param Request $request
+     * @param ProfileUpdateRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function updateProfile(Request $request)
+    public function updateProfile(ProfileUpdateRequest $request)
     {
-        $this->validate($request, [
-            'name' => 'required|max:255',
-        ]);
         /* @var User $user */
         $user = auth()->user();
-        $user->update([
-            'name' => $request->input('name'),
-        ]);
+        $user->update($request->only('name'));
 
         return redirect()->route('profile')->with('success', '資料修改完成。');
     }
