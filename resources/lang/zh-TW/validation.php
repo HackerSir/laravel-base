@@ -145,6 +145,7 @@ return [
         'username'              => '使用者名字',
         'year'                  => '年',
         'display_name'          => '顯示名稱',
+        'new_password'          => '新密碼',
     ],
 
 ];

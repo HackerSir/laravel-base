@@ -11,66 +11,19 @@
 @section('main_content')
     <div class="card">
         <div class="card-body">
-            <form role="form" method="POST" action="{{ route('password.change') }}">
-                {{ csrf_field() }}
-                {{ method_field('put') }}
+            {{ Form::open(['route' => 'password.change', 'method' => 'put']) }}
+            {{ Form::bsPassword('密碼', 'password', ['required']) }}
+            {{ Form::bsPassword('新密碼', 'new_password', ['required']) }}
+            {{ Form::bsPassword('確認新密碼', 'new_password_confirmation', ['required']) }}
 
-                <div class="form-group row">
-                    <label for="password" class="col-md-2 col-form-label">密碼</label>
-
-                    <div class="col-md-10">
-                        <input id="password" type="password"
-                               class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                               name="password" required autofocus>
-
-                        @if ($errors->has('password'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('password') }}</strong>
-                            </span>
-                        @endif
-                    </div>
+            <div class="form-group row">
+                <div class="col-md-10 ml-auto">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-check" aria-hidden="true"></i> 確認
+                    </button>
                 </div>
-
-                <div class="form-group row">
-                    <label for="new_password" class="col-md-2 col-form-label">新密碼</label>
-
-                    <div class="col-md-10">
-                        <input id="new_password" type="password"
-                               class="form-control{{ $errors->has('new_password') ? ' is-invalid' : '' }}"
-                               name="new_password" required autofocus>
-
-                        @if ($errors->has('new_password'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('new_password') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <label for="new_password_confirmation" class="col-md-2 col-form-label">確認新密碼</label>
-
-                    <div class="col-md-10">
-                        <input id="new_password_confirmation" type="password"
-                               class="form-control{{ $errors->has('new_password_confirmation') ? ' is-invalid' : '' }}"
-                               name="new_password_confirmation" required autofocus>
-
-                        @if ($errors->has('new_password_confirmation'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('new_password_confirmation') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </div>
-
-                <div class="form-group row">
-                    <div class="col-md-10 ml-auto">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-check" aria-hidden="true"></i> 確認
-                        </button>
-                    </div>
-                </div>
-            </form>
+            </div>
+            {{ Form::close() }}
         </div>
     </div>
 @endsection

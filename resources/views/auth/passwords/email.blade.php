@@ -17,34 +17,17 @@
                     {{ session('status') }}
                 </div>
             @endif
-            <form role="form" method="POST" action="{{ route('password.email') }}">
-                {{ csrf_field() }}
+            {{ Form::open(['route' => 'password.email']) }}
+            {{ Form::bsEmail('信箱', 'email', null, ['required']) }}
 
-                <div class="form-group row">
-                    <label for="email" class="col-md-2 col-form-label">信箱</label>
-
-                    <div class="col-md-10">
-                        <input id="email" type="email"
-                               class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
-                               name="email" value="{{ old('email') }}"
-                               required>
-
-                        @if ($errors->has('email'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('email') }}</strong>
-                            </span>
-                        @endif
-                    </div>
+            <div class="form-group row">
+                <div class="col-md-10 ml-auto">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i> 發送重設密碼信件
+                    </button>
                 </div>
-
-                <div class="form-group row">
-                    <div class="col-md-10 ml-auto">
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i> 發送重設密碼信件
-                        </button>
-                    </div>
-                </div>
-            </form>
+            </div>
+            {{ Form::close() }}
         </div>
     </div>
 @endsection
