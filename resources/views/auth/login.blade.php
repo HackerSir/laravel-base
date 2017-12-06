@@ -5,26 +5,18 @@
 @section('main_content')
     <div class="card">
         <div class="card-body">
-            {{ Form::open(['route' => 'login']) }}
-            {{ Form::bsEmail('信箱', 'email', null, ['required']) }}
-            {{ Form::bsPassword('密碼', 'password', ['required']) }}
-            {{ Form::bsCheckbox('記住我', 'remember') }}
-
-            <div class="form-group row">
-                <div class="col-md-10 ml-auto">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-check" aria-hidden="true"></i> 登入
-                    </button>
-
-                    <a class="btn btn-link" href="{{ route('register') }}">
-                        註冊
-                    </a>
-                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                        忘記密碼
-                    </a>
+            {{ bs()->openForm('post', route('login')) }}
+            {{ bs()->formGroup(bs()->text('email')->required())->label('信箱')->showAsRow() }}
+            {{ bs()->formGroup(bs()->text('password')->type('password')->required())->label('密碼')->showAsRow() }}
+            {{ bs()->formGroup(bs()->checkBox('remember', '記住我'))->showAsRow('no_label') }}
+            <div class="row">
+                <div class="mx-auto">
+                    {{ bs()->submit('登入', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
+                    {{ bs()->a(route('register'), '註冊')->asButton('link') }}
+                    {{ bs()->a(route('password.request'), '忘記密碼')->asButton('link') }}
                 </div>
             </div>
-            {{ Form::close() }}
+            {{ bs()->closeForm() }}
         </div>
     </div>
 @endsection
