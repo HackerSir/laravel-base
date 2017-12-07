@@ -5,23 +5,18 @@
 @section('main_content')
     <div class="card">
         <div class="card-body">
-            {{ Form::open(['route' => 'register']) }}
-            {{ Form::bsText('名稱', 'name', null, ['required']) }}
-            {{ Form::bsEmail('信箱', 'email', null, ['required']) }}
-            {{ Form::bsPassword('密碼', 'password', ['required']) }}
-            {{ Form::bsPassword('確認密碼', 'password_confirmation', ['required']) }}
-
-            <div class="form-group row">
-                <div class="col-md-10 ml-auto">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-check" aria-hidden="true"></i> 註冊
-                    </button>
-                    <a class="btn btn-link" href="{{ route('login') }}">
-                        登入
-                    </a>
+            {{ bs()->openForm('post',route('register')) }}
+            {{ bs()->formGroup(bs()->text('name')->required())->label('名稱')->showAsRow() }}
+            {{ bs()->formGroup(bs()->email('email')->required())->label('信箱')->showAsRow() }}
+            {{ bs()->formGroup(bs()->password('password')->required())->label('密碼')->showAsRow() }}
+            {{ bs()->formGroup(bs()->password('password_confirmation')->required())->label('確認密碼')->showAsRow() }}
+            <div class="row">
+                <div class="mx-auto">
+                    {{ bs()->submit('註冊', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
+                    {{ bs()->a(route('login'), '登入')->asButton('link') }}
                 </div>
             </div>
-            {{ Form::close() }}
+            {{ bs()->closeForm() }}
         </div>
     </div>
 @endsection

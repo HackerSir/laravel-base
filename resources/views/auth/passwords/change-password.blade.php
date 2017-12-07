@@ -11,19 +11,16 @@
 @section('main_content')
     <div class="card">
         <div class="card-body">
-            {{ Form::open(['route' => 'password.change', 'method' => 'put']) }}
-            {{ Form::bsPassword('密碼', 'password', ['required']) }}
-            {{ Form::bsPassword('新密碼', 'new_password', ['required']) }}
-            {{ Form::bsPassword('確認新密碼', 'new_password_confirmation', ['required']) }}
-
-            <div class="form-group row">
-                <div class="col-md-10 ml-auto">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-check" aria-hidden="true"></i> 確認
-                    </button>
+            {{ bs()->openForm('put', route('password.change')) }}
+            {{ bs()->formGroup(bs()->password('password')->required())->label('密碼')->showAsRow() }}
+            {{ bs()->formGroup(bs()->password('new_password')->required())->label('新密碼')->showAsRow() }}
+            {{ bs()->formGroup(bs()->password('new_password_confirmation')->required())->label('確認新密碼')->showAsRow() }}
+            <div class="row">
+                <div class="mx-auto">
+                    {{ bs()->submit('確認', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
                 </div>
             </div>
-            {{ Form::close() }}
+            {{ bs()->closeForm() }}
         </div>
     </div>
 @endsection
