@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a3f069410feab4a0925ae59610f77939",
+    "content-hash": "400c29cd1be11915748d9bd47a1bca6c",
     "packages": [
         {
             "name": "appstract/laravel-blade-directives",
@@ -1410,16 +1410,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.5.23",
+            "version": "v5.5.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cb8ec95aa65fbaeeaf94026c8a9f04bb97c13777"
+                "reference": "06135405bb1f736dac5e9529ed1541fc446c9c0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cb8ec95aa65fbaeeaf94026c8a9f04bb97c13777",
-                "reference": "cb8ec95aa65fbaeeaf94026c8a9f04bb97c13777",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/06135405bb1f736dac5e9529ed1541fc446c9c0f",
+                "reference": "06135405bb1f736dac5e9529ed1541fc446c9c0f",
                 "shasum": ""
             },
             "require": {
@@ -1539,7 +1539,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2017-12-04T14:19:08+00:00"
+            "time": "2017-12-07T01:28:21+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1884,16 +1884,16 @@
         },
         {
             "name": "marvinlabs/laravel-html-bootstrap-4",
-            "version": "v0.5.1",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/marvinlabs/laravel-html-bootstrap-4.git",
-                "reference": "6c2ebd08f36ee0eabc7478dd4ef285372cbcc0db"
+                "reference": "06db18151dedcb3ea464285357acf6f0c6e57273"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/marvinlabs/laravel-html-bootstrap-4/zipball/6c2ebd08f36ee0eabc7478dd4ef285372cbcc0db",
-                "reference": "6c2ebd08f36ee0eabc7478dd4ef285372cbcc0db",
+                "url": "https://api.github.com/repos/marvinlabs/laravel-html-bootstrap-4/zipball/06db18151dedcb3ea464285357acf6f0c6e57273",
+                "reference": "06db18151dedcb3ea464285357acf6f0c6e57273",
                 "shasum": ""
             },
             "require": {
@@ -1943,7 +1943,7 @@
                 "html",
                 "marvinlabs"
             ],
-            "time": "2017-12-06T09:34:43+00:00"
+            "time": "2017-12-06T13:18:34+00:00"
         },
         {
             "name": "marvinlabs/laravel-html-font-awesome",
