@@ -11,11 +11,9 @@
 @section('main_content')
     <div class="card">
         <div class="card-body">
-            {{ Form::open(['route' => ['user.update', $user], 'method' => 'patch']) }}
-            {{ Form::model($user) }}
-
-            {{ Form::bsEmail('信箱', 'email', null, ['readonly'], '信箱作為帳號使用，故無法修改') }}
-            {{ Form::bsText('名稱', 'name', null) }}
+            {{ bs()->openForm('patch', route('user.update', $user), ['model' => $user]) }}
+            {{ bs()->formGroup(bs()->email('email')->readOnly())->label('信箱')->helpText('信箱作為帳號使用，故無法修改')->showAsRow() }}
+            {{ bs()->formGroup(bs()->text('name')->required())->label('名稱')->showAsRow() }}
 
             <div class="form-group row">
                 <label class="col-md-2 col-form-label">角色</label>
@@ -54,14 +52,12 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <div class="col-md-10 ml-auto">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-check" aria-hidden="true"></i> 更新會員資料
-                    </button>
+            <div class="row">
+                <div class="mx-auto">
+                    {{ bs()->submit('更新會員資料', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
                 </div>
             </div>
-            {{ Form::close() }}
+            {{ bs()->closeForm() }}
         </div>
     </div>
 @endsection

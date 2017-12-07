@@ -11,19 +11,16 @@
 @section('main_content')
     <div class="card">
         <div class="card-body">
-            {{ Form::open(['route' => 'profile.update', 'method' => 'put']) }}
-            {{ Form::model($user) }}
-            {{ Form::bsEmail('信箱', 'email', null, ['readonly'], '信箱作為帳號使用，故無法修改') }}
-            {{ Form::bsText('名稱', 'name', null, ['required']) }}
-
-            <div class="form-group row">
-                <div class="col-md-10 ml-auto">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-check" aria-hidden="true"></i> 確認
-                    </button>
+            {{ bs()->openForm('put', route('profile.update'), ['model' => $user]) }}
+            {{ bs()->formGroup(bs()->email('email')->readOnly())->label('信箱')
+             ->helpText('信箱作為帳號使用，故無法修改')->showAsRow() }}
+            {{ bs()->formGroup(bs()->text('name')->required())->label('名稱')->showAsRow() }}
+            <div class="row">
+                <div class="mx-auto">
+                    {{ bs()->submit('確認', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
                 </div>
             </div>
-            {{ Form::close() }}
+            {{ bs()->closeForm() }}
         </div>
     </div>
 @endsection

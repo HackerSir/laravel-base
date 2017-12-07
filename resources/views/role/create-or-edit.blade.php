@@ -17,18 +17,17 @@
     <div class="card">
         <div class="card-body">
             @if($isEditMode)
-                {{ Form::open(['route' => ['role.update', $role], 'method' => 'patch']) }}
-                {{ Form::model($role) }}
+                {{ bs()->openForm('patch', route('role.update', $role), ['model' => $role]) }}
             @else
-                {{ Form::open(['route' => 'role.store']) }}
+                {{ bs()->openForm('post', route('role.store')) }}
             @endif
             @if($isEditMode && $role->protection)
-                {{ Form::bsText('英文名稱', 'name', null, ['readonly', 'placeholder' => '如：admin']) }}
+                {{ bs()->formGroup(bs()->text('name')->readOnly()->placeholder('如：admin'))->label('英文名稱')->showAsRow() }}
             @else
-                {{ Form::bsText('英文名稱', 'name', null, ['required', 'placeholder' => '如：admin']) }}
+                {{ bs()->formGroup(bs()->text('name')->required()->placeholder('如：admin'))->label('英文名稱')->showAsRow() }}
             @endif
-            {{ Form::bsText('顯示名稱', 'display_name', null, ['required', 'placeholder' => '如：管理員']) }}
-            {{ Form::bsText('簡介', 'description', null, ['placeholder' => '說明此角色之用途']) }}
+            {{ bs()->formGroup(bs()->text('display_name')->required()->placeholder('如：管理員'))->label('顯示名稱')->showAsRow() }}
+            {{ bs()->formGroup(bs()->text('description')->required()->placeholder('說明此角色之用途'))->label('簡介')->showAsRow() }}
 
             <div class="form-group row">
                 <label class="col-md-2 col-form-label">權限</label>
@@ -70,14 +69,12 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <div class="col-md-10 ml-auto">
-                    <button type="submit" class="btn btn-primary">
-                        <i class="fa fa-check" aria-hidden="true"></i> 確認
-                    </button>
+            <div class="row">
+                <div class="mx-auto">
+                    {{ bs()->submit('確認', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
                 </div>
             </div>
-            {{ Form::close() }}
+            {{ bs()->closeForm() }}
         </div>
     </div>
 @endsection
