@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Carbon\Carbon;
-use Form;
 use Illuminate\Support\ServiceProvider;
 use Monolog\Handler\SlackHandler;
 use Monolog\Logger;
