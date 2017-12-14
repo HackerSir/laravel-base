@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <meta property="og:title" content="@yield('title')::{{ config('app.cht_name') }}">
+    <meta property="og:title" content="@if(View::hasSection('title'))@yield('title')::@endif{{ config('app.cht_name') }}">
     <meta property="og:url" content="{{ URL::current() }}">
     <meta property="og:image" content="{{ asset('img/hacker.png') }}">
     <meta property="og:description" content="{{ config('app.name') }} - {{ config('app.cht_name') }}">
