@@ -66,42 +66,5 @@ php artisan migrate
 gulp --production
 ```
 
-## Use Laradock
-If you want to run this project in [Laradock](http://laradock.io/), you can follow this steps.
-1. Make sure you have [Docker and Docker Compose](https://www.docker.com/) installed.
-2. Clone submodule `laradock`. ([ref](http://blog.chh.tw/posts/git-submodule/))
-    1. Initial submodule  
-        ```bash
-        git submodule init
-        ```
-    2. Update submodule
-        ```bash
-        git submodule update
-        ```
-    - Or you can just add `--recursive` when you `git clone` this project.
-3. Copy settings.
-    ```bash
-    cp .env.laradock .env
-    cp laradock/env-example laradock/.env
-    ```
-4. Run containers.
-    ```bash
-    cd laradock
-    docker-compose up -d nginx mysql redis
-    ```
-5. Enter the workspace container and install packages and setup database schema.
-    ```bash
-    docker-compose exec workspace bash
-    composer install
-    php artisan migrate
-    exit
-    ```
-6. Open your browser and visit localhost: `http://localhost`.
-
-If you want to enter the workspace container, to execute commands like  (Artisan, Composer, PHPUnit, Gulp, …)  
-```bash
-docker-compose exec workspace bash
-```
-
 ## License
 This project is open-source under the [MIT license](http://opensource.org/licenses/MIT).
