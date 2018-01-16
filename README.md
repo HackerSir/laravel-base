@@ -22,16 +22,16 @@ A website base on Laravel and Bootstrap for HackerSir.
   - doctrine/dbal: "^2.6"
   - recca0120/laravel-tracy: "^2.4"
   - thomaswelton/laravel-gravatar: "^1.1"
-  - santigarcor/laratrust: "^4.0"
+  - santigarcor/laratrust: "^5.0"
   - spatie/laravel-backup: "^5.1",
   - graham-campbell/throttle: "^6.0"
-  - lavary/laravel-menu: "^1.6"
-  - marvinlabs/laravel-html-bootstrap-4: "^0.5.0"
+  - lavary/laravel-menu: "^1.7"
+  - marvinlabs/laravel-html-bootstrap-4: "^0.7.0"
   - marvinlabs/laravel-html-font-awesome: "^1.0"
   - arcanedev/log-viewer: "^4.4"
-  - yajra/laravel-datatables-buttons: "^3.0"
-  - yajra/laravel-datatables-html: "^3.1"
-  - yajra/laravel-datatables-oracle: "^8.0"
+  - yajra/laravel-datatables-buttons: "^3.1"
+  - yajra/laravel-datatables-html: "^3.5"
+  - yajra/laravel-datatables-oracle: "^8.3"
   - yish/generators: "^2.0"
 - System
   - User
