@@ -34,4 +34,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function showLoginForm()
+    {
+        //若主動點擊登入，而非被middleware要求登入，記錄來源頁面作為登入後跳轉頁面
+        if (!session()->has('url.intended')) {
+            session(['url.intended' => \URL::previous()]);
+        }
+
+        return view('auth.login');
+    }
 }
