@@ -64,7 +64,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script src="//cdn.jsdelivr.net/alertifyjs/1.9.0/alertify.min.js"></script>
-<script src="https://use.fontawesome.com/544fc47aab.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 {{-- DataTables --}}
 <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 {{--<script src="//cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>--}}

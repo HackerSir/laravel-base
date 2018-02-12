@@ -48,7 +48,7 @@ class LaravelMenu
 
                     if (Laratrust::can('log-viewer.access')) {
                         $adminMenu->add(
-                            '記錄檢視器 <i class="fa fa-external-link" aria-hidden="true"></i>',
+                            '記錄檢視器 <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
                             ['route' => 'log-viewer::dashboard']
                         )->link->attr('target', '_blank');
                     }
