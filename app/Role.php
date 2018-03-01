@@ -11,7 +11,7 @@ use Laratrust\Models\LaratrustRole;
  * @property string $name
  * @property string|null $display_name
  * @property string|null $description
- * @property int $protection
+ * @property bool $protection
  * @property \Carbon\Carbon|null $created_at
  * @property \Carbon\Carbon|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Permission[] $permissions
@@ -31,5 +31,9 @@ class Role extends LaratrustRole
         'display_name',
         'description',
         'protection',
+    ];
+
+    protected $casts = [
+        'protection' => 'boolean',
     ];
 }
