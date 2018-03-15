@@ -10,6 +10,15 @@
     </style>
 @endsection
 
+@section('buttons')
+    <a href="{{ route('profile.edit') }}" class="btn btn-primary">
+        <i class="fa fa-edit" aria-hidden="true"></i> 編輯資料
+    </a>
+    <a href="{{ route('password.change') }}" class="btn btn-primary">
+        <i class="fa fa-key" aria-hidden="true"></i> 修改密碼
+    </a>
+@endsection
+
 @section('main_content')
     <div class="card">
         <div class="card-body text-center">
@@ -51,14 +60,6 @@
                 <dt class="col-4 col-md-3">最後登入IP</dt>
                 <dd class="col-8 col-md-9">{{ $user->last_login_ip }}</dd>
             </dl>
-        </div>
-        <div class="card-body text-center">
-            <a href="{{ route('profile.edit') }}" class="btn btn-primary">
-                <i class="fa fa-edit" aria-hidden="true"></i> 編輯資料
-            </a>
-            <a href="{{ route('password.change') }}" class="btn btn-primary">
-                <i class="fa fa-key" aria-hidden="true"></i> 修改密碼
-            </a>
         </div>
     </div>
 @endsection

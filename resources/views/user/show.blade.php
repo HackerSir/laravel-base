@@ -14,6 +14,14 @@
     <a href="{{ route('user.index') }}" class="btn btn-secondary">
         <i class="fa fa-arrow-left" aria-hidden="true"></i> 會員清單
     </a>
+    <a href="{{ route('user.edit', $user) }}" class="btn btn-primary">
+        <i class="fa fa-edit" aria-hidden="true"></i> 編輯資料
+    </a>
+    {!! Form::open(['route' => ['user.destroy', $user], 'style' => 'display: inline', 'method' => 'DELETE', 'onSubmit' => "return confirm('確定要刪除此會員嗎？');"]) !!}
+    <button type="submit" class="btn btn-danger">
+        <i class="fa fa-trash" aria-hidden="true"></i> 刪除會員
+    </button>
+    {!! Form::close() !!}
 @endsection
 
 @section('main_content')
@@ -56,16 +64,6 @@
                 <dt class="col-4 col-md-3">最後登入IP</dt>
                 <dd class="col-8 col-md-9">{{ $user->last_login_ip }}</dd>
             </dl>
-        </div>
-        <div class="card-body text-center">
-            <a href="{{ route('user.edit', $user) }}" class="btn btn-primary">
-                <i class="fa fa-edit" aria-hidden="true"></i> 編輯資料
-            </a>
-            {!! Form::open(['route' => ['user.destroy', $user], 'style' => 'display: inline', 'method' => 'DELETE', 'onSubmit' => "return confirm('確定要刪除此會員嗎？');"]) !!}
-            <button type="submit" class="btn btn-danger">
-                <i class="fa fa-trash" aria-hidden="true"></i> 刪除會員
-            </button>
-            {!! Form::close() !!}
         </div>
     </div>
 @endsection
