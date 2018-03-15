@@ -21,7 +21,7 @@
             {{ bs()->formGroup(bs()->email('email')->required())->label('信箱')->showAsRow() }}
             <div class="row">
                 <div class="mx-auto">
-                    {{ bs()->submit('發送重設密碼信件', 'primary')->prependChildren(fa()->icon('envelope-o')->addClass('mr-2')) }}
+                    {{ bs()->submit('發送重設密碼信件', 'primary')->prependChildren(fa()->icon('envelope')->addClass('mr-2')) }}
                 </div>
             </div>
             {{ bs()->closeForm() }}

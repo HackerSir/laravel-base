@@ -19,7 +19,7 @@
             </div>
             <div class="row">
                 <div class="mx-auto">
-                    {{ bs()->submit('發送驗證信件', 'primary')->prependChildren(fa()->icon('envelope-o')->addClass('mr-2')) }}
+                    {{ bs()->submit('發送驗證信件', 'primary')->prependChildren(fa()->icon('envelope')->addClass('mr-2')) }}
                 </div>
             </div>
             {{ bs()->closeForm() }}

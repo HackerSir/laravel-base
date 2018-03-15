@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="mx-auto">
                     {{ bs()->submit('註冊', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
-                    {{ bs()->a(route('login'), '登入')->asButton('link') }}
+                    {{ bs()->a(route('login'), '登入')->asButton('light')->prependChildren(fa()->icon('sign-in-alt')->addClass('mr-2')) }}
                 </div>
             </div>
             {{ bs()->closeForm() }}
