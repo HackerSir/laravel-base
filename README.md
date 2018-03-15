@@ -24,15 +24,15 @@ A website base on Laravel and Bootstrap for HackerSir.
   - recca0120/laravel-tracy: "^2.4"
   - thomaswelton/laravel-gravatar: "^1.1"
   - santigarcor/laratrust: "^5.0"
-  - spatie/laravel-backup: "^5.1",
-  - graham-campbell/throttle: "^6.0"
+  - spatie/laravel-backup: "^5.5",
+  - graham-campbell/throttle: "^7.0"
   - lavary/laravel-menu: "^1.7"
-  - marvinlabs/laravel-html-bootstrap-4: "^0.7.0"
+  - marvinlabs/laravel-html-bootstrap-4: "^0.8.1"
   - marvinlabs/laravel-html-font-awesome: "^1.0"
   - arcanedev/log-viewer: "^4.4"
-  - yajra/laravel-datatables-buttons: "^3.1"
-  - yajra/laravel-datatables-html: "^3.5"
-  - yajra/laravel-datatables-oracle: "^8.3"
+  - yajra/laravel-datatables-buttons: "^3.2"
+  - yajra/laravel-datatables-html: "^3.7"
+  - yajra/laravel-datatables-oracle: "^8.4"
   - yish/generators: "^2.0"
 - System
   - User
