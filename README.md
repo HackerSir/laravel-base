@@ -21,6 +21,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - barryvdh/laravel-ide-helper: ^2.4
   - doctrine/dbal: ^2.7
   - predis/predis: ^1.1
+  - recca0120/laravel-tracy: ^1.8
 - System
 
 ## Installation Guide
