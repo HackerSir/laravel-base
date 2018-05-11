@@ -18,10 +18,10 @@ A website base on Laravel and Bootstrap for HackerSir.
 
 ## Including
 - Packages
-  - barryvdh/laravel-ide-helper: ^2.4
-  - doctrine/dbal: ^2.7
-  - predis/predis: ^1.1
-  - recca0120/laravel-tracy: ^1.8
+  - [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper): ^2.4
+  - [doctrine/dbal](https://github.com/doctrine/dbal): ^2.7
+  - [predis/predis](https://github.com/nrk/predis): ^1.1
+  - [recca0120/laravel-tracy](https://github.com/recca0120/laravel-tracy): ^1.8
 - System
 
 ## Installation Guide
@@ -32,6 +32,9 @@ yarn install
 ```
 
 2. Copy `.env.example` to `.env`.
+```bash
+cp .env.example .env
+```
 
 3. Configure environment variables in `.env`.
 
