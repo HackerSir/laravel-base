@@ -11,7 +11,7 @@ A website base on Laravel and Bootstrap for HackerSir.
 - Yarn
 
 ## Framework
-- Laravel 5.5
+- Laravel 5.6
 - Bootstrap 4
 - Font Awesome 5
 - Vue.js 2
