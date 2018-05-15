@@ -41,5 +41,5 @@ return [
 
     'google_ad' => [
         'client' => env('GOOGLE_AD_CLIENT'),
-    ]
+    ],
 ];
