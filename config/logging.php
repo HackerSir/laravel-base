@@ -63,7 +63,7 @@ return [
             'driver'   => 'stack',
             'channels' => ['daily', 'slack'],
         ],
-        
+
         'stderr' => [
             'driver'  => 'monolog',
             'handler' => StreamHandler::class,
