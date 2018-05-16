@@ -10,7 +10,7 @@
         if(View::hasSection('title')) {
             $title = View::yieldContent('title') . ' - ';
         }
-        $title .= config('config.title');
+        $title .= config('app-extend.title');
     @endphp
 
     @if(View::hasSection('description'))

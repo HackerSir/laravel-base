@@ -6,6 +6,6 @@
 
 @section('content')
     <div class="container mt-3 pb-3">
-        <h1>{{ config('config.title') }}</h1>
+        <h1>{{ config('app-extend.title') }}</h1>
     </div>
 @endsection
