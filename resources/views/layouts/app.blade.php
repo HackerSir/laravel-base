@@ -75,8 +75,7 @@
 </head>
 <body>
 {{-- Navbar --}}
-{{-- TODO: Navbar --}}
-{{--@include('components.navbar')--}}
+@include('components.navbar')
 
 @yield('content')
 
