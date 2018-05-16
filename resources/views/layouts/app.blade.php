@@ -41,8 +41,9 @@
             top: 60px;
         }
 
-        body > .container {
-            min-height: calc(100vh - 1rem - 54px - 56px);
+        .footer {
+            padding-top: 15px;
+            padding-bottom: 15px;
         }
     </style>
 
@@ -50,7 +51,8 @@
 
     @if (config('app.env') == 'production' && !empty(config('services.google_analytics.id')))
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google_analytics.id') }}"></script>
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google_analytics.id') }}"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
 
@@ -77,23 +79,27 @@
 {{-- Navbar --}}
 @include('components.navbar')
 
-@yield('content')
+<div style="min-height: calc(100vh - 54px - 56px - 2rem);" class="mt-3 mb-3">
+    @yield('content')
+</div>
 
 {{-- Footer --}}
-{{-- TODO: Footer --}}
-{{--@include('components.footer')--}}
+@include('components.footer')
 
 {{-- JavaScript --}}
 {{-- jQuery first, then Popper.js, then Bootstrap JS --}}
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
 {{-- Font Awesome --}}
 <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
-        integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+        integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+        crossorigin="anonymous"></script>
 
 {{-- Alertify js --}}
 <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
