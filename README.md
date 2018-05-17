@@ -29,6 +29,9 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [graham-campbell/throttle](https://github.com/GrahamCampbell/Laravel-Throttle): ^7.0
   - [marvinlabs/laravel-html-bootstrap-4](https://github.com/marvinlabs/laravel-html-bootstrap-4): ^1.5
   - [marvinlabs/laravel-html-font-awesome](https://github.com/marvinlabs/laravel-html-font-awesome): "^1.0,
+  - [yajra/laravel-datatables-buttons](https://github.com/yajra/laravel-datatables-buttons): ^3.2
+  - [yajra/laravel-datatables-html](https://github.com/yajra/laravel-datatables-html): ^3.7
+  - [yajra/laravel-datatables-oracle](https://github.com/yajra/laravel-datatables-oracle): ^8.5
 - System
 
 ## Installation Guide
