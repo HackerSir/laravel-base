@@ -32,7 +32,6 @@ class LaravelMenu
                         ->link->attr(['class' => 'text-danger']);
                 }
 
-
                 // 管理員
                 if (Laratrust::can('menu.view') and auth()->user()->isConfirmed) {
                     /** @var \Lavary\Menu\Builder $adminMenu */
@@ -57,7 +56,6 @@ class LaravelMenu
                 $userMenu = $menu->add(auth()->user()->name, 'javascript:void(0)');
 //                $userMenu->add('個人資料', ['route' => 'profile'])->active('profile/*');
                 $userMenu->add('登出', ['route' => 'logout']);
-
             } else {
                 // 遊客
                 $menu->add('登入', ['route' => 'login']);
