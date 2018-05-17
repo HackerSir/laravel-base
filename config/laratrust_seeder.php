@@ -1,17 +1,17 @@
 <?php
 
 return [
-    'role_structure' => [
+    'role_structure'       => [
         'superadministrator' => [
             'users'   => 'c,r,u,d',
             'acl'     => 'c,r,u,d',
             'profile' => 'r,u',
         ],
-        'administrator' => [
+        'administrator'      => [
             'users'   => 'c,r,u,d',
             'profile' => 'r,u',
         ],
-        'user' => [
+        'user'               => [
             'profile' => 'r,u',
         ],
     ],
@@ -20,7 +20,7 @@ return [
             'profile' => 'c,r,u',
         ],
     ],
-    'permissions_map' => [
+    'permissions_map'      => [
         'c' => 'create',
         'r' => 'read',
         'u' => 'update',

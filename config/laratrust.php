@@ -17,7 +17,7 @@ return [
     | are going to be used are the ones inside the 'user_models' array.
     |
     */
-    'use_morph_map' => false,
+    'use_morph_map'         => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -27,7 +27,7 @@ return [
     | Defines if Laratrust will use Laravel's Cache to cache the roles and permissions.
     |
     */
-    'use_cache' => true,
+    'use_cache'             => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -38,7 +38,7 @@ return [
     | Please check the docs to see what you need to do in case you have the package already configured.
     |
     */
-    'use_teams' => false,
+    'use_teams'             => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     | it will check only if the user has attached that role/permission ignoring the team.
     |
     */
-    'teams_strict_check' => false,
+    'teams_strict_check'    => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     | The key in the array is the name of the relationship inside the roles and permissions.
     |
     */
-    'user_models' => [
+    'user_models'           => [
         'users' => 'App\User',
     ],
 
@@ -79,11 +79,11 @@ return [
     | to have a different name, you can do it here.
     |
     */
-    'models' => [
+    'models'                => [
         /**
          * Role model
          */
-        'role' => 'App\Role',
+        'role'       => 'App\Role',
 
         /**
          * Permission model
@@ -93,7 +93,7 @@ return [
         /**
          * Team model
          */
-        'team' => 'App\Team',
+        'team'       => 'App\Team',
 
     ],
 
@@ -105,26 +105,26 @@ return [
     | These are the tables used by Laratrust to store all the authorization data.
     |
     */
-    'tables' => [
+    'tables'                => [
         /**
          * Roles table.
          */
-        'roles' => 'roles',
+        'roles'           => 'roles',
 
         /**
          * Permissions table.
          */
-        'permissions' => 'permissions',
+        'permissions'     => 'permissions',
 
         /**
          * Teams table.
          */
-        'teams' => 'teams',
+        'teams'           => 'teams',
 
         /**
          * Role - User intermediate table.
          */
-        'role_user' => 'role_user',
+        'role_user'       => 'role_user',
 
         /**
          * Permission - User intermediate table.
@@ -146,16 +146,16 @@ return [
     | These are the foreign keys used by laratrust in the intermediate tables.
     |
     */
-    'foreign_keys' => [
+    'foreign_keys'          => [
         /**
          * User foreign key on Laratrust's role_user and permission_user tables.
          */
-        'user' => 'user_id',
+        'user'       => 'user_id',
 
         /**
          * Role foreign key on Laratrust's role_user and permission_role tables.
          */
-        'role' => 'role_id',
+        'role'       => 'role_id',
 
         /**
          * Role foreign key on Laratrust's permission_user and permission_role tables.
@@ -165,7 +165,7 @@ return [
         /**
          * Role foreign key on Laratrust's role_user and permission_user tables.
          */
-        'team' => 'team_id',
+        'team'       => 'team_id',
 
     ],
 
@@ -177,7 +177,7 @@ return [
     | This configuration helps to customize the Laratrust middleware behavior.
     |
     */
-    'middleware' => [
+    'middleware'            => [
         /**
          * Define if the laratrust middleware are registered automatically in the service provider
          */
@@ -192,7 +192,7 @@ return [
         /**
          * Parameter passed to the middleware_handling method
          */
-        'params' => '403',
+        'params'   => '403',
 
     ],
 

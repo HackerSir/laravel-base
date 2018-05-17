@@ -2,8 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use Auth;
 use Closure;
-use Illuminate\Support\Facades\Auth;
 
 class RedirectIfAuthenticated
 {
@@ -11,8 +11,8 @@ class RedirectIfAuthenticated
      * Handle an incoming request.
      *
      * @param \Illuminate\Http\Request $request
-     * @param \Closure                 $next
-     * @param string|null              $guard
+     * @param \Closure $next
+     * @param string|null $guard
      *
      * @return mixed
      */

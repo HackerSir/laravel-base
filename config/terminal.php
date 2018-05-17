@@ -1,13 +1,13 @@
 <?php
 
 return [
-    'enabled'    => env('APP_DEBUG') === true,
-    'whitelists' => [],
-    'route'      => [
+    'enabled'          => env('APP_DEBUG') === true,
+    'whitelists'       => [],
+    'route'            => [
         'prefix' => 'terminal',
         'as'     => 'terminal.',
     ],
-    'interpreters' => [
+    'interpreters'     => [
         'mysql'          => 'mysql',
         'artisan tinker' => 'tinker',
         'tinker'         => 'tinker',
@@ -23,7 +23,7 @@ return [
             'db:seed',
         ],
     ],
-    'commands' => [
+    'commands'         => [
         \Recca0120\Terminal\Console\Commands\Artisan::class,
         \Recca0120\Terminal\Console\Commands\ArtisanTinker::class,
         \Recca0120\Terminal\Console\Commands\Cleanup::class,
