@@ -79,7 +79,7 @@
 {{-- Navbar --}}
 @include('components.navbar')
 
-<div style="min-height: calc(100vh - 54px - 56px - 2rem);" class="mt-3 mb-3">
+<div style="min-height: calc(100vh - 54px - 56px - 2rem);" class="mt-3 mb-3 container" id="app">
     @yield('content')
 </div>
 
