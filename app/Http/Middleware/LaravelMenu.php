@@ -19,7 +19,6 @@ class LaravelMenu
     {
         //左側
         Menu::make('left', function (Builder $menu) {
-
         });
 
         Menu::make('right', function (Builder $menu) {
