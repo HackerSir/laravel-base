@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'enabled' => env('APP_DEBUG') === true,
+    'enabled'    => env('APP_DEBUG') === true,
     'whitelists' => [],
-    'route' => [
+    'route'      => [
         'prefix' => 'terminal',
-        'as' => 'terminal.',
+        'as'     => 'terminal.',
     ],
     'interpreters' => [
-        'mysql' => 'mysql',
+        'mysql'          => 'mysql',
         'artisan tinker' => 'tinker',
-        'tinker' => 'tinker',
+        'tinker'         => 'tinker',
     ],
     'confirmToProceed' => [
         'artisan' => [
