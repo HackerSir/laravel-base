@@ -343,3 +343,5 @@ _ide_helper.php
 .phpstorm.meta.php
 
 .idea/vagrant.xml
+
+.idea\remote-mappings.xml
