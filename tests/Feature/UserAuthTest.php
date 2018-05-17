@@ -1,12 +1,16 @@
 <?php
+
 namespace Tests\Feature;
+
 use App\User;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Tests\BrowserKitTestCase;
+
 class UserAuthTest extends BrowserKitTestCase
 {
     use DatabaseTransactions;
+
     public function testUserLoginSuccess()
     {
         /** @var User $user */
@@ -17,6 +21,7 @@ class UserAuthTest extends BrowserKitTestCase
             ->press('登入')
             ->seePageIs('/');
     }
+
     public function testRegisterSuccess()
     {
         $userEmail = 'example@example.com';
@@ -28,6 +33,7 @@ class UserAuthTest extends BrowserKitTestCase
             ->press('註冊')
             ->seePageIs('/');
     }
+
     public function testConfirmCode()
     {
         /** @var User $user */
@@ -50,6 +56,7 @@ class UserAuthTest extends BrowserKitTestCase
             ->seePageIs('/')
             ->see($this->stringToxxxx('驗證連結無效。'));
     }
+
     public function testResendConfirmMailPage()
     {
         /** @var User $user */
@@ -63,6 +70,7 @@ class UserAuthTest extends BrowserKitTestCase
             ->visit(route('confirm-mail.resend'))
             ->seePageIs('/');
     }
+
     public function testConfirmMailRedirect()
     {
         /** @var User $user */
@@ -72,6 +80,7 @@ class UserAuthTest extends BrowserKitTestCase
             ->seePageIs(route('confirm-mail.resend'))
             ->see($this->stringToxxxx('尚未完成信箱驗證'));
     }
+
     public function testRedirectIfAuthenticated()
     {
         /** @var User $user */
