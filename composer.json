@@ -9,10 +9,13 @@
         "arcanedev/log-viewer": "^4.5",
         "doctrine/dbal": "^2.7",
         "fideloper/proxy": "^4.0",
+        "graham-campbell/throttle": "^7.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^5.6",
         "lavary/laravel-menu": "^1.7",
+        "marvinlabs/laravel-html-bootstrap-4": "^1.5",
+        "marvinlabs/laravel-html-font-awesome": "^1.0",
         "predis/predis": "^1.1",
         "recca0120/laravel-tracy": "^1.8",
         "santigarcor/laratrust": "5.0.*"
