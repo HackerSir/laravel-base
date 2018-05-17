@@ -32,6 +32,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [yajra/laravel-datatables-buttons](https://github.com/yajra/laravel-datatables-buttons): ^3.2
   - [yajra/laravel-datatables-html](https://github.com/yajra/laravel-datatables-html): ^3.7
   - [yajra/laravel-datatables-oracle](https://github.com/yajra/laravel-datatables-oracle): ^8.5
+  - [thomaswelton/laravel-gravatar](https://github.com/thomaswelton/laravel-gravatar): ^1.1
 - System
 
 ## Installation Guide
