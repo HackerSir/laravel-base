@@ -13,6 +13,35 @@
 
 Route::view('/', 'index')->name('index');
 
+//會員（須完成信箱驗證）
+Route::group(['middleware' => ['auth', 'email']], function () {
+    //會員管理
+    //權限：user.manage、user.view
+//    Route::resource('user', 'UserController', [
+//        'except' => [
+//            'create',
+//            'store',
+//        ],
+//    ]);
+    //角色管理
+    //權限：role.manage
+//    Route::group(['middleware' => 'permission:role.manage'], function () {
+//        Route::resource('role', 'RoleController', [
+//            'except' => [
+//                'show',
+//            ],
+//        ]);
+//    });
+    //會員資料
+    Route::group(['prefix' => 'profile'], function () {
+        //查看會員資料
+        Route::get('/', 'ProfileController@getProfile')->name('profile');
+        //編輯會員資料
+        Route::get('edit', 'ProfileController@getEditProfile')->name('profile.edit');
+        Route::put('update', 'ProfileController@updateProfile')->name('profile.update');
+    });
+});
+
 //會員系統
 //將 Auth::routes() 複製出來自己命名
 Route::group(['namespace' => 'Auth'], function () {
