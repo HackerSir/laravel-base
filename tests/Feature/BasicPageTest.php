@@ -4,10 +4,8 @@ namespace Tests\Feature;
 
 use App\Role;
 use App\User;
-use Tests\BrowserKitTestCase;
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Tests\BrowserKitTestCase;
 
 class BasicPageTest extends BrowserKitTestCase
 {
