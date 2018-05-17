@@ -13,7 +13,6 @@
 
 Route::view('/', 'index')->name('index');
 
-
 //會員系統
 //將 Auth::routes() 複製出來自己命名
 Route::group(['namespace' => 'Auth'], function () {
