@@ -105,20 +105,96 @@
 <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
 <script>
     $(function () {
-        // Alertify JS
+        //AlertifyJS
         alertify.defaults = {
+            autoReset: true,
+            basic: false,
+            closable: true,
+            closableByDimmer: true,
+            frameless: false,
+            maintainFocus: true, // <== global default not per instance, applies to all dialogs
+            maximizable: true,
+            modal: true,
+            movable: true,
+            moveBounded: false,
+            overflow: true,
+            padding: true,
+            pinnable: true,
+            pinned: true,
+            preventBodyShift: false, // <== global default not per instance, applies to all dialogs
+            resizable: true,
+            startMaximized: false,
+            transition: 'pulse',
             notifier: {
                 position: 'top-right'
             },
+            // language resources
+            glossary: {
+                // dialogs default title
+                title: 'AlertifyJS',
+                // ok button text
+                ok: 'OK',
+                // cancel button text
+                cancel: 'Cancel'
+            },
+            // theme settings
+            theme: {
+                // class name attached to prompt dialog input textbox.
+                input: 'ajs-input',
+                // class name attached to ok button
+                ok: 'ajs-ok',
+                // class name attached to cancel button
+                cancel: 'ajs-cancel'
+            }
         };
-
-        @if(session('global'))
-        alertify.notify('{{ session('global') }}', 'success', 10);
+        @if(session('success'))
+        alertify.notify('{{ session('success') }}', 'success', 5);
         @endif
         @if(session('warning'))
-        alertify.notify('{{ session('warning') }}', 'warning', 10);
+        alertify.notify('{{ session('warning') }}', 'warning', 5);
         @endif
+        // Tooltip
+        $('[title]:not(#tracy-debug *[title])').each(function () {
+            $(this).tooltip({
+                placement: 'right'
+            });
+        });
     });
+    // DataTables 預設設定
+    (function ($, DataTable) {
+        $.extend(true, DataTable.defaults, {
+            pageLength: 10,
+            autoWidth: false,
+            responsive: true,
+            dom: "<'row'<'col-md-6'l><'col-md-6'f>><'row'<'col-md-12'rt>><'row'<'col-md-6'i><'col-md-6'p>>",
+            stateSave: true,
+            language: {
+                "decimal": "",
+                "emptyTable": "沒有資料",
+                "thousands": ",",
+                "processing": "處理中...",
+                "loadingRecords": "載入中...",
+                "lengthMenu": "顯示 _MENU_ 項結果",
+                "zeroRecords": "沒有符合的結果",
+                "info": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                "infoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                "infoFiltered": "(從 _MAX_ 項結果中過濾)",
+                "infoPostFix": "",
+                "search": "搜尋：",
+                "paginate": {
+                    "first": "第一頁",
+                    "previous": "上一頁",
+                    "next": "下一頁",
+                    "last": "最後一頁"
+                },
+                "aria": {
+                    "sortAscending": ": 升冪排列",
+                    "sortDescending": ": 降冪排列"
+                }
+            }
+        });
+        DataTable.ext.errMode = 'throw';
+    })(jQuery, jQuery.fn.dataTable);
 </script>
 
 @yield('js')
