@@ -61,5 +61,6 @@ class Kernel extends HttpKernel
         'signed'          => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle'        => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'register.toggle' => \App\Http\Middleware\RegisterEnableToggle::class,
+        'email'           => \App\Http\Middleware\EmailConfirm::class,
     ];
 }
