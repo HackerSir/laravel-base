@@ -17,12 +17,12 @@ Route::view('/', 'index')->name('index');
 Route::group(['middleware' => ['auth', 'email']], function () {
     //會員管理
     //權限：user.manage、user.view
-//    Route::resource('user', 'UserController', [
-//        'except' => [
-//            'create',
-//            'store',
-//        ],
-//    ]);
+    Route::resource('user', 'UserController', [
+        'except' => [
+            'create',
+            'store',
+        ],
+    ]);
     //角色管理
     //權限：role.manage
     Route::group(['middleware' => 'permission:role.manage'], function () {

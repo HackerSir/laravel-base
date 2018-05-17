@@ -38,7 +38,7 @@ class LaravelMenu
                     $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
 
                     if (Laratrust::can(['user.manage', 'user.view'])) {
-//                        $adminMenu->add('會員清單', ['route' => 'user.index'])->active('user/*');
+                        $adminMenu->add('會員管理', ['route' => 'user.index'])->active('user/*');
                     }
                     if (Laratrust::can('role.manage')) {
                         $adminMenu->add('角色管理', ['route' => 'role.index']);

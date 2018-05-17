@@ -47,6 +47,10 @@
             top: 60px;
         }
 
+        .table td, .table th {
+            vertical-align: middle;
+        }
+
         .footer {
             padding-top: 15px;
             padding-bottom: 15px;
