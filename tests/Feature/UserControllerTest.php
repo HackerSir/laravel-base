@@ -21,6 +21,6 @@ class UserControllerTest extends BrowserKitTestCase
 
         $this->actingAs($user)
             ->visit(route('user.index'))
-            ->see('會員清單');
+            ->see('會員管理');
     }
 }

@@ -24,39 +24,6 @@ class BasicPageTest extends BrowserKitTestCase
             ->assertResponseStatus(200);
     }
 
-    /**
-     * 測試大廳頁面
-     *
-     * @return void
-     */
-    public function testHallPage()
-    {
-        $this->visit(route('hall'))
-            ->assertResponseStatus(200);
-    }
-
-    /**
-     * 測試常見問題頁面
-     *
-     * @return void
-     */
-    public function testFaqPage()
-    {
-        $this->visit(route('faq'))
-            ->assertResponseStatus(200);
-    }
-
-    /**
-     * 測試隱私權條款頁面
-     *
-     * @return void
-     */
-    public function testPrivacyPolicyPage()
-    {
-        $this->visit(route('privacy-policy'))
-            ->assertResponseStatus(200);
-    }
-
     public function testNavbar()
     {
         /** @var User $user */

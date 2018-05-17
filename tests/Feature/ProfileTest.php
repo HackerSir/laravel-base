@@ -40,7 +40,7 @@ class ProfileTest extends BrowserKitTestCase
             ->visit(route('profile.edit'))
             ->see('編輯個人資料')
             ->type('illya', 'name')
-            ->press('更新')
+            ->press('確認')
             ->seePageIs(route('profile'))
             ->see($this->stringToxxxx('資料修改完成。'));
 
