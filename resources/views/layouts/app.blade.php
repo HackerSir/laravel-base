@@ -35,6 +35,12 @@
     {{-- Alertify js --}}
     <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.9.0/css/alertify.min.css"/>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/alertifyjs/1.9.0/css/themes/bootstrap.min.css"/>
+
+    {{-- DataTables --}}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    {{--<link rel="stylesheet" href="//cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">--}}
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
+
     <style>
         {{-- 讓 AlertifyJS 的 notify 往下一點，才不會擋到 navbar --}}
         .alertify-notifier.ajs-top {
@@ -103,6 +109,13 @@
 
 {{-- Alertify js --}}
 <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.11.0/build/alertify.min.js"></script>
+
+{{-- DataTables --}}
+<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+{{--<script src="//cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>--}}
+<script src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+{{--<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>--}}
+
 <script>
     $(function () {
         //AlertifyJS
