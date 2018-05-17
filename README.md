@@ -34,6 +34,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [yajra/laravel-datatables-oracle](https://github.com/yajra/laravel-datatables-oracle): ^8.5
   - [thomaswelton/laravel-gravatar](https://github.com/thomaswelton/laravel-gravatar): ^1.1
   - [yish/generators](https://github.com/Mombuyish/Laravel-Oh-Generators): ^2.0
+  - [laravel/browser-kit-testing](https://github.com/laravel/browser-kit-testing): ^4.0
 - System
 
 ## Installation Guide
