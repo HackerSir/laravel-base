@@ -25,6 +25,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [lavary/laravel-menu](https://github.com/lavary/laravel-menu): ^1.7
   - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): 5.0.*
   - [arcanedev/log-viewer](https://github.com/ARCANEDEV/LogViewer): ^4.5
+  - [laravelcollective/html](https://github.com/LaravelCollective/html): ^5.6
 - System
 
 ## Installation Guide
