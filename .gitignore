@@ -342,6 +342,7 @@ $RECYCLE.BIN/
 _ide_helper.php
 .phpstorm.meta.php
 
+### Personal Config ###
 .idea/vagrant.xml
-
 .idea/remote-mappings.xml
+.idea/php-test-framework.xml
