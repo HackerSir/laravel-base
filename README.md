@@ -24,6 +24,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [recca0120/laravel-tracy](https://github.com/recca0120/laravel-tracy): ^1.8
   - [lavary/laravel-menu](https://github.com/lavary/laravel-menu): ^1.7
   - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): 5.0.*
+  - [arcanedev/log-viewer](https://github.com/ARCANEDEV/LogViewer): ^4.5
 - System
 
 ## Installation Guide
