@@ -42,7 +42,7 @@ class ConfirmMail extends Notification
      */
     public function toMail($notifiable)
     {
-        $subject = '[' . config('app-extend.title') . ']信箱驗證';
+        $subject = '[' . config('app-extend.title') . '] 信箱驗證';
 
         return (new MailMessage)
             ->subject($subject)
