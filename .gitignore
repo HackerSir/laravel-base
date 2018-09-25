@@ -367,3 +367,4 @@ _ide_helper.php
 .idea/vagrant.xml
 .idea/remote-mappings.xml
 .idea/php-test-framework.xml
+.idea/dataSources.xml
