@@ -33,7 +33,7 @@
     {{-- Scripts --}}
     {{--<script src="{{ asset('js/app.js') }}" defer></script>--}}
 
-{{-- Fonts --}}
+    {{-- Fonts --}}
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
@@ -61,9 +61,11 @@
     {{-- Footer --}}
     @include('components.footer')
     {{-- Logout form --}}
-    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-        @csrf
-    </form>
+    @auth
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+    @endauth
 </div>
 
 {{-- JavaScript --}}
