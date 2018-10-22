@@ -60,6 +60,10 @@
     </main>
     {{-- Footer --}}
     @include('components.footer')
+    {{-- Logout form --}}
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
 </div>
 
 {{-- JavaScript --}}
