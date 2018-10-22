@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\User;
 use Closure;
 use Lavary\Menu\Builder;
 use Menu;
@@ -11,8 +12,8 @@ class LaravelMenu
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
@@ -23,13 +24,15 @@ class LaravelMenu
 
         Menu::make('right', function (Builder $menu) {
             if (auth()->check()) {
+                /** @var User $user */
+                $user = auth()->user();
                 // 會員
 
-//                // 信箱驗證
-//                if (!auth()->user()->is_confirmed) {
-//                    $menu->add('尚未完成信箱驗證', ['route' => 'confirm-mail.resend'])
-//                        ->link->attr(['class' => 'text-danger']);
-//                }
+                // 信箱驗證
+                if (!$user->hasVerifiedEmail()) {
+                    $menu->add('尚未完成信箱驗證', ['route' => 'verification.notice'])
+                        ->link->attr(['class' => 'text-danger']);
+                }
 //
 //                // 管理員
 //                if (Laratrust::can('menu.view') and auth()->user()->isConfirmed) {
