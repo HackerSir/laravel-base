@@ -46,14 +46,14 @@ class LaravelMenu
 //                    if (Laratrust::can('role.manage')) {
 //                        $adminMenu->add('角色管理', ['route' => 'role.index']);
 //                    }
-//
-//                    if (Laratrust::can('log-viewer.access')) {
-//                        $adminMenu->add(
-//                            '記錄檢視器 <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
-//                            ['route' => 'log-viewer::dashboard']
-//                        )->link->attr('target', '_blank');
-//                    }
-//                }
+
+                    if (Laratrust::can('telescope.access')) {
+                        $adminMenu->add(
+                            'Telescope <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
+                            ['url' => config('telescope.path')]
+                        )->link->attr('target', '_blank');
+                    }
+                }
 
                 /** @var \Lavary\Menu\Builder $userMenu */
                 $userMenu = $menu->add(auth()->user()->name, 'javascript:void(0)');
