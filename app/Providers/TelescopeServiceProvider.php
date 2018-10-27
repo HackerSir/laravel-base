@@ -40,6 +40,7 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
     protected function gate()
     {
         Gate::define('viewTelescope', function ($user) {
+            //TODO: 改用權限節點
             return in_array($user->email, [
                 //
             ]);
