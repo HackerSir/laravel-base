@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\User;
 use Closure;
+use Laratrust;
 use Lavary\Menu\Builder;
 use Menu;
 
@@ -33,12 +34,12 @@ class LaravelMenu
                     $menu->add('尚未完成信箱驗證', ['route' => 'verification.notice'])
                         ->link->attr(['class' => 'text-danger']);
                 }
-//
-//                // 管理員
-//                if (Laratrust::can('menu.view') and auth()->user()->isConfirmed) {
-//                    /** @var \Lavary\Menu\Builder $adminMenu */
-//                    $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
-//
+
+                // 管理員
+                if (Laratrust::can('menu.view') && $user->hasVerifiedEmail()) {
+                    /** @var \Lavary\Menu\Builder $adminMenu */
+                    $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
+
 //                    if (Laratrust::can(['user.manage', 'user.view'])) {
 //                        $adminMenu->add('會員管理', ['route' => 'user.index'])->active('user/*');
 //                    }
