@@ -57,7 +57,7 @@ class LaravelMenu
 
                 /** @var \Lavary\Menu\Builder $userMenu */
                 $userMenu = $menu->add(auth()->user()->name, 'javascript:void(0)');
-//                $userMenu->add('個人資料', ['route' => 'profile'])->active('profile/*');
+                $userMenu->add('個人資料', ['route' => 'profile'])->active('profile/*');
                 $userMenu->add('登出', 'javascript:void(0)')
                     ->link
                     ->attr('onclick', 'event.preventDefault(); document.getElementById(\'logout-form\').submit();');
