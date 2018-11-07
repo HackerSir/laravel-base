@@ -25,4 +25,10 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     });
 });
 
+//會員系統
 Auth::routes(['verify' => true]);
+Route::group(['namespace' => 'Auth'], function () {
+    //修改密碼
+    Route::get('password/change', 'PasswordController@getChangePassword')->name('password.change');
+    Route::put('password/change', 'PasswordController@putChangePassword')->name('password.change');
+});
