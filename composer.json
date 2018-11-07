@@ -26,7 +26,8 @@
         "yajra/laravel-datatables-buttons": "^3.2",
         "yajra/laravel-datatables-html": "^3.7",
         "yajra/laravel-datatables-oracle": "^8.5",
-        "yish/generators": "^2.0"
+        "yish/generators": "^2.0",
+        "ext-json": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.4",
@@ -81,5 +82,11 @@
         "optimize-autoloader": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../composer-package/laravel-auth-management"
+        }
+    ]
 }
