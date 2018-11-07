@@ -17,7 +17,8 @@
         "marvinlabs/laravel-html-font-awesome": "^1.0",
         "predis/predis": "^1.1",
         "recca0120/laravel-tracy": "^1.8",
-        "santigarcor/laratrust": "^5.0"
+        "santigarcor/laratrust": "^5.0",
+        "ext-json": "*"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
