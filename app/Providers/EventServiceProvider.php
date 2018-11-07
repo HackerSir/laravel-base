@@ -18,6 +18,15 @@ class EventServiceProvider extends ServiceProvider
     ];
 
     /**
+     * 訂閱者類別進行註冊。
+     *
+     * @var array
+     */
+    protected $subscribe = [
+        'App\Listeners\AuthListener',
+    ];
+
+    /**
      * Register any events for your application.
      *
      * @return void
