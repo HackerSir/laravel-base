@@ -57,7 +57,8 @@ return [
      * Default html builder parameters.
      */
     'parameters'    => [
-        'dom'     => 'Bfrtip',
+        'dom'     => "<'d-flex flex-column'<'d-flex align-items-center justify-content-between'<l><f>><rt>"
+            . "<'d-flex align-items-center justify-content-between'<i><p>>>",
         'order'   => [[0, 'desc']],
         'buttons' => [
             'create',

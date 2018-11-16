@@ -136,7 +136,7 @@
             pageLength: 10,
             autoWidth: false,
             responsive: true,
-            dom: "<'row'<'col-md-6'l><'col-md-6'f>><'row'<'col-md-12'rt>><'row'<'col-md-6'i><'col-md-6'p>>",
+            dom: "<'d-flex flex-column'<'d-flex align-items-center justify-content-between'<l><f>><rt><'d-flex align-items-center justify-content-between'<i><p>>>",
             stateSave: true,
             language: {
                 "decimal": "",
