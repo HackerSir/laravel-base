@@ -37,6 +37,11 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
+    {{-- DataTables --}}
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+    {{--<link rel="stylesheet" href="//cdn.datatables.net/buttons/1.3.1/css/buttons.dataTables.min.css">--}}
+    <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
+
     {{-- Styles --}}
     {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -46,6 +51,10 @@
     {{-- toastr.js --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <style>
+        .table td, .table th {
+            vertical-align: middle;
+        }
+
         .toast-top-full-width {
             top: 60px;
         }
@@ -84,6 +93,11 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+{{-- DataTables --}}
+<script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+{{--<script src="//cdn.datatables.net/buttons/1.3.1/js/dataTables.buttons.min.js"></script>--}}
+<script src="//cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js"></script>
+{{--<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>--}}
 {{-- toastr.js --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 <script>
@@ -103,7 +117,7 @@
         "hideEasing": "linear",
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
-    }
+    };
     @if(session('success'))
         toastr["success"]('{{ session('success') }}');
     @endif
@@ -116,6 +130,42 @@
         @if(session('error'))
         toastr["error"]('{{ session('error') }}');
     @endif
+    // DataTables 預設設定
+    (function ($, DataTable) {
+        $.extend(true, DataTable.defaults, {
+            pageLength: 10,
+            autoWidth: false,
+            responsive: true,
+            dom: "<'row'<'col-md-6'l><'col-md-6'f>><'row'<'col-md-12'rt>><'row'<'col-md-6'i><'col-md-6'p>>",
+            stateSave: true,
+            language: {
+                "decimal": "",
+                "emptyTable": "沒有資料",
+                "thousands": ",",
+                "processing": "處理中...",
+                "loadingRecords": "載入中...",
+                "lengthMenu": "顯示 _MENU_ 項結果",
+                "zeroRecords": "沒有符合的結果",
+                "info": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
+                "infoEmpty": "顯示第 0 至 0 項結果，共 0 項",
+                "infoFiltered": "(從 _MAX_ 項結果中過濾)",
+                "infoPostFix": "",
+                "search": "搜尋：",
+                "paginate": {
+                    "first": "第一頁",
+                    "previous": "上一頁",
+                    "next": "下一頁",
+                    "last": "最後一頁"
+                },
+                "aria": {
+                    "sortAscending": ": 升冪排列",
+                    "sortDescending": ": 降冪排列"
+                }
+            }
+        });
+        DataTable.ext.errMode = 'throw';
+    })(jQuery, jQuery.fn.dataTable);
 </script>
+@yield('js')
 </body>
 </html>
