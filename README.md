@@ -28,6 +28,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): ^5.0
   - [laravel/telescope](https://github.com/laravel/telescope): ^0.1.3
   - [thomaswelton/laravel-gravatar](https://github.com/thomaswelton/laravel-gravatar): ^1.1
+  - [laravelcollective/html](https://github.com/LaravelCollective/html): ^5.7
 - System
 
 ## Installation Guide
