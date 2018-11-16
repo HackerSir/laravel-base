@@ -44,7 +44,7 @@ class LaravelMenu
                         $adminMenu->add('會員管理', ['route' => 'user.index'])->active('user/*');
                     }
                     if (Laratrust::can('role.manage')) {
-                        $adminMenu->add('角色管理', ['route' => 'role.index']);
+                        $adminMenu->add('角色管理', ['route' => 'role.index'])->active('role/*');
                     }
 
                     if (Laratrust::can('telescope.access')) {
