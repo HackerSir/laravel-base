@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="//cdn.datatables.net/responsive/2.1.1/css/responsive.dataTables.min.css">
 
     {{-- Styles --}}
-    {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
+    {{--<link rel="stylesheet" href="{{ asset(mix('/build-css/app.css')) }}">--}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
