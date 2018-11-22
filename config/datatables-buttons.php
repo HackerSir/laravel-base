@@ -57,8 +57,9 @@ return [
      * Default html builder parameters.
      */
     'parameters'    => [
-        'dom'     => "<'d-flex flex-column'<'d-flex align-items-center justify-content-between'<l><f>><rt>"
-            . "<'d-flex align-items-center justify-content-between'<i><p>>>",
+        'dom'     => "<'d-flex flex-column'"
+            . "<'d-flex flex-column flex-md-row align-items-center justify-content-between'<l><f>><rt>"
+            . "<'d-flex flex-column flex-md-row align-items-center justify-content-between'<i><p>>>",
         'order'   => [[0, 'desc']],
         'buttons' => [
             'create',
