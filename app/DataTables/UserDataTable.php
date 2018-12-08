@@ -25,7 +25,7 @@ class UserDataTable extends DataTable
                 /** @var User $user */
                 return view('user.datatables.email', compact('user'))->render();
             })
-            ->escapeColumns([]);
+            ->rawColumns(['name', 'email', 'action']);
     }
 
     /**
