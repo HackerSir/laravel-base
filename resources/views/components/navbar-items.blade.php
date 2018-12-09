@@ -1,7 +1,7 @@
 @foreach($items as $item)
-    <li@lm-attrs($item) class="nav-item @if($item->hasChildren()) dropdown @endif "@lm-endattrs>
+    <li @lm_attrs($item) class="nav-item @if($item->hasChildren()) dropdown @endif " @lm_endattrs>
     @if($item->link)
-        <a@lm-attrs($item->link) class="nav-link @if($item->hasChildren()) dropdown-toggle @endif" @if($item->hasChildren()) data-toggle="dropdown" @endif @lm-endattrs href="{!! $item->url() !!}">
+        <a @lm_attrs($item->link) class="nav-link @if($item->hasChildren()) dropdown-toggle @endif" @if($item->hasChildren()) data-toggle="dropdown" @endif @lm_endattrs href="{!! $item->url() !!}">
             {!! $item->title !!}
         </a>
     @else

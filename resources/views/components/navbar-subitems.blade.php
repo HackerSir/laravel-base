@@ -1,6 +1,6 @@
 @foreach($items as $item)
     @if($item->link)
-        <a@lm-attrs($item->link) class="dropdown-item" @lm-endattrs href="{!! $item->url() !!}">
+        <a @lm_attrs($item->link) class="dropdown-item" @lm_endattrs href="{!! $item->url() !!}">
             {!! $item->title !!}
         </a>
     @else
