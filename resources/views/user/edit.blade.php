@@ -35,7 +35,6 @@
                                 <input type="checkbox" name="role[]" value="{{ $role->id }}"
                                        class="custom-control-input" id="roleCheck{{ $role->id }}"
                                        @if($user->hasRole($role->name)) checked @endif>
-                                <span class="custom-control-indicator"></span>
                                 <label class="custom-control-label" for="roleCheck{{ $role->id }}">
                                     {{ $role->display_name }}（{{ $role->description }}）
                                 </label>
