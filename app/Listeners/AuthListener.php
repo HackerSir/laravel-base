@@ -78,6 +78,10 @@ class AuthListener
         /* @var \App\User $user */
         $user = $event->user;
         $ip = request()->getClientIp();
+        //無使用者資料時（可能登入期間帳號被刪除），直接結束處理
+        if (!$user) {
+            return;
+        }
         //寫入紀錄
         $this->logService->info('[Auth][Logout] ' . $user->name . ' (' . $user->email . ')' . PHP_EOL, [
             'user' => [
