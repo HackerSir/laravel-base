@@ -64,6 +64,7 @@
             padding-bottom: 15px;
         }
     </style>
+    @yield('css')
 </head>
 <body>
 <div class="d-flex flex-column" id="app" style="min-height:100vh;">
