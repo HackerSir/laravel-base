@@ -65,6 +65,31 @@
         }
     </style>
     @yield('css')
+
+    @if (config('app.env') == 'production' && !empty(config('services.google_analytics.id')))
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async
+                src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google_analytics.id') }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', '{{ config('services.google_analytics.id') }}');
+        </script>
+    @endif
+    @if (config('app.env') == 'production' && !empty(config('services.google_ad.client')))
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "{{ config('services.google_ad.client') }}",
+                enable_page_level_ads: true
+            });
+        </script>
+    @endif
 </head>
 <body>
 <div class="d-flex flex-column" id="app" style="min-height:100vh;">
