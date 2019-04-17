@@ -13,8 +13,8 @@ class LaravelMenu
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Closure  $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure $next
      * @return mixed
      */
     public function handle($request, Closure $next)
@@ -29,12 +29,12 @@ class LaravelMenu
                 $user = auth()->user();
                 // 會員
 
-//                // 信箱驗證
-//                if (!$user->hasVerifiedEmail()) {
-//                    $menu->add('尚未完成信箱驗證', ['route' => 'verification.notice'])
-//                        ->link->attr(['class' => 'text-danger']);
-//                }
-//
+                // 信箱驗證
+                if (!$user->hasVerifiedEmail()) {
+                    $menu->add('尚未完成信箱驗證', ['route' => 'verification.notice'])
+                        ->link->attr(['class' => 'text-danger']);
+                }
+
 //                // 管理員
 //                if (Laratrust::can('menu.view') && $user->hasVerifiedEmail()) {
 //                    /** @var \Lavary\Menu\Builder $adminMenu */
