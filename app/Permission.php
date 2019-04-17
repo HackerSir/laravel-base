@@ -32,6 +32,7 @@ class Permission extends LaratrustPermission
         'display_name',
         'description',
     ];
+
     /**
      * @param $roleName
      *
@@ -44,6 +45,7 @@ class Permission extends LaratrustPermission
                 return true;
             }
         }
+
         return false;
     }
 }
