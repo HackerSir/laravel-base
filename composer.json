@@ -15,6 +15,8 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "lavary/laravel-menu": "^1.7",
+        "marvinlabs/laravel-html-bootstrap-4": "^1.6",
+        "marvinlabs/laravel-html-font-awesome": "^1.0",
         "predis/predis": "^1.1",
         "recca0120/laravel-tracy": "^1.8"
     },

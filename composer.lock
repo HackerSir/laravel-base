@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb1b0da65b1c98d1022de04cb89769ec",
+    "content-hash": "62a36a044ed61fa4f8713f097befb0e9",
     "packages": [
+        {
+            "name": "appstract/laravel-blade-directives",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/appstract/laravel-blade-directives.git",
+                "reference": "575666fd336be0fd0deed5ac4c5979e384372db1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/appstract/laravel-blade-directives/zipball/575666fd336be0fd0deed5ac4c5979e384372db1",
+                "reference": "575666fd336be0fd0deed5ac4c5979e384372db1",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.5",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "orchestra/testbench": "~3.5",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Appstract\\BladeDirectives\\BladeDirectivesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Appstract\\BladeDirectives\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gijs Jorissen",
+                    "email": "hello@appstract.team",
+                    "homepage": "https://appstract.team",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handy Blade directives",
+            "homepage": "https://github.com/appstract/laravel-blade-directives",
+            "keywords": [
+                "appstract",
+                "laravel-blade-directives"
+            ],
+            "time": "2019-01-31T09:35:40+00:00"
+        },
         {
             "name": "barryvdh/laravel-ide-helper",
             "version": "v2.6.2",
@@ -1528,6 +1583,129 @@
             "time": "2019-03-30T13:22:34+00:00"
         },
         {
+            "name": "marvinlabs/laravel-html-bootstrap-4",
+            "version": "v1.6.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marvinlabs/laravel-html-bootstrap-4.git",
+                "reference": "77e1823cb3b5b395a2d30ad5a8cee82b21cffb33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marvinlabs/laravel-html-bootstrap-4/zipball/77e1823cb3b5b395a2d30ad5a8cee82b21cffb33",
+                "reference": "77e1823cb3b5b395a2d30ad5a8cee82b21cffb33",
+                "shasum": ""
+            },
+            "require": {
+                "appstract/laravel-blade-directives": "^1.1.0",
+                "illuminate/support": "^5.6.0",
+                "php": "^7.0",
+                "spatie/laravel-html": "^2.19.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^3.6",
+                "phpunit/phpunit": "^7.0",
+                "symfony/dom-crawler": "^4.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MarvinLabs\\Html\\Bootstrap\\BootstrapServiceProvider"
+                    ],
+                    "aliases": {
+                        "BS": "MarvinLabs\\Html\\Bootstrap\\Facades\\Bootstrap"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MarvinLabs\\Html\\Bootstrap\\": "src/Bootstrap"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Mimoun-Prat",
+                    "email": "contact@vincentprat.info",
+                    "homepage": "https://vincentprat.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent html builder for Bootstrap 4 components",
+            "homepage": "https://github.com/marvinlabs/laravel-html-bootstrap-4",
+            "keywords": [
+                "bootstrap-4",
+                "html",
+                "marvinlabs"
+            ],
+            "time": "2019-02-26T08:43:29+00:00"
+        },
+        {
+            "name": "marvinlabs/laravel-html-font-awesome",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marvinlabs/laravel-html-font-awesome.git",
+                "reference": "2a5870f01bdd597b71f9bc146250371989e3b43b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marvinlabs/laravel-html-font-awesome/zipball/2a5870f01bdd597b71f9bc146250371989e3b43b",
+                "reference": "2a5870f01bdd597b71f9bc146250371989e3b43b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "spatie/laravel-html": "^2.19.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MarvinLabs\\Html\\FontAwesome\\FontAwesomeServiceProvider"
+                    ],
+                    "aliases": {
+                        "FA": "MarvinLabs\\Html\\FontAwesome\\Facades\\FontAwesome"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MarvinLabs\\Html\\FontAwesome\\": "src/FontAwesome"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Mimoun-Prat",
+                    "email": "contact@vincentprat.info",
+                    "homepage": "https://vincentprat.info",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent html builder for Font Awesome icons",
+            "homepage": "https://github.com/marvinlabs/laravel-html-font-awesome",
+            "keywords": [
+                "font-awesome",
+                "html",
+                "marvinlabs"
+            ],
+            "time": "2018-04-25T12:53:49+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.24.0",
             "source": {
@@ -2453,6 +2631,74 @@
                 "phra"
             ],
             "time": "2015-10-13T18:44:15+00:00"
+        },
+        {
+            "name": "spatie/laravel-html",
+            "version": "2.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-html.git",
+                "reference": "84f49178216e4cd52d63d28d597236d23840d26d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-html/zipball/84f49178216e4cd52d63d28d597236d23840d26d",
+                "reference": "84f49178216e4cd52d63d28d597236d23840d26d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^7.5|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Html\\HtmlServiceProvider"
+                    ],
+                    "aliases": {
+                        "Html": "Spatie\\Html\\Facades\\Html"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Html\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fluent html builder",
+            "homepage": "https://github.com/spatie/laravel-html",
+            "keywords": [
+                "html",
+                "spatie"
+            ],
+            "time": "2019-02-27T07:33:04+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

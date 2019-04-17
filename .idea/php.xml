@@ -105,6 +105,10 @@
       <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
       <path value="$PROJECT_DIR$/vendor/recca0120/laravel-tracy" />
       <path value="$PROJECT_DIR$/vendor/lavary/laravel-menu" />
+      <path value="$PROJECT_DIR$/vendor/marvinlabs/laravel-html-bootstrap-4" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-html" />
+      <path value="$PROJECT_DIR$/vendor/appstract/laravel-blade-directives" />
+      <path value="$PROJECT_DIR$/vendor/marvinlabs/laravel-html-font-awesome" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
