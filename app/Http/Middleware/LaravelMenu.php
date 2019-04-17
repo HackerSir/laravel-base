@@ -40,9 +40,9 @@ class LaravelMenu
                     /** @var \Lavary\Menu\Builder $adminMenu */
                     $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
 
-//                    if (Laratrust::can('user.manage')) {
-//                        $adminMenu->add('會員管理', ['route' => 'user.index'])->active('user/*');
-//                    }
+                    if (Laratrust::can('user.manage')) {
+                        $adminMenu->add('會員管理', ['route' => 'user.index'])->active('user/*');
+                    }
                     if (Laratrust::can('role.manage')) {
                         $adminMenu->add('角色管理', ['route' => 'role.index'])->active('role/*');
                     }
