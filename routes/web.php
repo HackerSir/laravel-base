@@ -13,4 +13,4 @@
 
 Route::view('/', 'index')->name('index');
 
-Auth::routes();
+Auth::routes(['verify' => true]);
