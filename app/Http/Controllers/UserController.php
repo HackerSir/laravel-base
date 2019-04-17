@@ -34,6 +34,8 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
+        //清除 Laratrust 的 Cache，避免干擾表單
+        \Cache::forget('laratrust_roles_for_user_' . $user->getAttribute($user->getKeyName()));
         $roles = Role::all();
         return view('user.edit', compact('user', 'roles'));
     }
