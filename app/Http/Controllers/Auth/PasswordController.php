@@ -25,6 +25,7 @@ class PasswordController extends Controller
     public function getChangePassword()
     {
         $user = auth()->user();
+
         return view('auth.passwords.change-password', compact('user'));
     }
 
@@ -51,6 +52,7 @@ class PasswordController extends Controller
         $user->update([
             'password' => bcrypt($request->input('new_password')),
         ]);
+
         return redirect()->route('profile')->with('success', '密碼修改完成。');
     }
 }

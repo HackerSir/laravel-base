@@ -17,6 +17,7 @@ class UserDataTable extends DataTable
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
+
         return $dataTable
             ->editColumn('name', 'user.datatables.name')
             ->editColumn('email', function ($user) {

@@ -1,8 +1,11 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use App\Http\Requests\RoleRequest;
 use App\Permission;
 use App\Role;
+
 class RoleController extends Controller
 {
     /**
@@ -14,8 +17,10 @@ class RoleController extends Controller
     {
         $roles = Role::all();
         $permissions = Permission::with('roles')->get();
+
         return view('role.index', compact('roles', 'permissions'));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -24,8 +29,10 @@ class RoleController extends Controller
     public function create()
     {
         $permissions = Permission::all();
+
         return view('role.create', compact('permissions'));
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -39,8 +46,10 @@ class RoleController extends Controller
             'protection' => false,
         ]));
         $role->permissions()->sync($request->input('permissions') ?: []);
+
         return redirect()->route('role.index')->with('success', '角色已建立');
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -50,8 +59,10 @@ class RoleController extends Controller
     public function edit(Role $role)
     {
         $permissions = Permission::all();
+
         return view('role.edit', compact('role', 'permissions'));
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -67,8 +78,10 @@ class RoleController extends Controller
             $role->update($request->only(['name', 'display_name', 'description']));
             $role->permissions()->sync($request->input('permissions') ?: []);
         }
+
         return redirect()->route('role.index')->with('success', '角色已更新');
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -82,6 +95,7 @@ class RoleController extends Controller
             return back()->with('warning', '無法刪除受保護角色');
         }
         $role->delete();
+
         return redirect()->route('role.index')->with('success', '角色已刪除');
     }
 }

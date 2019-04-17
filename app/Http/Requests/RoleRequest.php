@@ -27,6 +27,7 @@ class RoleRequest extends FormRequest
     {
         /** @var Role $role */
         $role = $this->route('role');
+
         return [
             'name'         => [
                 'required',

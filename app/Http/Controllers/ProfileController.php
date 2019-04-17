@@ -16,6 +16,7 @@ class ProfileController extends Controller
     {
         /* @var User $user */
         $user = auth()->user();
+
         return view('profile.index', compact('user'));
     }
 
@@ -28,6 +29,7 @@ class ProfileController extends Controller
     {
         /* @var User $user */
         $user = auth()->user();
+
         return view('profile.edit', compact('user'));
     }
 
@@ -42,6 +44,7 @@ class ProfileController extends Controller
         /* @var User $user */
         $user = auth()->user();
         $user->update($request->only('name'));
+
         return redirect()->route('profile')->with('success', '資料修改完成。');
     }
 }

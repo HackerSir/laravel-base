@@ -1,9 +1,12 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use App\DataTables\UserDataTable;
 use App\Http\Requests\UserRequest;
 use App\Role;
 use App\User;
+
 class UserController extends Controller
 {
     /**
@@ -16,6 +19,7 @@ class UserController extends Controller
     {
         return $dataTable->render('user.index');
     }
+
     /**
      * Display the specified resource.
      *
@@ -26,6 +30,7 @@ class UserController extends Controller
     {
         return view('user.show', compact('user'));
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -37,8 +42,10 @@ class UserController extends Controller
         //清除 Laratrust 的 Cache，避免干擾表單
         \Cache::forget('laratrust_roles_for_user_' . $user->getAttribute($user->getKeyName()));
         $roles = Role::all();
+
         return view('user.edit', compact('user', 'roles'));
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -61,9 +68,11 @@ class UserController extends Controller
             $admin = Role::where('name', '=', 'Admin')->first();
             $user->attachRole($admin);
         }
+
         return redirect()->route('user.show', $user)
             ->with('success', '資料修改完成。');
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -78,6 +87,7 @@ class UserController extends Controller
                 ->with('warning', '無法刪除管理員，請先解除管理員角色。');
         }
         $user->delete();
+
         return redirect()->route('user.index')
             ->with('success', '會員已刪除。');
     }
