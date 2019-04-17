@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Services\LogService;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Logout;
@@ -45,7 +46,7 @@ class AuthListener
      */
     public function onLogin(Login $event)
     {
-        /* @var \App\User $user */
+        /* @var User $user */
         $user = $event->user;
         if (!$user) {
             return;
@@ -73,7 +74,7 @@ class AuthListener
      */
     public function onLogout(Logout $event)
     {
-        /* @var \App\User $user */
+        /* @var User $user */
         $user = $event->user;
         $ip = request()->getClientIp();
         //無使用者資料時（可能登入期間帳號被刪除），直接結束處理

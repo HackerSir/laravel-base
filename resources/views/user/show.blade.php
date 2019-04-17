@@ -28,7 +28,7 @@
     <div class="card">
         <div class="card-body text-center">
             {{-- Gravatar大頭貼 --}}
-            <img src="{{ Gravatar::src($user->email, 200) }}" class="img-thumbnail" id="gravatar"
+            <img src="{{ Gravatar::src($user->email, 200) }}" class="img-thumbnail" id="gravatar" alt="gravatar"
                  title="Gravatar大頭貼"/>
         </div>
         <div class="card-body">
