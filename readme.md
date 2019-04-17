@@ -25,6 +25,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [lavary/laravel-menu](https://github.com/lavary/laravel-menu): ^1.7
   - [marvinlabs/laravel-html-bootstrap-4](https://github.com/marvinlabs/laravel-html-bootstrap-4): ^1.6
   - [marvinlabs/laravel-html-font-awesome](https://github.com/marvinlabs/laravel-html-font-awesome): "^1.0
+  - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): ^5.2
 - System
 
 ## Installation Guide
