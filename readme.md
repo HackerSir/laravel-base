@@ -19,6 +19,7 @@ A website base on Laravel and Bootstrap for HackerSir.
 ## Including
 - Packages
   - [barryvdh/laravel-ide-helper](https://github.com/barryvdh/laravel-ide-helper): ^2.6
+  - [doctrine/dbal](https://github.com/doctrine/dbal): ^2.9
 - System
 
 ## Installation Guide
