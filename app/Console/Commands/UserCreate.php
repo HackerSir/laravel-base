@@ -2,7 +2,6 @@
 
 namespace App\Console\Commands;
 
-use App\Http\Controllers\Auth\RegisterController;
 use App\Role;
 use App\User;
 use Carbon\Carbon;
