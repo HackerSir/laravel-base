@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Observers\UserObserver;
+use App\User;
 use Illuminate\Support\ServiceProvider;
 use Schema;
 
@@ -27,5 +29,8 @@ class AppServiceProvider extends ServiceProvider
         // Fix "Specified key was too long error"
         // https://laravel-news.com/laravel-5-4-key-too-long-error
         Schema::defaultStringLength(191);
+
+        // Observers
+        User::observe(UserObserver::class);
     }
 }
