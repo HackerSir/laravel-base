@@ -13,4 +13,16 @@
 
 Route::view('/', 'index')->name('index');
 
+//會員（須完成信箱驗證）
+Route::group(['middleware' => ['auth', 'verified']], function () {
+    //個人資料
+    Route::group(['prefix' => 'profile'], function () {
+        //查看個人資料
+        Route::get('/', 'ProfileController@index')->name('profile');
+        //編輯個人資料
+        Route::get('edit', 'ProfileController@edit')->name('profile.edit');
+        Route::put('update', 'ProfileController@update')->name('profile.update');
+    });
+});
+
 Auth::routes(['verify' => true]);
