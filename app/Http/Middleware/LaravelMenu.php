@@ -43,9 +43,9 @@ class LaravelMenu
 //                    if (Laratrust::can('user.manage')) {
 //                        $adminMenu->add('會員管理', ['route' => 'user.index'])->active('user/*');
 //                    }
-//                    if (Laratrust::can('role.manage')) {
-//                        $adminMenu->add('角色管理', ['route' => 'role.index'])->active('role/*');
-//                    }
+                    if (Laratrust::can('role.manage')) {
+                        $adminMenu->add('角色管理', ['route' => 'role.index'])->active('role/*');
+                    }
 //
 //                    if (Laratrust::can('log-viewer.access')) {
 //                        $adminMenu->add(

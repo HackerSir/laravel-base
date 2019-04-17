@@ -15,6 +15,15 @@ Route::view('/', 'index')->name('index');
 
 //會員（須完成信箱驗證）
 Route::group(['middleware' => ['auth', 'verified']], function () {
+    //角色管理
+    //權限：role.manage
+    Route::group(['middleware' => 'permission:role.manage'], function () {
+        Route::resource('role', 'RoleController', [
+            'except' => [
+                'show',
+            ],
+        ]);
+    });
     //個人資料
     Route::group(['prefix' => 'profile'], function () {
         //查看個人資料
