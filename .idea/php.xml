@@ -104,6 +104,7 @@
       <path value="$PROJECT_DIR$/vendor/recca0120/terminal" />
       <path value="$PROJECT_DIR$/vendor/tracy/tracy" />
       <path value="$PROJECT_DIR$/vendor/recca0120/laravel-tracy" />
+      <path value="$PROJECT_DIR$/vendor/lavary/laravel-menu" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
