@@ -7,4 +7,6 @@ return [
     |--------------------------------------------------------------------------
     */
     'title' => config('app.name', 'Laravel'),
+
+    'allow-register' => env('ALLOW_REGISTER', false),
 ];
