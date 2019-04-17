@@ -15,6 +15,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
+        "laravelcollective/html": "^5.8",
         "lavary/laravel-menu": "^1.7",
         "marvinlabs/laravel-html-bootstrap-4": "^1.6",
         "marvinlabs/laravel-html-font-awesome": "^1.0",
