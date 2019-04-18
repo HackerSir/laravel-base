@@ -7,7 +7,7 @@
   </component>
   <component name="PhpCodeSniffer">
     <phpcs_settings>
-      <PhpCSConfiguration standards="MySource;PEAR;PSR1;PSR2;Squiz;Zend" tool_path="C:/xampp/php/phpcs" />
+      <PhpCSConfiguration standards="MySource;PEAR;PSR1;PSR2;Squiz;Zend" tool_path="$PROJECT_DIR$/../../php/phpcs" />
     </phpcs_settings>
   </component>
   <component name="PhpIncludePathManager">
