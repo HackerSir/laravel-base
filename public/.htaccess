@@ -5,6 +5,11 @@
 
     RewriteEngine On
 
+    # Force remove index.php from URL
+    RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+    RewriteCond %{REQUEST_URI} ^(.*)index\.php/*(.*) [NC]
+    RewriteRule ^ %1%2 [R=301,NE,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
