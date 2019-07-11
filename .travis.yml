@@ -2,6 +2,7 @@ language: php
 
 services:
   - redis-server
+  - mysql
 
 cache:
   directories:
