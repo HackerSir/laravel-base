@@ -48,7 +48,7 @@ return [
         'id' => env('GOOGLE_ANALYTICS_ID'),
     ],
 
-    'google_ad'        => [
+    'google_ad' => [
         'client' => env('GOOGLE_AD_CLIENT'),
     ],
 ];
