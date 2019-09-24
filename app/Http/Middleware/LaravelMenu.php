@@ -46,13 +46,13 @@ class LaravelMenu
                     if (Laratrust::can('role.manage')) {
                         $adminMenu->add('角色管理', ['route' => 'role.index'])->active('role/*');
                     }
-//
-//                    if (Laratrust::can('log-viewer.access')) {
-//                        $adminMenu->add(
-//                            '記錄檢視器 <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
-//                            ['route' => 'log-viewer::dashboard']
-//                        )->link->attr('target', '_blank');
-//                    }
+
+                    if (Laratrust::can('log-viewer.access')) {
+                        $adminMenu->add(
+                            '記錄檢視器 <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
+                            ['route' => 'log-viewer::dashboard']
+                        )->link->attr('target', '_blank');
+                    }
 //
 //                    if (Laratrust::can('telescope.access')) {
 //                        $adminMenu->add(
