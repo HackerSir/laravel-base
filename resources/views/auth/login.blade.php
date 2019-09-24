@@ -1,79 +1,24 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+@section('title', '登入')
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (config('app-extend.allow-register'))
-                                    <a class="btn btn-link" href="{{ route('register') }}">
-                                        {{ __('Register') }}
-                                    </a>
-                                @endif
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+@section('main_content')
+    <div class="card">
+        <div class="card-body">
+            {{ bs()->openForm('post', route('login')) }}
+            {{ bs()->formGroup(bs()->text('email')->required())->label('信箱')->showAsRow() }}
+            {{ bs()->formGroup(bs()->password('password')->required())->label('密碼')->showAsRow() }}
+            {{ bs()->formGroup(bs()->checkBox('remember', '記住我'))->showAsRow('no_label') }}
+            <div class="row">
+                <div class="mx-auto">
+                    {{ bs()->submit('登入', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
+                    @if((bool)config('app-extend.allow-register'))
+                        {{ bs()->a(route('register'), '註冊')->asButton('light')->prependChildren(fa()->icon('user-plus')->addClass('mr-2')) }}
+                    @endif
+                    {{ bs()->a(route('password.request'), '忘記密碼')->asButton('light')->prependChildren(fa()->icon('question-circle')->addClass('mr-2')) }}
                 </div>
             </div>
+            {{ bs()->closeForm() }}
         </div>
     </div>
-</div>
 @endsection
