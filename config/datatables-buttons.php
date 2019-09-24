@@ -87,8 +87,6 @@ return [
         /*
          * Default DOM to generate when not set.
          */
-        'dom'     => "<'d-flex flex-column'"
-            . "<'d-flex flex-column flex-md-row align-items-center justify-content-between'<l><f>><rt>"
-            . "<'d-flex flex-column flex-md-row align-items-center justify-content-between'<i><p>>>",
+        'dom'     => 'Bfrtip',
     ],
 ];
