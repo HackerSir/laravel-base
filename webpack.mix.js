@@ -11,5 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+let buildJsPath = 'public/build-js';
+let buildCssPath = 'public/build-css';
+
+mix.js('resources/js/app.js', buildJsPath)
+    .version();
+mix.sass('resources/sass/app.scss', buildCssPath)
+    .version();
