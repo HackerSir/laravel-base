@@ -52,6 +52,10 @@
             vertical-align: middle;
         }
 
+        .toast {
+            max-width: inherit;
+        }
+
         .toast-top-full-width {
             top: 60px;
         }
@@ -144,16 +148,16 @@
         "hideMethod": "fadeOut"
     };
     @if(session('success'))
-        toastr["success"]('{{ session('success') }}');
+    toastr.success('{{ session('success') }}');
     @endif
-        @if(session('info'))
-        toastr["info"]('{{ session('info') }}');
+    @if(session('info'))
+    toastr.info('{{ session('info') }}');
     @endif
-        @if(session('warning'))
-        toastr["warning"]('{{ session('warning') }}');
+    @if(session('warning'))
+    toastr.warning('{{ session('warning') }}');
     @endif
-        @if(session('error'))
-        toastr["error"]('{{ session('error') }}');
+    @if(session('error'))
+    toastr.error('{{ session('error') }}');
     @endif
     // DataTables 預設設定
     (function ($, DataTable) {
