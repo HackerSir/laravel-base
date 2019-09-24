@@ -15,7 +15,8 @@
         "laravel/tinker": "^1.0",
         "lavary/laravel-menu": "^1.7",
         "predis/predis": "^1.1",
-        "recca0120/laravel-tracy": "^1.9"
+        "recca0120/laravel-tracy": "^1.9",
+        "santigarcor/laratrust": "^5.2"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
