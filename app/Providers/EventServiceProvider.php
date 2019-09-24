@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
+use Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Event;
 
 class EventServiceProvider extends ServiceProvider
 {
