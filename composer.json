@@ -20,7 +20,8 @@
         "santigarcor/laratrust": "^5.2",
         "yajra/laravel-datatables-buttons": "^4.8",
         "yajra/laravel-datatables-html": "^4.18",
-        "yajra/laravel-datatables-oracle": "^9.6"
+        "yajra/laravel-datatables-oracle": "^9.6",
+        "ext-json": "*"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
