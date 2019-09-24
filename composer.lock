@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e40f043e49edf5bb02fcf6f3609e97b0",
+    "content-hash": "9e8fc446f28c9c647c775259a0a7fc14",
     "packages": [
         {
             "name": "appstract/laravel-blade-directives",
@@ -1520,6 +1520,64 @@
                 "source": "https://github.com/adriaanzon/laravel-html-bootstrap-4/tree/master"
             },
             "time": "2019-09-10T08:53:09+00:00"
+        },
+        {
+            "name": "marvinlabs/laravel-html-font-awesome",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/marvinlabs/laravel-html-font-awesome.git",
+                "reference": "2a5870f01bdd597b71f9bc146250371989e3b43b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/marvinlabs/laravel-html-font-awesome/zipball/2a5870f01bdd597b71f9bc146250371989e3b43b",
+                "reference": "2a5870f01bdd597b71f9bc146250371989e3b43b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "spatie/laravel-html": "^2.19.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "MarvinLabs\\Html\\FontAwesome\\FontAwesomeServiceProvider"
+                    ],
+                    "aliases": {
+                        "FA": "MarvinLabs\\Html\\FontAwesome\\Facades\\FontAwesome"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "MarvinLabs\\Html\\FontAwesome\\": "src/FontAwesome"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Mimoun-Prat",
+                    "role": "Developer",
+                    "email": "contact@vincentprat.info",
+                    "homepage": "https://vincentprat.info"
+                }
+            ],
+            "description": "A fluent html builder for Font Awesome icons",
+            "homepage": "https://github.com/marvinlabs/laravel-html-font-awesome",
+            "keywords": [
+                "font-awesome",
+                "html",
+                "marvinlabs"
+            ],
+            "time": "2018-04-25T12:53:49+00:00"
         },
         {
             "name": "monolog/monolog",

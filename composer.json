@@ -22,6 +22,7 @@
         "laravelcollective/html": "^6.0",
         "lavary/laravel-menu": "^1.7",
         "marvinlabs/laravel-html-bootstrap-4": "dev-master",
+        "marvinlabs/laravel-html-font-awesome": "^1.0",
         "predis/predis": "^1.1",
         "recca0120/laravel-tracy": "^1.9",
         "santigarcor/laratrust": "^5.2",
