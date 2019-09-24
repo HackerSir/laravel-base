@@ -7,21 +7,27 @@
         "laravel"
     ],
     "license": "MIT",
-    "require": {
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/adriaanzon/laravel-html-bootstrap-4"
+        }
+    ],"require": {
         "php": "^7.2",
+        "ext-json": "*",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
         "laravel/tinker": "^1.0",
         "laravelcollective/html": "^6.0",
         "lavary/laravel-menu": "^1.7",
+        "marvinlabs/laravel-html-bootstrap-4": "dev-master",
         "predis/predis": "^1.1",
         "recca0120/laravel-tracy": "^1.9",
         "santigarcor/laratrust": "^5.2",
         "yajra/laravel-datatables-buttons": "^4.8",
         "yajra/laravel-datatables-html": "^4.18",
-        "yajra/laravel-datatables-oracle": "^9.6",
-        "ext-json": "*"
+        "yajra/laravel-datatables-oracle": "^9.6"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
