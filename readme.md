@@ -24,6 +24,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [recca0120/laravel-tracy](https://github.com/recca0120/laravel-tracy): ^1.9
   - [lavary/laravel-menu](https://github.com/lavary/laravel-menu): ^1.7
   - [marvinlabs/laravel-html-bootstrap-4](https://github.com/marvinlabs/laravel-html-bootstrap-4): dev-master
+  - [marvinlabs/laravel-html-font-awesome](https://github.com/marvinlabs/laravel-html-font-awesome): "^1.0
   - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): ^5.2
   - [laravelcollective/html](https://github.com/LaravelCollective/html): ^6.0
   - [yajra/laravel-datatables-buttons](https://github.com/yajra/laravel-datatables-buttons): ^4.8
@@ -31,6 +32,11 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [yajra/laravel-datatables-oracle](https://github.com/yajra/laravel-datatables-oracle): ^9.6
   - [arcanedev/log-viewer](https://github.com/ARCANEDEV/LogViewer): ^4.7
 - System
+  - Membership system
+    - Role-based access control
+    - Toggleable registration
+    - **TODO**: Toggleable email validation
+    - **TODO**: Force user change password when you want
 
 ## Installation Guide
 1. Run the following commands.
