@@ -12,8 +12,10 @@
             "type": "vcs",
             "url": "https://github.com/adriaanzon/laravel-html-bootstrap-4"
         }
-    ],"require": {
+    ],
+    "require": {
         "php": "^7.2",
+        "ext-PDO": "*",
         "ext-json": "*",
         "arcanedev/log-viewer": "^5.0",
         "doctrine/dbal": "^2.9",
