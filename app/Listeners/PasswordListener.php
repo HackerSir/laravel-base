@@ -34,6 +34,7 @@ class PasswordListener
     {
         /** @var User $user */
         $user = $event->user;
+        //修改密碼已會產生紀錄，沒必要額外再紀錄清空 password_expired_at 的事件
         $user->disableLogging();
         $user->update([
             'password_expired_at' => null,
