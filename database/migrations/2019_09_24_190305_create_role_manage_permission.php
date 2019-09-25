@@ -1,6 +1,5 @@
 <?php
 
-use App\Permission;
 use App\Role;
 use Illuminate\Database\Migrations\Migration;
 
@@ -13,14 +12,14 @@ class CreateRoleManagePermission extends Migration
      */
     public function up()
     {
-        $permission = Permission::create([
+        $permissionId = DB::table('permissions')->insertGetId([
             'name'         => 'role.manage',
             'display_name' => '管理角色',
             'description'  => '新增、修改、刪除角色',
         ]);
         /* @var Role $admin */
         $admin = Role::where('name', 'Admin')->first();
-        $admin->attachPermission($permission);
+        $admin->attachPermission(['id' => $permissionId]);
     }
 
     /**
@@ -30,6 +29,6 @@ class CreateRoleManagePermission extends Migration
      */
     public function down()
     {
-        Permission::where('name', 'role.manage')->delete();
+        DB::table('permissions')->where('name', 'role.manage')->delete();
     }
 }

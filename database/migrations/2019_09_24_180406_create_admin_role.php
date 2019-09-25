@@ -1,6 +1,5 @@
 <?php
 
-use App\Role;
 use Illuminate\Database\Migrations\Migration;
 
 class CreateAdminRole extends Migration
@@ -12,7 +11,7 @@ class CreateAdminRole extends Migration
      */
     public function up()
     {
-        Role::create([
+        DB::table('roles')->insert([
             'name'         => 'Admin',
             'display_name' => '管理員',
             'description'  => '擁有最高權限的網站管理者',
@@ -26,6 +25,6 @@ class CreateAdminRole extends Migration
      */
     public function down()
     {
-        Role::where('name', 'Admin')->delete();
+        DB::table('roles')->where('name', 'Admin')->delete();
     }
 }
