@@ -18,3 +18,5 @@ mix.js('resources/js/app.js', buildJsPath)
     .version();
 mix.sass('resources/sass/app.scss', buildCssPath)
     .version();
+
+mix.js('resources/js/search-form.js', buildJsPath).version();
