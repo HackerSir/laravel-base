@@ -15,6 +15,10 @@ Route::view('/', 'index')->name('index');
 
 //會員（須完成信箱驗證）
 Route::group(['middleware' => ['auth', 'verified']], function () {
+    //活動紀錄
+    Route::middleware('permission:activity-log.access')->group(function () {
+        Route::resource('activity-log', 'ActivityLogController')->only(['index', 'show']);
+    });
     //會員管理
     //權限：user.manage
     Route::group(['middleware' => 'permission:user.manage'], function () {

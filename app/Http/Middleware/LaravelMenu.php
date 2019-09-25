@@ -47,6 +47,10 @@ class LaravelMenu
                         $adminMenu->add('角色管理', ['route' => 'role.index'])->active('role/*');
                     }
 
+                    if (Laratrust::can('activity-log.access')) {
+                        $adminMenu->add('活動紀錄', ['route' => 'activity-log.index'])->active('activity-log/*');
+                    }
+
                     if (Laratrust::can('log-viewer.access')) {
                         $adminMenu->add(
                             '記錄檢視器 <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
