@@ -25,7 +25,7 @@ trait LogModelEvent
 
     protected function getNameForActivityLog(): string
     {
-        return substr(strrchr(__CLASS__, "\\"), 1);
+        return substr(strrchr(__CLASS__, '\\'), 1);
     }
 
     public function getLogNameToUse(string $eventName = ''): string
