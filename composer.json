@@ -31,6 +31,7 @@
         "recca0120/laravel-tracy": "^1.9",
         "santigarcor/laratrust": "^5.2",
         "spatie/laravel-activitylog": "^3.8",
+        "spatie/laravel-backup": "^6.4",
         "yajra/laravel-datatables-buttons": "^4.8",
         "yajra/laravel-datatables-html": "^4.18",
         "yajra/laravel-datatables-oracle": "^9.6"
