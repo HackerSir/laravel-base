@@ -14,6 +14,8 @@ use Laratrust\Models\LaratrustPermission;
  * @property string|null $description
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Activitylog\Models\Activity[] $activities
+ * @property-read int|null $activities_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Role[] $roles
  * @property-read int|null $roles_count
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Permission newModelQuery()
