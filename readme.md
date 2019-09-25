@@ -32,6 +32,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [yajra/laravel-datatables-oracle](https://github.com/yajra/laravel-datatables-oracle): ^9.6
   - [arcanedev/log-viewer](https://github.com/ARCANEDEV/LogViewer): ^4.7
   - [creativeorange/gravatar](https://github.com/creativeorange/gravatar): ^1.0
+  - [spatie/laravel-activitylog](https://github.com/spatie/laravel-activitylog): ^3.8
 - System
   - Membership system
     - Role-based access control
