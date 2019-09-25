@@ -34,8 +34,10 @@ class PasswordListener
     {
         /** @var User $user */
         $user = $event->user;
+        $user->disableLogging();
         $user->update([
             'password_expired_at' => null,
         ]);
+        $user->enableLogging();
     }
 }
