@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89f2d1ad4b9ffe6f5128a20f02a4d5a1",
+    "content-hash": "cda8b99348e036625bd4b9190c5c7f17",
     "packages": [
         {
             "name": "appstract/laravel-blade-directives",
@@ -183,6 +183,60 @@
                 "support"
             ],
             "time": "2019-09-04T08:48:36+00:00"
+        },
+        {
+            "name": "creativeorange/gravatar",
+            "version": "v1.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/creativeorange/gravatar.git",
+                "reference": "c757291f791bf169e614b98b2ac3dad189bba2c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/creativeorange/gravatar/zipball/c757291f791bf169e614b98b2ac3dad189bba2c9",
+                "reference": "c757291f791bf169e614b98b2ac3dad189bba2c9",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^5.0|^6",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Creativeorange\\Gravatar\\GravatarServiceProvider"
+                    ],
+                    "aliases": {
+                        "Gravatar": "Creativeorange\\Gravatar\\Facades\\Gravatar"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Creativeorange\\Gravatar\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jaco Tijssen",
+                    "email": "jaco@creativeorange.nl",
+                    "homepage": "https://www.creativeorange.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Gravatar package for retrieving gravatar image URLs or checking the existance of an image.",
+            "keywords": [
+                "avatar",
+                "gravatar",
+                "laravel"
+            ],
+            "time": "2019-08-29T20:00:13+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

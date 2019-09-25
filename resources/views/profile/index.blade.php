@@ -21,12 +21,12 @@
 
 @section('main_content')
     <div class="card">
-{{--        <div class="card-body text-center">--}}
-{{--            --}}{{-- Gravatar大頭貼 --}}
-{{--            <a href="https://zh-tw.gravatar.com/" target="_blank" title="透過 Gravatar 更換照片">--}}
-{{--                <img src="{{ Gravatar::src($user->email, 200) }}" class="img-thumbnail" id="gravatar" alt="gravatar"/>--}}
-{{--            </a>--}}
-{{--        </div>--}}
+        <div class="card-body text-center">
+            {{-- Gravatar大頭貼--}}
+            <a href="https://zh-tw.gravatar.com/" target="_blank" title="透過 Gravatar 更換照片">
+                <img src="{{ Gravatar::get($user->email, 'large') }}" class="img-thumbnail" id="gravatar" alt="gravatar"/>
+            </a>
+        </div>
         <div class="card-body">
             <dl class="row" style="font-size: 120%">
                 <dt class="col-4 col-md-3">名稱</dt>

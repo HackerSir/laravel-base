@@ -18,6 +18,7 @@
         "ext-PDO": "*",
         "ext-json": "*",
         "arcanedev/log-viewer": "^5.0",
+        "creativeorange/gravatar": "^1.0",
         "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
