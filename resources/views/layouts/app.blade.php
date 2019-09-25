@@ -97,7 +97,7 @@
     {{-- Navbar --}}
     @include('components.navbar')
     {{-- Main Content --}}
-    <main style="flex-grow:1; display: block!important;" class="d-flex mt-3 mb-3 container" id="app">
+    <main style="flex-grow:1; display: block!important;" class="d-flex mt-3 mb-3 @yield('container_class', 'container')" id="app">
         @yield('content')
     </main>
     {{-- Footer --}}
