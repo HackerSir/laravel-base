@@ -2,10 +2,12 @@
     {{ bs()->formGroup(bs()->email('email')->readOnly())->label('信箱')->helpText('信箱作為帳號使用，故無法修改')->showAsRow() }}
     {{ bs()->formGroup(bs()->password('new_password')->attribute('autocomplete', 'new-password'))->label('新密碼')->helpText('如不更換密碼，請留白')->showAsRow() }}
     {{ bs()->formGroup(bs()->password('new_password_confirmation')->attribute('autocomplete', 'new-password'))->label('確認密碼')->helpText('如不更換密碼，請留白')->showAsRow() }}
+    {{ bs()->formGroup(bs()->checkBox('password_expired', '要求重設密碼', $user->is_password_expired))->label('要求重設密碼')->helpText('勾選後，該會員登入後，需重設密碼方能使用網站功能')->showAsRow() }}
 @else
     {{ bs()->formGroup(bs()->email('email')->required())->label('信箱')->showAsRow() }}
     {{ bs()->formGroup(bs()->password('new_password')->attribute('autocomplete', 'new-password')->required())->label('密碼')->showAsRow() }}
     {{ bs()->formGroup(bs()->password('new_password_confirmation')->attribute('autocomplete', 'new-password')->required())->label('確認密碼')->showAsRow() }}
+    {{ bs()->formGroup(bs()->checkBox('password_expired', '要求重設密碼', true))->label('要求重設密碼')->helpText('勾選後，該會員登入後，需重設密碼方能使用網站功能')->showAsRow() }}
 @endif
 {{ bs()->formGroup(bs()->text('name')->required())->label('名稱')->showAsRow() }}
 

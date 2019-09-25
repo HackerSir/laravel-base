@@ -39,7 +39,7 @@ A website base on Laravel and Bootstrap for HackerSir.
     - Role-based access control
     - Toggleable registration
     - Toggleable email validation
-    - **TODO**: Force user change password when you want
+    - Force user change password when you want
 
 ## Installation Guide
 1. Run the following commands.

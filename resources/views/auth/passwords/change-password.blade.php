@@ -3,12 +3,19 @@
 @section('title', '修改密碼')
 
 @section('buttons')
-    <a href="{{ route('profile') }}" class="btn btn-secondary">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i> 個人資料
-    </a>
+    @if(!$user->is_password_expired)
+        <a href="{{ route('profile') }}" class="btn btn-secondary">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i> 個人資料
+        </a>
+    @endif
 @endsection
 
 @section('main_content')
+    @if($user->is_password_expired)
+        <div class="alert alert-danger">
+            請修改密碼以繼續使用網站功能
+        </div>
+    @endif
     <div class="card">
         <div class="card-body">
             {{ bs()->openForm('put', route('password.change')) }}

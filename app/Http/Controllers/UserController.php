@@ -58,7 +58,8 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         $user = User::create(array_merge($request->only('email', 'name'), [
-            'password' => bcrypt($request->get('new_password')),
+            'password'            => bcrypt($request->get('new_password')),
+            'password_expired_at' => $request->has('password_expired') ? now() : null,
         ]));
 
         //權限
@@ -106,6 +107,14 @@ class UserController extends Controller
         //修改密碼
         if ($newPassword = $request->get('new_password')) {
             $updateData['password'] = bcrypt($newPassword);
+        }
+        //要求重設密碼
+        if ($request->has('password_expired')) {
+            if (!$user->password_expired_at) {
+                $updateData['password_expired_at'] = now();
+            }
+        } else {
+            $updateData['password_expired_at'] = null;
         }
         $user->update($updateData);
         //管理員禁止去除自己的管理員職務

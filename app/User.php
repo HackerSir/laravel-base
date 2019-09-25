@@ -23,6 +23,10 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @property string|null $register_ip 註冊IP
  * @property \Illuminate\Support\Carbon|null $last_login_at 最後登入時間
  * @property string|null $last_login_ip 最後登入IP
+ * @property \Illuminate\Support\Carbon|null $password_expired_at 密碼失效時間
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Activitylog\Models\Activity[] $activities
+ * @property-read int|null $activities_count
+ * @property-read bool $is_password_expired
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Permission[] $permissions
@@ -42,6 +46,7 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastLoginIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePasswordExpiredAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePermissionIs($permission = '', $boolean = 'and')
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRegisterAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRegisterIp($value)
@@ -66,7 +71,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'password_expired_at',
     ];
 
     /**
@@ -88,8 +93,20 @@ class User extends Authenticatable implements MustVerifyEmail
     ];
 
     protected $dates = [
-        'register_at', 'last_login_at',
+        'register_at', 'last_login_at', 'password_expired_at',
     ];
+
+    /**
+     * @return bool
+     */
+    public function getIsPasswordExpiredAttribute(): bool
+    {
+        if (!$this->password_expired_at) {
+            return false;
+        }
+
+        return $this->password_expired_at->lt(now());
+    }
 
     public function sendEmailVerificationNotification()
     {

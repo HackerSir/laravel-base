@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\User;
 use Hash;
+use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Http\Request;
 
 class PasswordController extends Controller
@@ -52,6 +53,8 @@ class PasswordController extends Controller
         $user->update([
             'password' => bcrypt($request->input('new_password')),
         ]);
+
+        event(new PasswordReset($user));
 
         return redirect()->route('profile')->with('success', '密碼修改完成。');
     }
