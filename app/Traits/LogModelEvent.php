@@ -2,7 +2,6 @@
 
 namespace App\Traits;
 
-use ReflectionClass;
 use Spatie\Activitylog\Traits\LogsActivity;
 
 trait LogModelEvent
@@ -26,11 +25,7 @@ trait LogModelEvent
 
     protected function getNameForActivityLog(): string
     {
-        try {
-            return (new ReflectionClass($this))->getShortName();
-        } catch (\ReflectionException $e) {
-            return '';
-        }
+        return substr(strrchr(__CLASS__, "\\"), 1);
     }
 
     public function getLogNameToUse(string $eventName = ''): string
