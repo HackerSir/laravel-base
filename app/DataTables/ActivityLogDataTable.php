@@ -93,7 +93,7 @@ class ActivityLogDataTable extends DataTable
                 ->printable(false)
                 ->width(60)
                 ->addClass('text-center')
-            ->title('操作'),
+                ->title('操作'),
         ];
     }
 
