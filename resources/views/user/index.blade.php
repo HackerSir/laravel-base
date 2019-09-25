@@ -2,6 +2,12 @@
 
 @section('title', '會員管理')
 
+@section('buttons')
+    <a href="{{ route('user.create') }}" class="btn btn-primary">
+        <i class="fa fa-plus-circle" aria-hidden="true"></i> 新增會員
+    </a>
+@endsection
+
 @section('buttons-right')
     {{ bs()->openForm('get', url()->current(), ['model' => request()->all(), 'attributes' => ['id' => 'search-form', 'class' => 'form-inline']]) }}
     <div class="input-group">

@@ -38,6 +38,36 @@ class UserController extends Controller
     }
 
     /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $roles = Role::all();
+
+        return view('user.create', compact('roles'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param UserRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(UserRequest $request)
+    {
+        $user = User::create(array_merge($request->only('email', 'name'), [
+            'password' => bcrypt($request->get('new_password')),
+        ]));
+
+        //權限
+        $user->roles()->sync($request->input('role'));
+
+        return redirect()->route('user.index')->with('success', '會員已建立');
+    }
+
+    /**
      * Display the specified resource.
      *
      * @param User $user
@@ -72,7 +102,12 @@ class UserController extends Controller
      */
     public function update(UserRequest $request, User $user)
     {
-        $user->update($request->only('name'));
+        $updateData = $request->only('name');
+        //修改密碼
+        if ($newPassword = $request->get('new_password')) {
+            $updateData['password'] = bcrypt($newPassword);
+        }
+        $user->update($updateData);
         //管理員禁止去除自己的管理員職務
         $keepAdmin = false;
         if ($user->id == auth()->user()->id) {
