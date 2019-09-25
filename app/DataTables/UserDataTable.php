@@ -50,7 +50,10 @@ class UserDataTable extends DataTable
             ->setTableId('user-table')
             ->columns($this->getColumns())
             ->minifiedAjax()
-            ->orderBy(0);
+            ->orderBy(0)
+            ->parameters([
+                'pageLength' => 50,
+            ]);
     }
 
     /**
