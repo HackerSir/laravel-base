@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 
+use App\Presenters\ActivityLogPresenter;
 use Spatie\Activitylog\Models\Activity;
 use Yajra\DataTables\EloquentDataTable;
 use Yajra\DataTables\Html\Column;
@@ -18,14 +19,20 @@ class ActivityLogDataTable extends DataTable
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
+        $activityLogPresenter = app(ActivityLogPresenter::class);
 
         return $dataTable
             ->editColumn('action', 'activity-log.datatables.action')
-            ->editColumn('subject_type', function (Activity $activity) {
+            ->editColumn('subject_id', function (Activity $activity) use ($activityLogPresenter) {
+                return $activityLogPresenter->getModelLink($activity->subject_type, $activity->subject_id);
+            })->editColumn('subject_type', function (Activity $activity) {
                 return str_replace(['App\\'], '', $activity->subject_type);
+            })->editColumn('causer_id', function (Activity $activity) use ($activityLogPresenter) {
+                return $activityLogPresenter->getModelLink($activity->causer_type, $activity->causer_id);
             })->editColumn('causer_type', function (Activity $activity) {
                 return str_replace(['App\\'], '', $activity->causer_type);
-            });
+            })
+            ->rawColumns(['subject_id', 'causer_id', 'action']);
     }
 
     /**
