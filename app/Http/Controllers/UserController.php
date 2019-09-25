@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\Scopes\UserRoleScope;
 use App\DataTables\UserDataTable;
 use App\Http\Requests\UserRequest;
 use App\Role;
 use App\User;
+use Illuminate\Database\Eloquent\Collection;
 
 class UserController extends Controller
 {
@@ -17,6 +19,21 @@ class UserController extends Controller
      */
     public function index(UserDataTable $dataTable)
     {
+        //過濾器
+        if (!request()->ajax()) {
+            /** @var Collection|Role[] $roles */
+            $roles = Role::withCount('users')->get();
+            $roleNameOptions = [null => ''];
+            foreach ($roles as $role) {
+                $roleNameOptions[$role->name] = $role->display_name . ' (' . $role->users_count . ')';
+            }
+            view()->share(compact('roleNameOptions'));
+        }
+        //過濾
+        if ($selectedRole = Role::whereName(request('role'))->first()) {
+            $dataTable->addScope(new UserRoleScope($selectedRole));
+        }
+
         return $dataTable->render('user.index');
     }
 
