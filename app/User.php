@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\LogModelEvent;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -53,6 +54,7 @@ class User extends Authenticatable implements MustVerifyEmail
 {
     use LaratrustUserTrait;
     use Notifiable;
+    use LogModelEvent;
     use \Illuminate\Auth\MustVerifyEmail {
         sendEmailVerificationNotification as originalSendEmailVerificationNotification;
         hasVerifiedEmail as originalHasVerifiedEmail;

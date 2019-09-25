@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\LogModelEvent;
 use Laratrust\Models\LaratrustRole;
 
 /**
@@ -28,6 +29,7 @@ use Laratrust\Models\LaratrustRole;
  */
 class Role extends LaratrustRole
 {
+    use LogModelEvent;
     protected $fillable = [
         'name',
         'display_name',

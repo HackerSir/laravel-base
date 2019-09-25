@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\LogModelEvent;
 use Laratrust\Models\LaratrustPermission;
 
 /**
@@ -28,6 +29,7 @@ use Laratrust\Models\LaratrustPermission;
  */
 class Permission extends LaratrustPermission
 {
+    use LogModelEvent;
     protected $fillable = [
         'name',
         'display_name',
