@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Traits;
-
 
 use ReflectionClass;
 use Spatie\Activitylog\Traits\LogsActivity;
