@@ -4,7 +4,7 @@
 
 @section('buttons')
     <a href="{{ route('role.index') }}" class="btn btn-secondary">
-        <i class="fa fa-arrow-left mr-2"></i>角色管理
+        <i class="fas fa-arrow-left mr-2"></i>角色管理
     </a>
 @endsection
 

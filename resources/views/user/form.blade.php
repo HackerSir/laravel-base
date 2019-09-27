@@ -22,7 +22,7 @@
                            @if($user->hasRole($role->name)) checked disabled @endif>
                     <label class="custom-control-label" for="roleCheck{{ $role->id }}">
                         {{ $role->display_name }}（{{ $role->description }}）
-                        <i class="fa fa-exclamation-triangle text-danger" title="禁止解除自己的管理員職務"></i>
+                        <i class="fas fa-exclamation-triangle text-danger" title="禁止解除自己的管理員職務"></i>
                     </label>
                 </div>
             @else

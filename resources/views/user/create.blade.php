@@ -4,7 +4,7 @@
 
 @section('buttons')
     <a href="{{ route('user.index') }}" class="btn btn-secondary">
-        <i class="fa fa-arrow-left mr-2"></i>會員管理
+        <i class="fas fa-arrow-left mr-2"></i>會員管理
     </a>
 @endsection
 

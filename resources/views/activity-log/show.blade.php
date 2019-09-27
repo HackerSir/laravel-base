@@ -6,7 +6,7 @@
 
 @section('buttons')
     <a href="{{ route('activity-log.index') }}" class="btn btn-secondary">
-        <i class="fa fa-arrow-left mr-2"></i>活動紀錄
+        <i class="fas fa-arrow-left mr-2"></i>活動紀錄
     </a>
 @endsection
 
