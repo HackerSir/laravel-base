@@ -16,7 +16,7 @@
 
             <div class="row">
                 <div class="mx-auto">
-                    {{ bs()->submit('更新會員資料', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
+                    {{ bs()->submit('確認', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
                 </div>
             </div>
             {{ bs()->closeForm() }}
