@@ -34,6 +34,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [creativeorange/gravatar](https://github.com/creativeorange/gravatar): ^1.0
   - [spatie/laravel-activitylog](https://github.com/spatie/laravel-activitylog): ^3.8
   - [spatie/laravel-backup](https://github.com/spatie/laravel-backup): ^6.4
+  - [biscolab/laravel-recaptcha](https://github.com/biscolab/laravel-recaptcha): ^4.0
 - System
   - Membership system
     - Role-based access control

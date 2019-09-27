@@ -176,4 +176,5 @@ return [
         'year'                  => '年',
         'new_password'          => '新密碼',
     ],
+    'recaptcha'  => '請勾選「我不是機器人」',
 ];
