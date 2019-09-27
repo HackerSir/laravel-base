@@ -18,6 +18,7 @@
             @endif
             {{ bs()->openForm('post', route('password.email')) }}
             {{ bs()->formGroup(bs()->email('email')->required())->label('信箱')->showAsRow() }}
+            @include('components.recaptcha')
             <div class="row">
                 <div class="mx-auto">
                     {{ bs()->submit('發送重設密碼信件', 'primary')->prependChildren(fa()->icon('envelope')->addClass('mr-2')) }}

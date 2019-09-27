@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
+use Illuminate\Http\Request;
 
 class ForgotPasswordController extends Controller
 {
@@ -28,5 +29,20 @@ class ForgotPasswordController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+    }
+
+    /**
+     * Validate the email for the given request.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return void
+     */
+    protected function validateEmail(Request $request)
+    {
+        // 覆寫原方法，以加入 reCAPTCHA 的驗證規則
+        $request->validate([
+            'email'              => 'required|email',
+            recaptchaFieldName() => recaptchaRuleName(),
+        ]);
     }
 }

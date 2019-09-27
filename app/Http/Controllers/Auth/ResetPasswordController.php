@@ -36,4 +36,20 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    /**
+     * Get the password reset validation rules.
+     *
+     * @return array
+     */
+    protected function rules()
+    {
+        // 覆寫原方法，以加入 reCAPTCHA 的驗證規則
+        return [
+            'token'              => 'required',
+            'email'              => 'required|email',
+            'password'           => 'required|confirmed|min:8',
+            recaptchaFieldName() => recaptchaRuleName(),
+        ];
+    }
 }
