@@ -41,6 +41,7 @@ A website base on Laravel and Bootstrap for HackerSir.
     - Toggleable registration
     - Toggleable email validation
     - Force user change password when you want
+  - Google reCAPTCHA
 
 ## Installation Guide
 1. Run the following commands.
