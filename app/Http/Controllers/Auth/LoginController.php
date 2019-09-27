@@ -52,7 +52,7 @@ class LoginController extends Controller
         $request->validate([
             $this->username()    => 'required|string',
             'password'           => 'required|string',
-            recaptchaFieldName() => recaptchaRuleName(),
+            recaptchaFieldName() => config('recaptcha.api_site_key') ? recaptchaRuleName() : '',
         ]);
     }
 }

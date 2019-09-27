@@ -42,7 +42,7 @@ class ForgotPasswordController extends Controller
         // 覆寫原方法，以加入 reCAPTCHA 的驗證規則
         $request->validate([
             'email'              => 'required|email',
-            recaptchaFieldName() => recaptchaRuleName(),
+            recaptchaFieldName() => config('recaptcha.api_site_key') ? recaptchaRuleName() : '',
         ]);
     }
 }

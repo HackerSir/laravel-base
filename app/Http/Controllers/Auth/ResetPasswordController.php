@@ -49,7 +49,7 @@ class ResetPasswordController extends Controller
             'token'              => 'required',
             'email'              => 'required|email',
             'password'           => 'required|confirmed|min:8',
-            recaptchaFieldName() => recaptchaRuleName(),
+            recaptchaFieldName() => config('recaptcha.api_site_key') ? recaptchaRuleName() : '',
         ];
     }
 }
