@@ -12,10 +12,10 @@
 
 @section('buttons')
     <a href="{{ route('profile.edit') }}" class="btn btn-primary">
-        <i class="fa fa-edit" aria-hidden="true"></i> 編輯資料
+        <i class="fa fa-edit mr-2"></i>編輯資料
     </a>
     <a href="{{ route('password.change') }}" class="btn btn-primary">
-        <i class="fa fa-key" aria-hidden="true"></i> 修改密碼
+        <i class="fa fa-key mr-2"></i>修改密碼
     </a>
 @endsection
 
@@ -36,8 +36,7 @@
                 <dd class="col-8 col-md-9">
                     {{ $user->email }}
                     @if (!$user->hasVerifiedEmail())
-                        <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"
-                           title="尚未完成信箱驗證"></i>
+                        <i class="fa fa-exclamation-triangle text-danger" title="尚未完成信箱驗證"></i>
                     @endif
                 </dd>
 

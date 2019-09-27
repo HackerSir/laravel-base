@@ -4,7 +4,7 @@
 
 @section('buttons')
     <a href="{{ route('user.create') }}" class="btn btn-primary">
-        <i class="fa fa-plus-circle" aria-hidden="true"></i> 新增會員
+        <i class="fa fa-plus-circle mr-2"></i>新增會員
     </a>
 @endsection
 

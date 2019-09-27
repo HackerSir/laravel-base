@@ -12,14 +12,14 @@
 
 @section('buttons')
     <a href="{{ route('user.index') }}" class="btn btn-secondary">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i> 會員管理
+        <i class="fa fa-arrow-left mr-2"></i>會員管理
     </a>
     <a href="{{ route('user.edit', $user) }}" class="btn btn-primary">
-        <i class="fa fa-edit" aria-hidden="true"></i> 編輯資料
+        <i class="fa fa-edit mr-2"></i>編輯資料
     </a>
     {!! Form::open(['route' => ['user.destroy', $user], 'style' => 'display: inline', 'method' => 'DELETE', 'onSubmit' => "return confirm('確定要刪除此會員嗎？');"]) !!}
     <button type="submit" class="btn btn-danger">
-        <i class="fa fa-trash" aria-hidden="true"></i> 刪除會員
+        <i class="fa fa-trash mr-2"></i>刪除會員
     </button>
     {!! Form::close() !!}
 @endsection
@@ -29,7 +29,8 @@
         <div class="card-body text-center">
             {{-- Gravatar大頭貼--}}
             <a href="https://zh-tw.gravatar.com/" target="_blank" title="透過 Gravatar 更換照片">
-                <img src="{{ Gravatar::get($user->email, 'large') }}" class="img-thumbnail" id="gravatar" alt="gravatar"/>
+                <img src="{{ Gravatar::get($user->email, 'large') }}" class="img-thumbnail" id="gravatar"
+                     alt="gravatar"/>
             </a>
         </div>
         <div class="card-body">
@@ -41,8 +42,7 @@
                 <dd class="col-8 col-md-9">
                     {{ $user->email }}
                     @if (!$user->hasVerifiedEmail())
-                        <i class="fa fa-exclamation-triangle text-danger" aria-hidden="true"
-                           title="尚未完成信箱驗證"></i>
+                        <i class="fa fa-exclamation-triangle text-danger" title="尚未完成信箱驗證"></i>
                     @endif
                 </dd>
 
