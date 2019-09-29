@@ -14,10 +14,9 @@ const mix = require('laravel-mix');
 let buildJsPath = 'public/build-js';
 let buildCssPath = 'public/build-css';
 
-mix.js('resources/js/app.js', buildJsPath)
-    .version();
-mix.sass('resources/sass/app.scss', buildCssPath)
-    .version();
+mix.js('resources/js/app.js', buildJsPath).version();
+// mix.sass('resources/sass/app.scss', buildCssPath).version();
+mix.stylus('resources/stylus/app.styl', buildCssPath).version();
 
 mix.js('resources/js/search-form.js', buildJsPath).version();
 mix.js('resources/js/options.js', buildJsPath).version();
