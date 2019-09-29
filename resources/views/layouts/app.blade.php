@@ -97,7 +97,8 @@
     {{-- Navbar --}}
     @include('components.navbar')
     {{-- Main Content --}}
-    <main style="flex-grow:1; display: block!important;" class="d-flex mt-3 mb-3 @yield('container_class', 'container')" id="app">
+    <main style="flex-grow:1; display: block!important;" class="d-flex mt-3 mb-3 @yield('container_class', 'container')"
+          id="app">
         @yield('content')
     </main>
     {{-- Footer --}}
@@ -129,71 +130,22 @@
 {{--<script src="{{ asset('vendor/datatables/buttons.server-side.js') }}"></script>--}}
 {{-- toastr.js --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-<script>
-    toastr.options = {
-        "closeButton": true,
-        "debug": false,
-        "newestOnTop": true,
-        "progressBar": true,
-        "positionClass": "toast-top-full-width",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "3000",
-        "hideDuration": "1000",
-        "timeOut": "5000",
-        "extendedTimeOut": "3000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-    };
-    @if(session('success'))
-    toastr.success('{{ session('success') }}');
-    @endif
-    @if(session('info'))
-    toastr.info('{{ session('info') }}');
-    @endif
-    @if(session('warning'))
-    toastr.warning('{{ session('warning') }}');
-    @endif
-    @if(session('error'))
-    toastr.error('{{ session('error') }}');
-    @endif
-    // DataTables 預設設定
-    (function ($, DataTable) {
-        $.extend(true, DataTable.defaults, {
-            pageLength: 10,
-            autoWidth: false,
-            responsive: true,
-            stateSave: true,
-            language: {
-                "decimal": "",
-                "emptyTable": "沒有資料",
-                "thousands": ",",
-                "processing": "處理中...",
-                "loadingRecords": "載入中...",
-                "lengthMenu": "顯示 _MENU_ 項結果",
-                "zeroRecords": "沒有符合的結果",
-                "info": "顯示第 _START_ 至 _END_ 項結果，共 _TOTAL_ 項",
-                "infoEmpty": "顯示第 0 至 0 項結果，共 0 項",
-                "infoFiltered": "(從 _MAX_ 項結果中過濾)",
-                "infoPostFix": "",
-                "search": "搜尋：",
-                "paginate": {
-                    "first": "第一頁",
-                    "previous": "上一頁",
-                    "next": "下一頁",
-                    "last": "最後一頁"
-                },
-                "aria": {
-                    "sortAscending": ": 升冪排列",
-                    "sortDescending": ": 降冪排列"
-                }
-            }
-        });
-        DataTable.ext.errMode = 'throw';
-    })(jQuery, jQuery.fn.dataTable);
-</script>
+{{-- 各種 js 的設定 --}}
+<script src="{{ asset(mix('build-js/options.js')) }}"></script>
+{{-- 通知 --}}
+@if(session('success'))
+    <script>toastr["success"]('{{ session('success') }}');</script>
+@endif
+@if(session('info'))
+    <script>toastr["info"]('{{ session('info') }}');</script>
+@endif
+@if(session('warning'))
+    <script>toastr["warning"]('{{ session('warning') }}');</script>
+@endif
+@if(session('error'))
+    <script>toastr["error"]('{{ session('error') }}');</script>
+@endif
+
 @yield('js')
 </body>
 </html>
