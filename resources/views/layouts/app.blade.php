@@ -128,6 +128,13 @@
     <script>toastr["error"]('{{ session('error') }}');</script>
 @endif
 
+<script>
+    $(function () {
+        // Add asterisk after label of input with required attribute
+        $('input[required], select[required]').parent().prev('label').addClass('required')
+    })
+</script>
+
 @yield('js')
 </body>
 </html>
