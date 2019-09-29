@@ -47,24 +47,6 @@
     {{-- toastr.js --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="{{ asset(mix('/build-css/app.css')) }}">
-    <style>
-        .table td, .table th {
-            vertical-align: middle;
-        }
-
-        .toast {
-            max-width: inherit;
-        }
-
-        .toast-top-full-width {
-            top: 60px;
-        }
-
-        .footer {
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-    </style>
     @yield('css')
 
     @if (config('app.env') == 'production' && !empty(config('services.google_analytics.id')))
