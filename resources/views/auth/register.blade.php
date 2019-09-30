@@ -10,7 +10,7 @@
             {{ bs()->formGroup(bs()->email('email')->required())->label('信箱')->showAsRow() }}
             {{ bs()->formGroup(bs()->password('password')->required())->label('密碼')->showAsRow() }}
             {{ bs()->formGroup(bs()->password('password_confirmation')->required())->label('確認密碼')->showAsRow() }}
-            @include('components.recaptcha')
+            @includeWhen(config('recaptcha.api_site_key'), 'components.recaptcha')
             <div class="row">
                 <div class="mx-auto">
                     {{ bs()->submit('註冊', 'primary')->prependChildren(fa()->icon('check')->addClass('mr-2')) }}
