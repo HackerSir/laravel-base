@@ -5,6 +5,8 @@
 @section('buttons-right')
     {{ bs()->openForm('get', url()->current(), ['model' => request()->all(), 'attributes' => ['id' => 'search-form', 'class' => 'form-inline']]) }}
     <div class="input-group">
+        {{ bs()->inputGroup()->class('mb-2 mr-sm-2')->prefix('起始日期')->control(bs()->input('date', 'start_date')) }}
+        {{ bs()->inputGroup()->class('mb-2 mr-sm-2')->prefix('結束日期')->control(bs()->input('date', 'end_date')) }}
         {{ bs()->inputGroup()->class('mb-2 mr-sm-2')->prefix('類型')->control(bs()->select('log_name', $activityLogNameOptions)) }}
     </div>
     <div class="btn-group" role="group">
