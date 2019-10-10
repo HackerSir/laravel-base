@@ -10,7 +10,7 @@
         {{ bs()->inputGroup()->class('mb-2 mr-sm-2')->prefix('類型')->control(bs()->select('log_name', $activityLogNameOptions)) }}
     </div>
     <div class="btn-group" role="group">
-        {{ bs()->submit('<i class="fas fa-filter"></i>')->class('mb-2')->attribute('title', '過濾') }}
+        {{ bs()->submit(fas()->icon('filter'))->class('mb-2')->attribute('title', '過濾') }}
         <a href="{{ url()->current() }}" class="btn btn-secondary mb-2 mr-sm-2" title="重設">
             <i class="fas fa-trash-alt"></i>
         </a>
