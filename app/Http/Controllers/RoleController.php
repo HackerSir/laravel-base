@@ -42,7 +42,7 @@ class RoleController extends Controller
     public function store(RoleRequest $request)
     {
         /** @var Role $role */
-        $role = Role::create(array_merge($request->all(), [
+        $role = Role::create(array_merge($request->validated(), [
             'protection' => false,
         ]));
         $role->permissions()->sync($request->input('permissions') ?: []);
