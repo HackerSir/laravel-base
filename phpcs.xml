@@ -4,6 +4,15 @@
     <!-- 以PSR2為基礎 -->
     <rule ref="PSR2"/>
 
+    <!-- 不需要雙引號的字串，不得使用雙引號 -->
+    <rule ref="Squiz.Strings.DoubleQuoteUsage">
+        <type>warning</type>
+    </rule>
+    <!-- 允許雙引號字串中出現變數（上述規則會禁止這情況，因此須手動關閉） -->
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
+        <severity>0</severity>
+    </rule>
+
     <file>app</file>
     <file>config</file>
     <file>database</file>
