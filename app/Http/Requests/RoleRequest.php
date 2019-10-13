@@ -34,6 +34,7 @@ class RoleRequest extends FormRequest
                 Rule::unique('roles')->ignore(optional($role)->id),
             ],
             'display_name' => 'required',
+            'description'  => 'required',
             'permissions'  => 'array',
         ];
     }
