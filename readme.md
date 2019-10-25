@@ -1,4 +1,4 @@
-# Laravel Base (6.0)
+# Laravel Base (6.x)
 [![StyleCI(6.0)](https://styleci.io/repos/65561499/shield?branch=6.0)](https://styleci.io/repos/65561499)
 [![codecov](https://codecov.io/gh/HackerSir/laravel-base/branch/6.0/graph/badge.svg)](https://codecov.io/gh/HackerSir/laravel-base)
 [![Build Status](https://travis-ci.org/HackerSir/laravel-base.svg?branch=6.0)](https://travis-ci.org/HackerSir/laravel-base)
@@ -11,7 +11,7 @@ A website base on Laravel and Bootstrap for HackerSir.
 - Yarn
 
 ## Framework
-- Laravel 6.0
+- Laravel 6.x
 - Bootstrap 4
 - Font Awesome 5
 - Vue.js 2
@@ -67,11 +67,10 @@ php artisan key:generate
 php artisan migrate
 ```
 
-## Notice
-- If you modify some files which need to be compiled, make sure you have run the following command before commit.  
-(For testing in local, you can also compile files by using `yarn run dev` instead.)
+6. Compile resource files.
 ```bash
-yarn run production
+yarn dev    # if in local testing
+yarn prod   # if in production
 ```
 
 ## License
