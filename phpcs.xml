@@ -13,9 +13,10 @@
         <severity>0</severity>
     </rule>
 
-    <!-- Migration 檔案不需要 Namespace -->
+    <!-- Migration 和 Seeder 不需要 Namespace -->
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
         <exclude-pattern>database/migrations/*</exclude-pattern>
+        <exclude-pattern>database/seeds/*</exclude-pattern>
     </rule>
 
     <file>app</file>
