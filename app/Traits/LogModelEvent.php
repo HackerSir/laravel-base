@@ -2,6 +2,7 @@
 
 namespace App\Traits;
 
+use Illuminate\Support\Str;
 use Spatie\Activitylog\Traits\LogsActivity;
 
 trait LogModelEvent
@@ -32,7 +33,7 @@ trait LogModelEvent
     {
         $nameForActivityLog = $this->getNameForActivityLog();
         if (!empty($nameForActivityLog)) {
-            return mb_strtolower($nameForActivityLog);
+            return Str::kebab($nameForActivityLog);
         }
 
         return $this->originalGetLogNameToUse($eventName);
