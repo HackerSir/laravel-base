@@ -16,6 +16,7 @@ node_js:
   - 11
 
 before_script:
+  - node -v
   - phpenv config-rm xdebug.ini
   - cp .env.travis .env
   - composer self-update
