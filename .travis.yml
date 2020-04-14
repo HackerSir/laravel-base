@@ -12,9 +12,6 @@ cache:
 php:
   - '7.4'
 
-node_js:
-  - 11
-
 before_script:
   - node -v
   - phpenv config-rm xdebug.ini
