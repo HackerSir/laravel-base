@@ -9,7 +9,10 @@ cache:
     - $HOME/.composer/cache/files
 
 php:
-  - '7.2'
+  - '7.4'
+
+node_js:
+  - 'lts/*'
 
 before_script:
   - phpenv config-rm xdebug.ini
