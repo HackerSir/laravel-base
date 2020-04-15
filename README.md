@@ -1,5 +1,5 @@
-# Laravel Base (6.x)
-[![StyleCI(6.0)](https://styleci.io/repos/65561499/shield?branch=7.0)](https://styleci.io/repos/65561499)
+# Laravel Base (7.x)
+[![StyleCI(7.0)](https://styleci.io/repos/65561499/shield?branch=7.0)](https://styleci.io/repos/65561499)
 [![codecov](https://codecov.io/gh/HackerSir/laravel-base/branch/7.0/graph/badge.svg)](https://codecov.io/gh/HackerSir/laravel-base)
 [![Build Status](https://travis-ci.org/HackerSir/laravel-base.svg?branch=7.0)](https://travis-ci.org/HackerSir/laravel-base)
 [![License](https://img.shields.io/github/license/HackerSir/laravel-base.svg)](https://raw.githubusercontent.com/HackerSir/laravel-base/master/LICENSE)
