@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'bootstrap-items' => 'laravel-menu::bootstrap-navbar-items',
+    'bootstrap-items' => 'components.navbar-items',
 ];
