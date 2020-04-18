@@ -17,6 +17,7 @@
         "laravel/telescope": "^3.2",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "laravelcollective/html": "^6.1",
         "lavary/laravel-menu": "^1.7",
         "santigarcor/laratrust": "^5.2"
     },
