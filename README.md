@@ -23,6 +23,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [lavary/laravel-menu](https://github.com/lavary/laravel-menu): ^1.7
   - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): ^5.2
   - [laravelcollective/html](https://github.com/LaravelCollective/html): ^6.1
+  - [yajra/laravel-datatables](https://github.com/yajra/laravel-datatables): ^1.5
 - System
 
 
