@@ -29,10 +29,10 @@ class LaravelMenu
                 // 會員
 
 //                // 信箱驗證
-//                if (!$user->hasVerifiedEmail()) {
-//                    $menu->add('尚未完成信箱驗證', ['route' => 'verification.notice'])
-//                        ->link->attr(['class' => 'text-danger']);
-//                }
+                if (!$user->hasVerifiedEmail()) {
+                    $menu->add('尚未完成信箱驗證', ['route' => 'verification.notice'])
+                        ->link->attr(['class' => 'text-danger']);
+                }
 //
 //                // 管理員
 //                if (Laratrust::can('menu.view') && $user->hasVerifiedEmail()) {
@@ -64,12 +64,12 @@ class LaravelMenu
                 /** @var \Lavary\Menu\Builder $userMenu */
                 $userMenu = $menu->add(auth()->user()->name, 'javascript:void(0)');
 //                $userMenu->add('個人資料', ['route' => 'profile'])->active('profile/*');
-//                $userMenu->add('登出', 'javascript:void(0)')
-//                    ->link
-//                    ->attr('onclick', 'event.preventDefault(); document.getElementById(\'logout-form\').submit();');
+                $userMenu->add('登出', 'javascript:void(0)')
+                    ->link
+                    ->attr('onclick', 'event.preventDefault(); document.getElementById(\'logout-form\').submit();');
             } else {
                 // 遊客
-//                $menu->add('登入', ['route' => 'login']);
+                $menu->add('登入', ['route' => 'login']);
             }
         });
 
