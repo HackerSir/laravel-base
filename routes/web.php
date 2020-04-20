@@ -13,4 +13,4 @@
 
 Route::view('/', 'index')->name('index');
 
-Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true, 'register' => (bool) config('app-extend.allow-register')]);
