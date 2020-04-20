@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Observers\ActivityObserver;
+use App\Observers\UserObserver;
+use App\User;
 use Illuminate\Support\ServiceProvider;
 use Schema;
 use Spatie\Activitylog\Models\Activity;
@@ -32,5 +34,6 @@ class AppServiceProvider extends ServiceProvider
 
         // Observers
         Activity::observe(ActivityObserver::class);
+        User::observe(UserObserver::class);
     }
 }
