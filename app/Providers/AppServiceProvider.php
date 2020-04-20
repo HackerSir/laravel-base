@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Observers\ActivityObserver;
 use Illuminate\Support\ServiceProvider;
 use Schema;
+use Spatie\Activitylog\Models\Activity;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,5 +29,8 @@ class AppServiceProvider extends ServiceProvider
         // Fix "Specified key was too long error"
         // https://laravel-news.com/laravel-5-4-key-too-long-error
         Schema::defaultStringLength(191);
+
+        // Observers
+        Activity::observe(ActivityObserver::class);
     }
 }
