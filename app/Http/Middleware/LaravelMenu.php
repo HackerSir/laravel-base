@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use App\User;
 use Closure;
+use Laratrust;
 use Lavary\Menu\Builder;
 use Menu;
 
@@ -35,10 +36,10 @@ class LaravelMenu
                 }
 //
 //                // 管理員
-//                if (Laratrust::can('menu.view') && $user->hasVerifiedEmail()) {
-//                    /** @var \Lavary\Menu\Builder $adminMenu */
-//                    $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
-//
+                if (Laratrust::can('menu.view') && $user->hasVerifiedEmail()) {
+                    /** @var \Lavary\Menu\Builder $adminMenu */
+                    $adminMenu = $menu->add('管理選單', 'javascript:void(0)');
+
 //                    if (Laratrust::can('user.manage')) {
 //                        $adminMenu->add('會員管理', ['route' => 'user.index'])->active('user/*');
 //                    }
@@ -59,7 +60,7 @@ class LaravelMenu
 //                            ['url' => config('telescope.path')]
 //                        )->link->attr('target', '_blank');
 //                    }
-//                }
+                }
 
                 /** @var \Lavary\Menu\Builder $userMenu */
                 $userMenu = $menu->add(auth()->user()->name, 'javascript:void(0)');
