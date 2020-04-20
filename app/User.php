@@ -16,6 +16,10 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @property string $email
  * @property \Illuminate\Support\Carbon|null $email_verified_at
  * @property string $password
+ * @property \Illuminate\Support\Carbon|null $register_at 註冊時間
+ * @property string|null $register_ip 註冊IP
+ * @property \Illuminate\Support\Carbon|null $last_login_at 最後登入時間
+ * @property string|null $last_login_ip 最後登入IP
  * @property string|null $remember_token
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -34,9 +38,13 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereEmailVerifiedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastLoginAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereLastLoginIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User wherePermissionIs($permission = '', $boolean = 'and')
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRegisterAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRegisterIp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereRoleIs($role = '', $team = null, $boolean = 'and')
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
@@ -73,5 +81,9 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+    protected $dates = [
+        'register_at', 'last_login_at',
     ];
 }
