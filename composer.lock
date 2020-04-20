@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "121deb4a7ee249f88b0181d9e46bd0b9",
+    "content-hash": "551c74d4dd19dd0f5fc4dcff3dcdbde9",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3083,6 +3083,82 @@
                 "roles"
             ],
             "time": "2020-03-09T08:19:36+00:00"
+        },
+        {
+            "name": "spatie/laravel-activitylog",
+            "version": "3.14.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-activitylog.git",
+                "reference": "08a128edbfc96493f45d785381ab0be4479cd763"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-activitylog/zipball/08a128edbfc96493f45d785381ab0be4479cd763",
+                "reference": "08a128edbfc96493f45d785381ab0be4479cd763",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "^6.0|^7.0",
+                "illuminate/database": "^6.0|^7.0",
+                "illuminate/support": "^6.0|^7.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "orchestra/testbench": "^4.0|^5.0",
+                "phpunit/phpunit": "^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Activitylog\\ActivitylogServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Activitylog\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Tom Witkowski",
+                    "email": "dev.gummibeer@gmail.com",
+                    "homepage": "https://gummibeer.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A very simple activity logger to monitor the users of your website or application",
+            "homepage": "https://github.com/spatie/activitylog",
+            "keywords": [
+                "activity",
+                "laravel",
+                "log",
+                "spatie",
+                "user"
+            ],
+            "time": "2020-03-23T17:09:07+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

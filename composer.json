@@ -22,6 +22,7 @@
         "laravelcollective/html": "^6.1",
         "lavary/laravel-menu": "^1.7",
         "santigarcor/laratrust": "^5.2",
+        "spatie/laravel-activitylog": "^3.14",
         "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
