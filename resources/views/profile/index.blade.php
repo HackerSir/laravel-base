@@ -14,9 +14,9 @@
     <a href="{{ route('profile.edit') }}" class="btn btn-primary">
         <i class="fas fa-edit mr-2"></i>編輯資料
     </a>
-    {{--    <a href="{{ route('password.change') }}" class="btn btn-primary">--}}
-    {{--        <i class="fas fa-key mr-2"></i>修改密碼--}}
-    {{--    </a>--}}
+    <a href="{{ route('password.change') }}" class="btn btn-primary">
+        <i class="fas fa-key mr-2"></i>修改密碼
+    </a>
 @endsection
 
 @section('main_content')

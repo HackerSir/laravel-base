@@ -22,4 +22,10 @@ Route::prefix('profile')->group(function () {
     Route::put('update', 'ProfileController@update')->name('profile.update');
 });
 
+//會員系統
 Auth::routes(['verify' => true, 'register' => (bool) config('app-extend.allow-register')]);
+Route::group(['namespace' => 'Auth'], function () {
+    //修改密碼
+    Route::get('password/change', 'PasswordController@getChangePassword')->name('password.change');
+    Route::put('password/change', 'PasswordController@putChangePassword')->name('password.change');
+});
