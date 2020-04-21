@@ -126,6 +126,9 @@
       <path value="$PROJECT_DIR$/vendor/yajra/laravel-datatables-html" />
       <path value="$PROJECT_DIR$/vendor/league/fractal" />
       <path value="$PROJECT_DIR$/vendor/spatie/laravel-activitylog" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-html" />
+      <path value="$PROJECT_DIR$/vendor/appstract/laravel-blade-directives" />
+      <path value="$PROJECT_DIR$/vendor/marvinlabs/laravel-html-bootstrap-4" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />

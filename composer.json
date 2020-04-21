@@ -21,6 +21,7 @@
         "laravel/ui": "^2.0",
         "laravelcollective/html": "^6.1",
         "lavary/laravel-menu": "^1.7",
+        "marvinlabs/laravel-html-bootstrap-4": "^1.7",
         "santigarcor/laratrust": "^5.2",
         "spatie/laravel-activitylog": "^3.14",
         "yajra/laravel-datatables": "^1.5"
