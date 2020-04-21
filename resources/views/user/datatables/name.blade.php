@@ -1,4 +1,4 @@
-{{--{{ Html::image(Gravatar::get($email), null, ['class'=>'img-thumbnail']) }}--}}
+{{ Html::image(Gravatar::get($email), null, ['class'=>'img-thumbnail']) }}
 <span style="font-size: 2em">
     {{ link_to_route('user.show', $name, $id) }}
     @foreach($roles as $role)

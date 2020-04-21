@@ -12,6 +12,7 @@
         "ext-PDO": "*",
         "ext-json": "*",
         "arcanedev/log-viewer": "^7.0",
+        "creativeorange/gravatar": "^1.0",
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
