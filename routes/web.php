@@ -40,7 +40,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 });
 
 //會員系統
-Auth::routes(['verify' => true, 'register' => (bool) config('app-extend.allow-register')]);
+Auth::routes(['verify' => (bool) config('app-extend.email-validation'), 'register' => (bool) config('app-extend.allow-register')]);
 Route::group(['namespace' => 'Auth'], function () {
     //修改密碼
     Route::get('password/change', 'PasswordController@getChangePassword')->name('password.change');

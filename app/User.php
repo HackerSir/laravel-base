@@ -62,6 +62,10 @@ class User extends Authenticatable implements MustVerifyEmail
     use UuidPrimaryKey;
     use Notifiable;
     use LogModelEvent;
+    use \Illuminate\Auth\MustVerifyEmail {
+        sendEmailVerificationNotification as originalSendEmailVerificationNotification;
+        hasVerifiedEmail as originalHasVerifiedEmail;
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -104,5 +108,24 @@ class User extends Authenticatable implements MustVerifyEmail
         }
 
         return $this->password_expired_at->lt(now());
+    }
+
+    public function sendEmailVerificationNotification()
+    {
+        // 對原 sendEmailVerificationNotification() 追加檢查信箱驗證機制是否開啟
+        if (!config('app-extend.email-validation')) {
+            return;
+        }
+        $this->originalSendEmailVerificationNotification();
+    }
+
+    public function hasVerifiedEmail()
+    {
+        // 對原 hasVerifiedEmail() 追加檢查信箱驗證機制是否開啟
+        if (!config('app-extend.email-validation')) {
+            return true;
+        }
+
+        return $this->originalHasVerifiedEmail();
     }
 }
