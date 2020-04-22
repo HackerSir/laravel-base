@@ -53,14 +53,14 @@ class LaravelMenu
 
                     if (Laratrust::can('log-viewer.access')) {
                         $adminMenu->add(
-                            '記錄檢視器 <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
+                            '記錄檢視器<i class="fas fa-external-link-alt ml-2"></i>',
                             ['route' => 'log-viewer::dashboard']
                         )->link->attr('target', '_blank');
                     }
 //
 //                    if (Laratrust::can('telescope.access')) {
 //                        $adminMenu->add(
-//                            'Telescope <i class="fas fa-external-link-alt" aria-hidden="true"></i>',
+//                            'Telescope<i class="fas fa-external-link-alt ml-2"></i>',
 //                            ['url' => config('telescope.path')]
 //                        )->link->attr('target', '_blank');
 //                    }
