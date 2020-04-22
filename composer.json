@@ -27,6 +27,7 @@
         "marvinlabs/laravel-html-font-awesome": "^1.1",
         "santigarcor/laratrust": "^5.2",
         "spatie/laravel-activitylog": "^3.14",
+        "spatie/laravel-backup": "^6.9",
         "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
