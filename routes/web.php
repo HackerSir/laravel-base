@@ -14,19 +14,19 @@
 Route::view('/', 'index')->name('index');
 
 //會員（須完成信箱驗證）
-Route::group(['middleware' => ['auth', 'verified']], function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     //活動紀錄
     Route::middleware('permission:activity-log.access')->group(function () {
         Route::resource('activity-log', 'ActivityLogController')->only(['index', 'show']);
     });
     //會員管理
     //權限：user.manage
-    Route::group(['middleware' => 'permission:user.manage'], function () {
+    Route::middleware('permission:user.manage')->group(function () {
         Route::resource('user', 'UserController');
     });
     //角色管理
     //權限：role.manage
-    Route::group(['middleware' => 'permission:role.manage'], function () {
+    Route::middleware('permission:role.manage')->group(function () {
         Route::resource('role', 'RoleController', [
             'except' => [
                 'show',
@@ -44,8 +44,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
 });
 
 //會員系統
-Auth::routes(['verify' => (bool) config('app-extend.email-validation'), 'register' => (bool) config('app-extend.allow-register')]);
-Route::group(['namespace' => 'Auth'], function () {
+Auth::routes([
+    'verify'   => (bool) config('app-extend.email-validation'),
+    'register' => (bool) config('app-extend.allow-register'),
+]);
+Route::namespace('Auth')->group(function () {
     //修改密碼
     Route::get('password/change', 'PasswordController@getChangePassword')->name('password.change');
     Route::put('password/change', 'PasswordController@putChangePassword')->name('password.change');
