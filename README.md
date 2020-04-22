@@ -30,6 +30,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [arcanedev/log-viewer](https://github.com/ARCANEDEV/LogViewer): ^7.0
   - [creativeorange/gravatar](https://github.com/creativeorange/gravatar): ^1.0
   - [spatie/laravel-backup](https://github.com/spatie/laravel-backup): ^6.9
+  - [biscolab/laravel-recaptcha](https://github.com/biscolab/laravel-recaptcha): ^4.1
 - System
   - Membership system
   - Role-based access control
