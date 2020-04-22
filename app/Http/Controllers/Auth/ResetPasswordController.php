@@ -27,4 +27,21 @@ class ResetPasswordController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+
+    /**
+     * Get the password reset validation rules.
+     *
+     * @return array
+     */
+    protected function rules()
+    {
+        // 覆寫原方法，以加入 reCAPTCHA 的驗證規則
+        return [
+            'token'              => 'required',
+            'email'              => 'required|email',
+            'password'           => 'required|confirmed|min:8',
+            recaptchaFieldName() => config('recaptcha.api_site_key') ? recaptchaRuleName() : '',
+        ];
+    }
 }

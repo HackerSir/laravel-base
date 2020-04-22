@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -36,5 +37,24 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+
+    /**
+     * Validate the user login request.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return void
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function validateLogin(Request $request)
+    {
+        // 覆寫原方法，以加入 reCAPTCHA 的驗證規則
+        $request->validate([
+            $this->username()    => 'required|string',
+            'password'           => 'required|string',
+            recaptchaFieldName() => config('recaptcha.api_site_key') ? recaptchaRuleName() : '',
+        ]);
     }
 }
