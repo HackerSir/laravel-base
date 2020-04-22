@@ -10,7 +10,7 @@
                     驗證信件已重新發送。
                 </div>
             @endif
-            {{ bs()->openForm('get',route('verification.resend')) }}
+            {{ bs()->openForm('post', route('verification.resend')) }}
             {{ bs()->formGroup(bs()->email('email')->value(auth()->user()->email)->readOnly())->label('信箱')
              ->helpText('信箱作為帳號使用，故無法修改')->showAsRow() }}
             <div class="alert alert-warning col-md-10 ml-auto" role="alert">
