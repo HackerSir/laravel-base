@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!-- 規則名稱 -->
+<ruleset>
+    <!-- 以PSR2為基礎 -->
+    <rule ref="PSR2"/>
+
+    <!-- 不需要雙引號的字串，不得使用雙引號 -->
+    <rule ref="Squiz.Strings.DoubleQuoteUsage">
+        <type>warning</type>
+    </rule>
+    <!-- 允許雙引號字串中出現變數（上述規則會禁止這情況，因此須手動關閉） -->
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
+        <severity>0</severity>
+    </rule>
+
+    <!-- Migration 和 Seeder 不需要 Namespace -->
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>database/migrations/*</exclude-pattern>
+        <exclude-pattern>database/seeds/*</exclude-pattern>
+    </rule>
+
+    <file>app</file>
+    <file>config</file>
+    <file>database</file>
+    <file>resources</file>
+    <file>routes</file>
+    <file>tests</file>
+
+    <exclude-pattern>*.blade.php</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+</ruleset>
