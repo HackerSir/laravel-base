@@ -33,10 +33,11 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [biscolab/laravel-recaptcha](https://github.com/biscolab/laravel-recaptcha): ^4.1
 - System
   - Membership system
-  - Role-based access control
-  - Toggleable registration
-  - Toggleable email validation
-  - Force user change password when you want
+    - Role-based access control
+    - Toggleable registration
+    - Toggleable email validation
+    - Force user change password when you want
+- Google reCAPTCHA
 
 
 ## Installation Guide
