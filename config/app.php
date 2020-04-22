@@ -106,7 +106,7 @@ return [
     |
     */
 
-    'faker_locale' => 'en_US',
+    'faker_locale' => str_replace('-', '_', env('APP_LOCALE', 'en_US')),
 
     /*
     |--------------------------------------------------------------------------
