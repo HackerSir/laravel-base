@@ -1,8 +1,8 @@
 <?php
 /**
- * @var  Arcanedev\LogViewer\Entities\Log $log
- * @var  Illuminate\Pagination\LengthAwarePaginator $entries
- * @var  string|null $query
+ * @var  Arcanedev\LogViewer\Entities\Log            $log
+ * @var  Illuminate\Pagination\LengthAwarePaginator  $entries
+ * @var  string|null                                 $query
  */
 ?>
 
@@ -56,30 +56,30 @@
                 <div class="table-responsive">
                     <table class="table table-condensed">
                         <thead>
-                        <tr>
-                            <td>@lang('File path') :</td>
-                            <td colspan="5">{{ $log->getPath() }}</td>
-                        </tr>
+                            <tr>
+                                <td>@lang('File path') :</td>
+                                <td colspan="5">{{ $log->getPath() }}</td>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>@lang('Log entries') :</td>
-                            <td>
-                                <span class="label label-primary">{{ $entries->total() }}</span>
-                            </td>
-                            <td>@lang('Size') :</td>
-                            <td>
-                                <span class="label label-primary">{{ $log->size() }}</span>
-                            </td>
-                            <td>@lang('Created at') :</td>
-                            <td>
-                                <span class="label label-primary">{{ $log->createdAt() }}</span>
-                            </td>
-                            <td>@lang('Updated at') :</td>
-                            <td>
-                                <span class="label label-primary">{{ $log->updatedAt() }}</span>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>@lang('Log entries') :</td>
+                                <td>
+                                    <span class="label label-primary">{{ $entries->total() }}</span>
+                                </td>
+                                <td>@lang('Size') :</td>
+                                <td>
+                                    <span class="label label-primary">{{ $log->size() }}</span>
+                                </td>
+                                <td>@lang('Created at') :</td>
+                                <td>
+                                    <span class="label label-primary">{{ $log->createdAt() }}</span>
+                                </td>
+                                <td>@lang('Updated at') :</td>
+                                <td>
+                                    <span class="label label-primary">{{ $log->updatedAt() }}</span>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -88,14 +88,11 @@
                     <form action="{{ route('log-viewer::logs.search', [$log->date, $level]) }}" method="GET">
                         <div class=form-group">
                             <div class="input-group">
-                                <input id="query" name="query" class="form-control" value="{{ $query }}"
-                                       placeholder="@lang('Type here to search')">
+                                <input id="query" name="query" class="form-control" value="{{ $query }}" placeholder="@lang('Type here to search')">
                                 <span class="input-group-btn">
                                     @unless (is_null($query))
-                                        <a href="{{ route('log-viewer::logs.show', [$log->date]) }}"
-                                           class="btn btn-default">
-                                            (@lang(':count results', ['count' => $entries->count()])) <span
-                                                class="glyphicon glyphicon-remove"></span>
+                                        <a href="{{ route('log-viewer::logs.show', [$log->date]) }}" class="btn btn-default">
+                                            (@lang(':count results', ['count' => $entries->count()])) <span class="glyphicon glyphicon-remove"></span>
                                         </a>
                                     @endunless
                                     <button id="search-btn" class="btn btn-primary">
@@ -123,74 +120,72 @@
                 <div class="table-responsive">
                     <table id="entries" class="table table-condensed">
                         <thead>
-                        <tr>
-                            <th>@lang('ENV')</th>
-                            <th style="width: 120px;">@lang('Level')</th>
-                            <th style="width: 65px;">@lang('Time')</th>
-                            <th>@lang('Header')</th>
-                            <th class="text-right">@lang('Actions')</th>
-                        </tr>
+                            <tr>
+                                <th>@lang('ENV')</th>
+                                <th style="width: 120px;">@lang('Level')</th>
+                                <th style="width: 65px;">@lang('Time')</th>
+                                <th>@lang('Header')</th>
+                                <th class="text-right">@lang('Actions')</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        @forelse($entries as $key => $entry)
-                            <?php /** @var  Arcanedev\LogViewer\Entities\LogEntry $entry */ ?>
-                            <tr>
-                                <td>
-                                    <span class="label label-env">{{ $entry->env }}</span>
-                                </td>
-                                <td>
-                                    <span class="level level-{{ $entry->level }}">{!! $entry->level() !!}</span>
-                                </td>
-                                <td>
+                            @forelse($entries as $key => $entry)
+                                <?php /** @var  Arcanedev\LogViewer\Entities\LogEntry  $entry */ ?>
+                                <tr>
+                                    <td>
+                                        <span class="label label-env">{{ $entry->env }}</span>
+                                    </td>
+                                    <td>
+                                        <span class="level level-{{ $entry->level }}">{!! $entry->level() !!}</span>
+                                    </td>
+                                    <td>
                                         <span class="label label-default">
                                             {{ $entry->datetime->format('H:i:s') }}
                                         </span>
-                                </td>
-                                <td>
-                                    <p>{{ $entry->header }}</p>
-                                </td>
-                                <td class="text-right">
-                                    @if ($entry->hasStack())
+                                    </td>
+                                    <td>
+                                        <p>{{ $entry->header }}</p>
+                                    </td>
+                                    <td class="text-right">
+                                        @if ($entry->hasStack())
                                         <a class="btn btn-xs btn-default" role="button" data-toggle="collapse"
-                                           href="#log-stack-{{ $key }}" aria-expanded="false"
-                                           aria-controls="log-stack-{{ $key }}">
+                                           href="#log-stack-{{ $key }}" aria-expanded="false" aria-controls="log-stack-{{ $key }}">
                                             <i class="fa fa-toggle-on"></i> @lang('Stack')
                                         </a>
-                                    @endif
-
-                                    @if ($entry->hasContext())
-                                        <a class="btn btn-xs btn-default" role="button" data-toggle="collapse"
-                                           href="#log-context-{{ $key }}" aria-expanded="false"
-                                           aria-controls="log-context-{{ $key }}">
-                                            <i class="fa fa-toggle-on"></i> @lang('Context')
-                                        </a>
-                                    @endif
-                                </td>
-                            </tr>
-                            @if ($entry->hasStack() || $entry->hasContext())
-                                <tr>
-                                    <td colspan="5" class="stack">
-                                        @if ($entry->hasStack())
-                                            <div class="stack-content collapse" id="log-stack-{{ $key }}">
-                                                {!! $entry->stack() !!}
-                                            </div>
                                         @endif
 
                                         @if ($entry->hasContext())
-                                            <div class="stack-content collapse" id="log-context-{{ $key }}">
-                                                <pre>{{ $entry->context() }}</pre>
-                                            </div>
+                                        <a class="btn btn-xs btn-default" role="button" data-toggle="collapse"
+                                           href="#log-context-{{ $key }}" aria-expanded="false" aria-controls="log-context-{{ $key }}">
+                                            <i class="fa fa-toggle-on"></i> @lang('Context')
+                                        </a>
                                         @endif
                                     </td>
                                 </tr>
-                            @endif
-                        @empty
-                            <tr>
-                                <td colspan="5" class="text-center">
-                                    <span class="label label-default">@lang('The list of logs is empty!')</span>
-                                </td>
-                            </tr>
-                        @endforelse
+                                @if ($entry->hasStack() || $entry->hasContext())
+                                    <tr>
+                                        <td colspan="5" class="stack">
+                                            @if ($entry->hasStack())
+                                            <div class="stack-content collapse" id="log-stack-{{ $key }}">
+                                                {!! $entry->stack() !!}
+                                            </div>
+                                            @endif
+
+                                            @if ($entry->hasContext())
+                                            <div class="stack-content collapse" id="log-context-{{ $key }}">
+                                                <pre>{{ $entry->context() }}</pre>
+                                            </div>
+                                            @endif
+                                        </td>
+                                    </tr>
+                                @endif
+                            @empty
+                                <tr>
+                                    <td colspan="5" class="text-center">
+                                        <span class="label label-default">@lang('The list of logs is empty!')</span>
+                                    </td>
+                                </tr>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
@@ -228,10 +223,8 @@
                         <p>@lang('Are you sure you want to delete this log file: :date ?', ['date' => $log->date])</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default pull-left"
-                                data-dismiss="modal">@lang('Cancel')</button>
-                        <button type="submit" class="btn btn-sm btn-danger"
-                                data-loading-text="@lang('Loading')&hellip;">@lang('Delete')</button>
+                        <button type="button" class="btn btn-sm btn-default pull-left" data-dismiss="modal">@lang('Cancel')</button>
+                        <button type="submit" class="btn btn-sm btn-danger" data-loading-text="@lang('Loading')&hellip;">@lang('Delete')</button>
                     </div>
                 </div>
             </form>
@@ -243,28 +236,29 @@
     <script>
         $(function () {
             var deleteLogModal = $('div#delete-log-modal'),
-                deleteLogForm = $('form#delete-log-form'),
-                submitBtn = deleteLogForm.find('button[type=submit]');
+                deleteLogForm  = $('form#delete-log-form'),
+                submitBtn      = deleteLogForm.find('button[type=submit]');
 
-            deleteLogForm.on('submit', function (event) {
+            deleteLogForm.on('submit', function(event) {
                 event.preventDefault();
                 submitBtn.button('loading');
 
                 $.ajax({
-                    url: $(this).attr('action'),
-                    type: $(this).attr('method'),
+                    url:      $(this).attr('action'),
+                    type:     $(this).attr('method'),
                     dataType: 'json',
-                    data: $(this).serialize(),
-                    success: function (data) {
+                    data:     $(this).serialize(),
+                    success: function(data) {
                         submitBtn.button('reset');
                         if (data.result === 'success') {
                             deleteLogModal.modal('hide');
                             location.replace("{{ route('log-viewer::logs.list') }}");
-                        } else {
+                        }
+                        else {
                             alert('OOPS ! This is a lack of coffee exception !')
                         }
                     },
-                    error: function (xhr, textStatus, errorThrown) {
+                    error: function(xhr, textStatus, errorThrown) {
                         alert('AJAX ERROR ! Check the console !');
                         console.error(errorThrown);
                         submitBtn.button('reset');
@@ -275,18 +269,18 @@
             });
 
             @unless (empty(log_styler()->toHighlight()))
-            @php
-                $htmlHighlight = version_compare(PHP_VERSION, '7.4.0') >= 0
-                    ? join('|', log_styler()->toHighlight())
-                    : join(log_styler()->toHighlight(), '|');
-            @endphp
-            $('.stack-content').each(function () {
-                var $this = $(this);
-                var html = $this.html().trim()
-                    .replace(/({!! $htmlHighlight !!})/gm, '<strong>$1</strong>');
+                @php
+                    $htmlHighlight = version_compare(PHP_VERSION, '7.4.0') >= 0
+                        ? join('|', log_styler()->toHighlight())
+                        : join(log_styler()->toHighlight(), '|');
+                @endphp
+                $('.stack-content').each(function() {
+                    var $this = $(this);
+                    var html = $this.html().trim()
+                        .replace(/({!! $htmlHighlight !!})/gm, '<strong>$1</strong>');
 
-                $this.html(html);
-            });
+                    $this.html(html);
+                });
             @endunless
         });
     </script>

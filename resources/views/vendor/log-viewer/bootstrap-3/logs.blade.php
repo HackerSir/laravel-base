@@ -1,6 +1,6 @@
 @extends('log-viewer::bootstrap-3._master')
 
-<?php /** @var  Illuminate\Pagination\LengthAwarePaginator $rows */ ?>
+<?php /** @var  Illuminate\Pagination\LengthAwarePaginator  $rows */ ?>
 
 @section('content')
     <h1 class="page-header">@lang('Logs')</h1>
@@ -10,8 +10,8 @@
     <div class="table-responsive">
         <table class="table table-condensed table-hover table-stats">
             <thead>
-            <tr>
-                @foreach($headers as $key => $header)
+                <tr>
+                    @foreach($headers as $key => $header)
                     <th class="{{ $key == 'date' ? 'text-left' : 'text-center' }}">
                         @if ($key == 'date')
                             <span class="label label-info">{{ $header }}</span>
@@ -21,45 +21,45 @@
                             </span>
                         @endif
                     </th>
-                @endforeach
-                <th class="text-right">@lang('Actions')</th>
-            </tr>
+                    @endforeach
+                    <th class="text-right">@lang('Actions')</th>
+                </tr>
             </thead>
             <tbody>
-            @forelse($rows as $date => $row)
-                <tr>
-                    @foreach($row as $key => $value)
-                        <td class="{{ $key == 'date' ? 'text-left' : 'text-center' }}">
-                            @if ($key == 'date')
-                                <span class="label label-primary">{{ $value }}</span>
-                            @elseif ($value == 0)
-                                <span class="level level-empty">{{ $value }}</span>
-                            @else
-                                <a href="{{ route('log-viewer::logs.filter', [$date, $key]) }}">
-                                    <span class="level level-{{ $key }}">{{ $value }}</span>
-                                </a>
-                            @endif
+                @forelse($rows as $date => $row)
+                    <tr>
+                        @foreach($row as $key => $value)
+                            <td class="{{ $key == 'date' ? 'text-left' : 'text-center' }}">
+                                @if ($key == 'date')
+                                    <span class="label label-primary">{{ $value }}</span>
+                                @elseif ($value == 0)
+                                    <span class="level level-empty">{{ $value }}</span>
+                                @else
+                                    <a href="{{ route('log-viewer::logs.filter', [$date, $key]) }}">
+                                        <span class="level level-{{ $key }}">{{ $value }}</span>
+                                    </a>
+                                @endif
+                            </td>
+                        @endforeach
+                        <td class="text-right">
+                            <a href="{{ route('log-viewer::logs.show', [$date]) }}" class="btn btn-xs btn-info">
+                                <i class="fa fa-search"></i>
+                            </a>
+                            <a href="{{ route('log-viewer::logs.download', [$date]) }}" class="btn btn-xs btn-success">
+                                <i class="fa fa-download"></i>
+                            </a>
+                            <a href="#delete-log-modal" class="btn btn-xs btn-danger" data-log-date="{{ $date }}">
+                                <i class="fa fa-trash-o"></i>
+                            </a>
                         </td>
-                    @endforeach
-                    <td class="text-right">
-                        <a href="{{ route('log-viewer::logs.show', [$date]) }}" class="btn btn-xs btn-info">
-                            <i class="fa fa-search"></i>
-                        </a>
-                        <a href="{{ route('log-viewer::logs.download', [$date]) }}" class="btn btn-xs btn-success">
-                            <i class="fa fa-download"></i>
-                        </a>
-                        <a href="#delete-log-modal" class="btn btn-xs btn-danger" data-log-date="{{ $date }}">
-                            <i class="fa fa-trash-o"></i>
-                        </a>
-                    </td>
-                </tr>
-            @empty
-                <tr>
-                    <td colspan="11" class="text-center">
-                        <span class="label label-default">{{ trans('log-viewer::general.empty-logs') }}</span>
-                    </td>
-                </tr>
-            @endforelse
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="11" class="text-center">
+                            <span class="label label-default">{{ trans('log-viewer::general.empty-logs') }}</span>
+                        </td>
+                    </tr>
+                @endforelse
             </tbody>
         </table>
     </div>
@@ -86,10 +86,8 @@
                         <p></p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-default pull-left"
-                                data-dismiss="modal">@lang('Cancel')</button>
-                        <button type="submit" class="btn btn-sm btn-danger"
-                                data-loading-text="@lang('Loading')&hellip;">@lang('Delete')</button>
+                        <button type="button" class="btn btn-sm btn-default pull-left" data-dismiss="modal">@lang('Cancel')</button>
+                        <button type="submit" class="btn btn-sm btn-danger" data-loading-text="@lang('Loading')&hellip;">@lang('Delete')</button>
                     </div>
                 </div>
             </form>
@@ -101,12 +99,12 @@
     <script>
         $(function () {
             var deleteLogModal = $('div#delete-log-modal'),
-                deleteLogForm = $('form#delete-log-form'),
-                submitBtn = deleteLogForm.find('button[type=submit]');
+                deleteLogForm  = $('form#delete-log-form'),
+                submitBtn      = deleteLogForm.find('button[type=submit]');
 
-            $("a[href=#delete-log-modal]").on('click', function (event) {
+            $("a[href=#delete-log-modal]").on('click', function(event) {
                 event.preventDefault();
-                var date = $(this).data('log-date'),
+                var date    = $(this).data('log-date'),
                     message = "@lang('Are you sure you want to DELETE this log file: :date ?')";
 
                 deleteLogForm.find('input[name=date]').val(date);
@@ -115,26 +113,27 @@
                 deleteLogModal.modal('show');
             });
 
-            deleteLogForm.on('submit', function (event) {
+            deleteLogForm.on('submit', function(event) {
                 event.preventDefault();
                 submitBtn.button('loading');
 
                 $.ajax({
-                    url: $(this).attr('action'),
-                    type: $(this).attr('method'),
+                    url:      $(this).attr('action'),
+                    type:     $(this).attr('method'),
                     dataType: 'json',
-                    data: $(this).serialize(),
-                    success: function (data) {
+                    data:     $(this).serialize(),
+                    success: function(data) {
                         submitBtn.button('reset');
                         if (data.result === 'success') {
                             deleteLogModal.modal('hide');
                             location.reload();
-                        } else {
+                        }
+                        else {
                             alert('AJAX ERROR ! Check the console !');
                             console.error(data);
                         }
                     },
-                    error: function (xhr, textStatus, errorThrown) {
+                    error: function(xhr, textStatus, errorThrown) {
                         alert('AJAX ERROR ! Check the console !');
                         console.error(errorThrown);
                         submitBtn.button('reset');
@@ -144,7 +143,7 @@
                 return false;
             });
 
-            deleteLogModal.on('hidden.bs.modal', function () {
+            deleteLogModal.on('hidden.bs.modal', function() {
                 deleteLogForm.find('input[name=date]').val('');
                 deleteLogModal.find('.modal-body p').html('');
             });

@@ -1,6 +1,6 @@
 <div class="alert alert-{{ $type }} {{ $class or '' }}
-    @istrue($dismissible, 'alert-dismissible')
-    @istrue($animated, 'fade show') "
+        @istrue($dismissible, 'alert-dismissible')
+        @istrue($animated, 'fade show') "
      @isset($data){!! data_attributes($data) !!}@endisset
      role="alert">
 
