@@ -14,6 +14,7 @@ trait LogModelEvent
     protected static $logName = 'loggable-model';
     protected static $logFillable = true;
     protected static $logOnlyDirty = true;
+    protected static $submitEmptyLogs = false;
     protected static $eventText = [
         'created' => '建立了',
         'updated' => '更新了',
