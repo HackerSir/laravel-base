@@ -67,6 +67,12 @@ class User extends Authenticatable implements MustVerifyEmail
         hasVerifiedEmail as originalHasVerifiedEmail;
     }
 
+    protected static $ignoreChangedAttributes = [
+        'updated_at',
+        'last_login_at',
+        'last_login_ip',
+    ];
+
     /**
      * The attributes that are mass assignable.
      *
