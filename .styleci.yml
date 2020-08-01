@@ -7,7 +7,6 @@ disabled:
   - phpdoc_summary
   - concat_without_spaces
   - not_operator_with_successor_space
-  - simplified_null_return
 finder:
   not-name:
     - index.php
