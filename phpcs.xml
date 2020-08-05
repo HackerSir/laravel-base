@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <!-- 規則名稱 -->
 <ruleset>
-    <!-- 以PSR2為基礎 -->
-    <rule ref="PSR2"/>
+    <!-- 以PSR12為基礎 -->
+    <rule ref="PSR12"/>
 
     <!-- 不需要雙引號的字串，不得使用雙引號 -->
     <rule ref="Squiz.Strings.DoubleQuoteUsage">
@@ -13,10 +13,13 @@
         <severity>0</severity>
     </rule>
 
-    <!-- Migration 和 Seeder 不需要 Namespace -->
+    <!-- Config, Factory, Migration, Seeder 和 Routes 不需要 Namespace -->
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>config/*</exclude-pattern>
+        <exclude-pattern>database/factory/*</exclude-pattern>
         <exclude-pattern>database/migrations/*</exclude-pattern>
         <exclude-pattern>database/seeds/*</exclude-pattern>
+        <exclude-pattern>routes/*</exclude-pattern>
     </rule>
 
     <file>app</file>
