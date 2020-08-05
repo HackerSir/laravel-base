@@ -1,8 +1,9 @@
 dist: bionic
+os: linux
 language: php
 
 services:
-  - redis-server
+  - redis
   - mysql
 
 cache:
@@ -12,22 +13,47 @@ cache:
 php:
   - '7.4'
 
-before_script:
+env:
+  - SONAR_SCANNER_VER=4.4.0.2170
+
+before_install:
+  # Version
+  - php -v
+  - composer --version
   - node -v
+  - yarn --version
+  # Xdebug
   - phpenv config-rm xdebug.ini
+  # Composer
   - composer self-update
+
+install:
+  # Sonarqube
+  - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-$SONAR_SCANNER_VER-linux.zip
+  - unzip sonar-scanner-cli-$SONAR_SCANNER_VER-linux.zip
+  - mv sonar-scanner-$SONAR_SCANNER_VER-linux sonar
+  # Composer
   - composer install --prefer-dist --optimize-autoloader --no-suggest --no-progress
+  # Yarn
+  - yarn install
+
+before_script:
+  # Generate key
   - php artisan key:generate --env testing
+  # Generate database
   - mysql -e 'CREATE DATABASE travis_test DEFAULT CHARACTER SET utf8mb4 DEFAULT COLLATE utf8mb4_unicode_ci;'
   - php artisan migrate --env testing
-  - yarn install
+  # Build JS
   - yarn production
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
 
 script:
   - phpdbg -qrr vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+  # Submit coverage report to https://codecov.io
+  - bash <(curl -s https://codecov.io/bash)
+  # Submit coverage report to self-hosted SonarQube
+  - sonar/bin/sonar-scanner -D sonar.host.url=$SONAR_HOST -D sonar.login=$SONAR_SECRET
 
 notifications:
   email:
