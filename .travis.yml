@@ -53,7 +53,7 @@ after_success:
   # Submit coverage report to https://codecov.io
   - bash <(curl -s https://codecov.io/bash)
   # Submit coverage report to self-hosted SonarQube
-  - sonar/bin/sonar-scanner -D sonar.host.url=$SONAR_HOST -D sonar.login=$SONAR_SECRET
+  - sonar/bin/sonar-scanner -D sonar.host.url=$SONAR_HOST -D sonar.login=$SONAR_SECRET -X
 
 notifications:
   email:
