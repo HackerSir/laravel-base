@@ -17,7 +17,7 @@ return [
                 /*
                  * The list of directories and files that will be included in the backup.
                  */
-                'include'      => [
+                'include'                       => [
                     base_path('.env'),
                 ],
 
@@ -26,7 +26,7 @@ return [
                  *
                  * Directories used by the backup process will automatically be excluded.
                  */
-                'exclude'      => [
+                'exclude'                       => [
                     base_path('vendor'),
                     base_path('node_modules'),
                 ],
@@ -34,7 +34,19 @@ return [
                 /*
                  * Determines if symlinks should be followed.
                  */
-                'follow_links' => false,
+                'follow_links'                  => false,
+
+                /*
+                 * Determines if it should avoid unreadable folders.
+                 */
+                'ignore_unreadable_directories' => false,
+
+                /*
+                 * This path is used to make directories in resulting zip-file relative
+                 * Set to `null` to include complete absolute path
+                 * Example: base_path()
+                 */
+                'relative_path'                 => null,
             ],
 
             /*
@@ -108,7 +120,7 @@ return [
 
     /*
      * You can get notified when specific events occur. Out of the box you can use 'mail' and 'slack'.
-     * For Slack you need to install guzzlehttp/guzzle and laravel/slack-notification-channel.
+     * For Slack you need to install laravel/slack-notification-channel.
      *
      * You can also use your own notification classes, just make sure the class is named after one of
      * the `Spatie\Backup\Events` classes.

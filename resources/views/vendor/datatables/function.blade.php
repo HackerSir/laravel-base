@@ -1,6 +1,7 @@
-$(function(){
+window.dtx = window.dtx || {};
+window.dtx["%1$s"] = function(opts) {
     window.{{ config('datatables-html.namespace', 'LaravelDataTables') }} = window.{{ config('datatables-html.namespace', 'LaravelDataTables') }} || {};
-    $.ajaxSetup({headers: {'X-CSRF-TOKEN': '{{csrf_token()}}'}});
+    @if(isset($editors))
     @foreach($editors as $editor)
         var {{$editor->instance}} = window.{{ config('datatables-html.namespace', 'LaravelDataTables') }}["%1$s-{{$editor->instance}}"] = new $.fn.dataTable.Editor({!! $editor->toJson() !!});
         {!! $editor->scripts  !!}
@@ -8,5 +9,6 @@ $(function(){
             {{$editor->instance}}.on('{!! $event['event']  !!}', {!! $event['script'] !!});
         @endforeach
     @endforeach
-    window.{{ config('datatables-html.namespace', 'LaravelDataTables') }}["%1$s"] = $("#%1$s").DataTable(%2$s);
-});
+    @endif
+    return window.{{ config('datatables-html.namespace', 'LaravelDataTables') }}["%1$s"] = $("#%1$s").DataTable($.extend(%2$s, opts));
+}
