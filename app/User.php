@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\LegacySerializeDate;
 use App\Traits\LogModelEvent;
 use App\Traits\UuidPrimaryKey;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -62,6 +63,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use UuidPrimaryKey;
     use Notifiable;
     use LogModelEvent;
+    use LegacySerializeDate;
     use \Illuminate\Auth\MustVerifyEmail {
         sendEmailVerificationNotification as originalSendEmailVerificationNotification;
         hasVerifiedEmail as originalHasVerifiedEmail;

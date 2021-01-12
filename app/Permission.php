@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\LegacySerializeDate;
 use App\Traits\LogModelEvent;
 use App\Traits\UuidPrimaryKey;
 use Laratrust\Models\LaratrustPermission;
@@ -34,6 +35,7 @@ class Permission extends LaratrustPermission
 {
     use UuidPrimaryKey;
     use LogModelEvent;
+    use LegacySerializeDate;
 
     protected $fillable = [
         'name',

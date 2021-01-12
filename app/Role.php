@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\LegacySerializeDate;
 use App\Traits\LogModelEvent;
 use App\Traits\UuidPrimaryKey;
 use Laratrust\Models\LaratrustRole;
@@ -36,6 +37,7 @@ class Role extends LaratrustRole
 {
     use UuidPrimaryKey;
     use LogModelEvent;
+    use LegacySerializeDate;
 
     protected $fillable = [
         'name',
