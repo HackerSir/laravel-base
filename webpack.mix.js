@@ -14,7 +14,7 @@ const mix = require('laravel-mix');
 let buildJsPath = 'public/build-js';
 let buildCssPath = 'public/build-css';
 
-mix.js('resources/js/app.js', buildJsPath).version();
+mix.js('resources/js/app.js', buildJsPath).version().vue();
 // mix.sass('resources/sass/app.scss', buildCssPath);
 mix.stylus('resources/stylus/app.styl', buildCssPath).version();
 
