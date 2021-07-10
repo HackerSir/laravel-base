@@ -1,5 +1,5 @@
 require('./bootstrap');
-require('alpinejs');
+// require('alpinejs');
 import VueTailwind from 'vue-tailwind';
 import components from './tailwindcss';
 
@@ -9,6 +9,7 @@ window.Vue = Vue;
 
 // Register Vue Plugins
 Vue.use(VueTailwind, components);
+Vue.component('navigation', require('./components/global/Navigation').default);
 
 // Create Instance
 // eslint-disable-next-line no-unused-vars
