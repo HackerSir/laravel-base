@@ -9,7 +9,7 @@ window.Vue = Vue;
 
 // Register Vue Plugins
 Vue.use(VueTailwind, components);
-Vue.component('navigation', require('./components/global/Navigation').default);
+Vue.component('navigation', require('./components/global/Navigation.vue').default);
 
 // Create Instance
 // eslint-disable-next-line no-unused-vars

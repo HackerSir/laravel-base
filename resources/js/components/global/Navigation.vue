@@ -87,9 +87,9 @@
 </template>
 
 <script>
-import ApplicationLogo from "./ApplicationLogo";
-import NavbarDropdown from "./NavbarDropdown";
-import NavbarLink from "./NavbarLink";
+import ApplicationLogo from "./Navigation/ApplicationLogo";
+import NavbarDropdown from "./Navigation/NavbarDropdown";
+import NavbarLink from "./Navigation/NavbarLink";
 export default {
     name: "Navigation",
     components: {
