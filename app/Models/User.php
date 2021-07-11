@@ -51,7 +51,6 @@ class User extends Authenticatable implements MustVerifyEmail
     use LaratrustUserTrait;
     use UuidPrimaryKey;
     use HasFactory, Notifiable;
-
     use \Illuminate\Auth\MustVerifyEmail {
         hasVerifiedEmail as originalHasVerifiedEmail;
     }
