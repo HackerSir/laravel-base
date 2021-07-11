@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\UuidPrimaryKey;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -45,11 +46,15 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  * @mixin \Eloquent
  */
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use LaratrustUserTrait;
     use UuidPrimaryKey;
     use HasFactory, Notifiable;
+
+    use \Illuminate\Auth\MustVerifyEmail {
+        hasVerifiedEmail as originalHasVerifiedEmail;
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -80,4 +85,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function hasVerifiedEmail(): bool
+    {
+        // 對原 hasVerifiedEmail() 追加檢查信箱驗證機制是否開啟
+        if (!config('app-extend.email-validation')) {
+            return true;
+        }
+
+        return $this->originalHasVerifiedEmail();
+    }
 }
