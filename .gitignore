@@ -23,7 +23,6 @@ tramp
 # Org-mode
 .org-id-locations
 *_archive
-ltximg/**
 
 # flymake-mode
 *_flymake.*
@@ -71,6 +70,9 @@ flycheck_*.el
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+
+# AWS User-specific
+.idea/**/aws.xml
 
 # Generated files
 .idea/**/contentModel.xml
@@ -188,10 +190,6 @@ Homestead.json
 /.vagrant
 .phpunit.result.cache
 
-# Laravel IDE helper
-*.meta.*
-_ide_*
-
 ### Linux ###
 
 # temporary files which can be created if a process still has a handle open of a deleted file
@@ -213,7 +211,7 @@ _ide_*
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon\r\r
 
 
 # Thumbnails
@@ -243,6 +241,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+.pnpm-debug.log*
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -278,8 +277,8 @@ build/Release
 # Dependency directories
 jspm_packages/
 
-# TypeScript v1 declaration files
-typings/
+# Snowpack dependency directory (https://snowpack.dev/)
+web_modules/
 
 # TypeScript cache
 *.tsbuildinfo
@@ -289,9 +288,6 @@ typings/
 
 # Optional eslint cache
 .eslintcache
-
-# Optional stylelint cache
-.stylelintcache
 
 # Microbundle cache
 .rpt2_cache/
@@ -310,7 +306,7 @@ typings/
 
 # dotenv environment variables file
 .env.test
-.env*.local
+.env.production
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -318,6 +314,7 @@ typings/
 
 # Next.js build output
 .next
+out
 
 # Nuxt.js build / generate output
 .nuxt
@@ -347,6 +344,13 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test
 
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
 ### NotepadPP ###
 # Notepad++ backups #
 *.bak
@@ -366,6 +370,7 @@ dist
 
 # SFTP configuration file
 sftp-config.json
+sftp-config-alt*.json
 
 # Package control specific files
 Package Control.last-run
@@ -405,9 +410,14 @@ tags
 
 ### VisualStudioCode ###
 .vscode/*
+!.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
+!.vscode/extensions.json
 *.code-workspace
+
+# Local History for Visual Studio Code
+.history/
 
 ### VisualStudioCode Patch ###
 # Ignore all local history of files
@@ -441,7 +451,15 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,node,macos,linux,emacs,laravel,windows,composer,notepadpp,jetbrains,sublimetext,visualstudiocode
-# Project
+
+### IDE Helper ###
+_ide_helper.php
+.phpstorm.meta.php
+
+### Personal Config ###
+.idea/dataSources.xml
+
+### Project ###
 public/css/app.css
 public/js/app.js
 public/mix-manifest.json
