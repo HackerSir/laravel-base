@@ -17,7 +17,8 @@
         "laravel/tinker": "^2.5",
         "laravelcollective/html": "^6.2",
         "lavary/laravel-menu": "^1.8",
-        "santigarcor/laratrust": "^6.3"
+        "santigarcor/laratrust": "^6.3",
+        "yajra/laravel-datatables": "^1.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

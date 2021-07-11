@@ -21,6 +21,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [lavary/laravel-menu](https://github.com/lavary/laravel-menu): ^1.8
   - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): ^6.3
   - [laravelcollective/html](https://github.com/LaravelCollective/html): ^6.2
+  - [yajra/laravel-datatables](https://github.com/yajra/laravel-datatables): ^1.5
 
 ## Installation Guide
 1. Run the following commands.
