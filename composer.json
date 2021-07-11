@@ -15,7 +15,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "lavary/laravel-menu": "^1.8"
+        "lavary/laravel-menu": "^1.8",
+        "santigarcor/laratrust": "^6.3"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.5",

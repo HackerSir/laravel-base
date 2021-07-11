@@ -19,6 +19,7 @@ A website base on Laravel and Bootstrap for HackerSir.
   - [barryvdh/laravel-debugbar](https://github.com/barryvdh/laravel-debugbar): ^3.5
   - [doctrine/dbal](https://github.com/doctrine/dbal): ^3.1
   - [lavary/laravel-menu](https://github.com/lavary/laravel-menu): ^1.8
+  - [santigarcor/laratrust](https://github.com/santigarcor/laratrust): ^6.3
 
 ## Installation Guide
 1. Run the following commands.
