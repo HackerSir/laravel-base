@@ -15,7 +15,8 @@ class UserRoleScope implements DataTableScope
 
     /**
      * UserRoleScope constructor.
-     * @param Role $role
+     *
+     * @param  Role  $role
      */
     public function __construct(Role $role)
     {
@@ -25,7 +26,7 @@ class UserRoleScope implements DataTableScope
     /**
      * Apply a query scope.
      *
-     * @param \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $query
      * @return mixed
      */
     public function apply($query)
