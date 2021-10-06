@@ -20,7 +20,7 @@ class PasswordListener
     /**
      * 註冊監聽器的訂閱者。
      *
-     * @param \Illuminate\Events\Dispatcher $events
+     * @param  \Illuminate\Events\Dispatcher  $events
      */
     public function subscribe($events)
     {
