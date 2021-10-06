@@ -11,7 +11,7 @@ class UserObserver
     /**
      * Handle the user "creating" event.
      *
-     * @param \App\User $user
+     * @param  \App\User  $user
      * @return void
      */
     public function creating(User $user)
@@ -25,7 +25,7 @@ class UserObserver
     /**
      * Handle the user "created" event.
      *
-     * @param \App\User $user
+     * @param  \App\User  $user
      * @return void
      */
     public function created(User $user)
