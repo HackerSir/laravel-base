@@ -13,7 +13,7 @@ use Spatie\Activitylog\Models\Activity;
 class ActivityLogController extends Controller
 {
     /**
-     * @param ActivityLogDataTable $dataTable
+     * @param  ActivityLogDataTable  $dataTable
      * @return \Illuminate\Http\Response
      */
     public function index(ActivityLogDataTable $dataTable)
