@@ -11,7 +11,7 @@ class AuthListener
     /**
      * 註冊監聽器的訂閱者。
      *
-     * @param \Illuminate\Events\Dispatcher $events
+     * @param  \Illuminate\Events\Dispatcher  $events
      */
     public function subscribe($events)
     {
@@ -29,7 +29,7 @@ class AuthListener
     /**
      * 使用者登入
      *
-     * @param Login $event
+     * @param  Login  $event
      */
     public function onLogin(Login $event)
     {
@@ -49,7 +49,7 @@ class AuthListener
     /**
      * 使用者登出
      *
-     * @param Logout $event
+     * @param  Logout  $event
      */
     public function onLogout(Logout $event)
     {

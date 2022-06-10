@@ -14,7 +14,8 @@ class ActivityLogEndDateScope implements DataTableScope
 
     /**
      * ActivityLogEndDateScope constructor.
-     * @param Carbon $endDate
+     *
+     * @param  Carbon  $endDate
      */
     public function __construct(Carbon $endDate)
     {
@@ -24,7 +25,7 @@ class ActivityLogEndDateScope implements DataTableScope
     /**
      * Apply a query scope.
      *
-     * @param \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder $query
+     * @param  \Illuminate\Database\Query\Builder|\Illuminate\Database\Eloquent\Builder  $query
      * @return mixed
      */
     public function apply($query)
