@@ -33,8 +33,9 @@ class PasswordController extends Controller
     /**
      * 修改密碼
      *
-     * @param Request $request
+     * @param  Request  $request
      * @return \Illuminate\Http\RedirectResponse
+     *
      * @throws \Illuminate\Validation\ValidationException
      */
     public function putChangePassword(Request $request)
